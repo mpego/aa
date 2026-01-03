@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Counters</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <button id="settings-toggle" class="btn btn-icon btn-sm" aria-label="Toggle Settings"
+                style="position: absolute; right: 2rem; z-index: 1000;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="3"></circle>
+                    <path
+                        d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                    </path>
+                </svg>
+            </button>
+            <div id="settings-panel" class="settings-panel">
+                <div class="panel-header">
+                    <h2>Game Data</h2>
+                </div>
+                <div class="control-group">
+                    <button id="save-game" class="btn btn-primary full-width">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+                            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+                            <polyline points="7 3 7 8 15 8"></polyline>
+                        </svg>
+                        Save Game
+                    </button>
+                </div>
+                <div class="control-group">
+                    <button id="load-game-btn" class="btn btn-outline full-width"
+                        style="cursor: pointer; display: flex; justify-content: center; align-items: center;">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            style="margin-right: 0.5rem;">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="17 8 12 3 7 8"></polyline>
+                            <line x1="12" y1="3" x2="12" y2="15"></line>
+                        </svg>
+                        Load Game
+                    </button>
+                </div>
+                <div class="control-group">
+                    <textarea id="game-state-json" rows="10" class="full-width"
+                        style="display: block; margin-top: 1rem; font-family: monospace; font-size: 0.8rem; padding: 0.5rem;"
+                        placeholder="Paste game JSON here..."></textarea>
+                </div>
+            </div>
+        </header>
+
+        <section class="timer-section">
+            <div class="timer-display" id="timer-display">01:00</div>
+            <div class="timer-controls">
+                <input type="number" id="timer-duration" class="timer-input" value="60" min="1" max="3600"
+                    aria-label="Timer Duration in Seconds">
+                <button id="timer-start" class="btn btn-primary">Start</button>
+                <button id="timer-pause" class="btn btn-secondary">Pause</button>
+                <button id="timer-reset" class="btn btn-outline">Reset</button>
+            </div>
+        </section>
+
+        <main class="counters-grid" id="counters-grid">
+            <!-- Counters will be injected here by JS, but wait, the plan said vanilla JS structure. 
+                 I can explicitely write them out or generate them. 
+                 Writing them out gives cleaner HTML structure to look at initially.
+                 Let's create 6 counters. -->
+
+            <div class="card counter-card" data-id="1">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 1" id="counter-name-1">
+                </div>
+                <div class="counter-value" id="counter-1">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(1, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(1, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(1, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(1, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(1, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(1, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card counter-card" data-id="2">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 2" id="counter-name-2">
+                </div>
+                <div class="counter-value" id="counter-2">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(2, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(2, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(2, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(2, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(2, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(2, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card counter-card" data-id="3">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 3" id="counter-name-3">
+                </div>
+                <div class="counter-value" id="counter-3">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(3, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(3, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(3, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(3, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(3, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(3, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card counter-card" data-id="4">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 4" id="counter-name-4">
+                </div>
+                <div class="counter-value" id="counter-4">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(4, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(4, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(4, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(4, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(4, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(4, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card counter-card" data-id="5">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 5" id="counter-name-5">
+                </div>
+                <div class="counter-value" id="counter-5">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(5, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(5, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(5, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(5, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(5, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(5, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card counter-card" data-id="6">
+                <label class="btn btn-icon color-btn" style="cursor: pointer;">
+                    <input type="color" oninput="updateCardColor(this)"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; cursor: pointer;">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        style="pointer-events: none;">
+                        <circle cx="13.5" cy="6.5" r=".5"></circle>
+                        <circle cx="17.5" cy="10.5" r=".5"></circle>
+                        <circle cx="8.5" cy="7.5" r=".5"></circle>
+                        <circle cx="6.5" cy="12.5" r=".5"></circle>
+                        <path
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z">
+                        </path>
+                    </svg>
+                </label>
+                <div class="card-header">
+                    <input type="text" value="Player 6" id="counter-name-6">
+                </div>
+                <div class="counter-value" id="counter-6">0</div>
+                <div class="counter-actions">
+                    <div class="action-group decrease-group">
+                        <button class="btn btn-sm decrease" onclick="updateCounter(6, -10)">-10</button>
+                        <button class="btn btn-sm decrease" onclick="updateCounter(6, -5)">-5</button>
+                        <button class="btn btn-icon decrease" onclick="updateCounter(6, -1)">-</button>
+                    </div>
+                    <div class="action-group increase-group">
+                        <button class="btn btn-icon increase" onclick="updateCounter(6, 1)">+</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(6, 5)">+5</button>
+                        <button class="btn btn-sm increase" onclick="updateCounter(6, 10)">+10</button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
