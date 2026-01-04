@@ -98,13 +98,11 @@
         <li>Buy army or infrastructure. Place it on the map</li>
         <li>Each army roll a dice the highest roll goes first.</li>
         <li>Declare attacks.</li>
-        <li>Roll dice for attached <a href="#neutral">Neutral territories</a> if not already done.</li>
-        <li>Collect IPC of conquered territories, if no territories were conquered, roll dice to gain IPCs.</li>
+        <li>If never done for the territory roll dice for <a href="#neutral">Neutral army</a>.</li>
         <li>End turn. Repeat for every player.</li>
-        <li>All players can reacomodate units respeting <a href="#regroup">Regrouping rules</a>.</li>
+        <li>All players can reacomodate units respecting <a href="#regroup">Regrouping rules</a>.</li>
         <li>Run the round of <a href="#revolts">Revolts</a></li>
-        <li>The players who have at least one land unit on their territory, roll dice for <a href="#collection">IPC
-                collection</a>. </li>
+        <li>Time for <a href="#collection">IPC collection</a>. </li>
 
         <h2>Desambiguation</h2>
         <ul>
@@ -170,11 +168,19 @@
             <li>If the player did not conquer any territory in the turn, he can roll a dice, on a 4 or more he earns 10
                 IPCs.
             </li>
-            <li id="collection">At begining of round, roll one die per each territoy with land troop to a maximum of
-                ten dice, on a 4 or more each player earns 5 IPCs.</li>
+            <li id="collection">At end of round, collect IPC by choosing one of:
+                <ul>
+                    <li>roll one die per every two territoies with land troop to a maximum of ten dice, for each 4 or
+                        more each earn 5 IPCs.</li>
+                    <li>Collect 10 IPC for each conquered territoriesy in the turn.<br>
+                        if you attacked a territory and no territories were conquered, roll dice to gain IPCs, on a 4 or
+                        more earn 10 IPCs.
+                    </li>
+                </ul>
+            </li>
         </ul>
 
-        <h2>Infrastructure</h2>
+        <h2>Infrastructure</h2>`
         <ul>
             <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
             <li>Conquering a territory with a complex disables the complex.</li>
@@ -292,7 +298,7 @@
                 </ul>
             </li>
         </ul>
-        <h2> (not applyable) Developments</h2>
+        <h2>Developments (under development ...)</h2>
         Every turn an army can spend up to 10 IPC in development.
         Only one development can be undergoing at a time.
         A development is complete when the completion dice roll is 5 or 6.
