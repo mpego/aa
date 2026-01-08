@@ -207,9 +207,14 @@
             not counted.</li>
         <li>Units being transported cannot defend (excepting planes in not-disabled carriers).</li>
         <li>A docked ship cannot defend if the territory is attacked.</li>
+        <li>Sea units can move to an empty sea territory as if it were an attack, yet they do not count as conquered
+            for IPC..</li>
+
         <li><strong>Aircraft Carrier:</strong> Can transport up to 3 air units. Requires 2 hits to be destroyed, one
             hit disables it. Has to dock at a port to be fixed.</li>
+
         <li><strong>Transports:</strong> Can transport up to 2 units (not air units).</li>
+
         <li><strong>**Strategic Bomber:</strong>
             <ul>
                 <li>Can be used to transport up to two land troops.</li>
@@ -218,8 +223,13 @@
                 </li>
             </ul>
         </li>
-        <li>Sea units can move to an empty sea territory as if it were an attack, yet they do not count as conquered
-            for IPC..</li>
+
+        <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
+            on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a location with
+            an AAA, the latter can do a preentive attack.</li>
+        <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
+            on passing by ships</li>
+
         <li><strong>ICBM:</strong> Can attack any territory (works like strategic bomber attack).
             <ul>
                 <li>On a 5 or less the attack succeeds.</li>
@@ -227,51 +237,46 @@
                 <li> An AAA can defend from it.</li>
             </ul>
         </li>
-        <li id="regroup"><strong>Regrouping</strong></li>
-        <ul>
-            <li> land units, means moving any number of troops follwing own territory up to the
-                maximum
-                movement of the unit type </li>
-            <li>Regrouping air units , moving units to anoter air base or aircraft carrier not passing by any
-                territory
-                with hostile AAA. </li>
-            <li>Regrouping naval units, moving units to nearby empty and without coast sea places or with coast of
-                friendly
-                territory </li>
-        </ul>
+
+        <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
+            continue its movement.</li>
+        <li>Can refuel any air unit in the same territory.
+            A plane can be refueled only once per turn.
+            The unit can complete its movement at the refueler in which case in cannot defend if attacked and other
+            planes cannot refuel at the refueler.
+        </li>
     </ul>
+    </ul>
+    <li id="regroup"><strong>Regrouping</strong></li>
     <ul>
-        <li><strong>Refueler</strong></li>
-        <ul>
-            <li>Can refuel any air unit in the same territory. Refueling implies restore the full range for the plane to
-                continue its movement.
-                A plane can be refueled only once per turn.
-                The unit can complete its movement at the refueler in which case in cannot defend if attacked.
-            </li>
-        </ul>
+        <li> land units, means moving any number of troops follwing own territory up to the
+            maximum
+            movement of the unit type </li>
+        <li>Regrouping air units , moving units to anoter air base or aircraft carrier not passing by any
+            territory
+            with hostile AAA. </li>
+        <li>Regrouping naval units, moving units to nearby empty and without coast sea places or with coast of
+            friendly
+            territory </li>
     </ul>
     <h2>Combat</h2>
     <ul>
-        <li>A territory can be attacked only once per turn, even if it has no units on it.</li>
-        <li><strong>Dice Rolling:</strong> Roll one die per unit (up to three dices per type of unit) for each unit
-            type.
-        </li>
+        <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
+            conquered as units pass by, this action is counted as an attack on the territory, but units that have more
+            movement can continue their movement and attack another territory.</li>
+        <li>Each territory can be attacked only once per turn.</li>
+        <li><strong>Dice Rolling:</strong> Roll one die per unit. Each unit accounts damage according its type.</li>
         <li> The atack can continue as long as attacking units can damage defending units.</li>
-        <li> If defending units cannot defend against attacking units, on each round of combat, roll a die, on a 1
-            the attack finalizes.</li>
+        <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says so,
+            or the die roll makes no damage.</li>
+        <li> The attacker choose what defending unites get the damage.</li>
         <li>
-            A territory can be attacekd with any number of units from different countries. Defending territory
+            A territory can be attacekd with up to 10 units that can come from different countries. Defending territory
             defends with all possible units.
             If the territory is conquered, all attacking units remain in the new territory.
-            Any given unit can only attack one territory per turn.
+            Any given unit can only attack an enemy territory with troops once per turn.
         </li>
         <li>Land units if able can attack sea units on shore.
-        <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
-            on passing by
-            planes or surface ships the first time they reach shore. If an ICBM where to attack a location with
-            an AAA, the latter can do a preentive attack.</li>
-        <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
-            on passing by ships</li>
         <li id="neutral"><strong>Attacking neutral territories:</strong>
             Neutral territories can be attacked, The
             first time a neutral territory is attacked, it rolls a die to determine defending units. Put units
