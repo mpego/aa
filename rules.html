@@ -149,103 +149,109 @@
     <p><strong>Goal:</strong> Conquer enemies' central territory.</p>
     <ul>
         <li>Once a central territory is conquered, conquered troops have the following turn to recover it before
-            getting out of the game.</li>
-        <li>In the case of more than two players, the troops losing their home territory become neutral territory,
-            and the troops go off the game. <a href="#neutral">Neutral territories</a> rules apply afterwards.</li>
+            getting out of the game. At this point the army is considered conquered.</li>
+        <li>In a more than two player game, the player that conquers a central territory rolls a dice:</li>
+        <ul>
+            <li>On a 3 or less he preserves the army and infrastructure.</li>
+            <li>On other cases, the troops losing their home territory become neutral territory,
+                and the troops go off the game. <a href="#neutral">Neutral territories</a> rules apply afterwards.</li>
+        </ul>
         <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
             best see fit.</li>
-    </ul>
 
-    <h2>Production</h2>
-    <ul>
-        <li>Each Industrial Complex accounts for 20 IPC of production per turn.
-            All IPCs of production from all complexes is summed up to determine the total production of the player for
-            the turn.
-            <br>Unused production points does not accumulate.
-        </li>
-        <li>Production of units cannot be split across multiple turns.</li>
+        <h2>Production</h2>
         <ul>
-            <li>Land units can be located away from the Military base up to its maximum movement.</li>
-            <li>Planes must be located at an Air base.</li>
-            <li>Ships must be located at a Sea base.</li>
-            <li>Infantry can be freely placed anywhere in a controlled territory.</li>
+            <li>Each Industrial Complex accounts for 20 IPC of production per turn.
+                All IPCs of production from all complexes is summed up to determine the total production of the player
+                for
+                the turn.
+                <br>Unused production points does not accumulate.
+            </li>
+            <li>Production of units cannot be split across multiple turns.</li>
+            <ul>
+                <li>Land units can be located away from the Military base up to its maximum movement.</li>
+                <li>Planes must be located at an Air base.</li>
+                <li>Ships must be located at a Sea base.</li>
+                <li>Infantry can be freely placed anywhere in a controlled territory.</li>
+            </ul>
+
+            <li>At end of round players earn 10 IPCs for each of the territories they conquered in the turn, up to a max
+                of 50 IPCs.
+            </li>
+            <li>The maximum possible accumulated IPC is 50 per flag.</li>
+            <li>If the player did not conquer any territory in the turn, he can roll a dice, on a 3 or less he earns 10
+                IPCs.
+            </li>
+            <li id="collection">At end of round, if player have not yet collected IPCs, choose one of:
+                <ul>
+                    <li>Earn 10 IPC for each country conquered.</li>
+                    <li>Roll one die per every two territoies with land troop to a maximum of ten dice, for each 4 or
+                        more each earn 5 IPCs.</li>
+                    <li>If you attacked at least one territory and no territories were conquered, roll dice to gain
+                        IPCs, on a 3 or less earn 10 IPCs.
+                    </li>
+                </ul>
+            </li>
         </ul>
 
-        <li>At end of round players earn 10 IPCs for each of the territories they conquered in the turn, up to a max
-            of 50 IPCs.
-        </li>
-        <li>The maximum possible accumulated IPC is 50 per flag.</li>
-        <li>If the player did not conquer any territory in the turn, he can roll a dice, on a 4 or more he earns 10
-            IPCs.
-        </li>
-        <li id="collection">At end of round, if player have not yet collected IPCs, choose one of:
-            <ul>
-                <li>Earn 10 IPC for each country conquered.</li>
-                <li>Roll one die per every two territoies with land troop to a maximum of ten dice, for each 4 or
-                    more each earn 5 IPCs.</li>
-                <li>If you attacked at least one territory and no territories were conquered, roll dice to gain
-                    IPCs, on a 4 or more earn 10 IPCs.
-                </li>
-            </ul>
-        </li>
-    </ul>
+        <h2>Infrastructure</h2>`
+        <ul>
+            <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
+            <li>Conquering a territory with a complex disables the complex.</li>
+            <li>Repairs cost half of production cost.</li>
+            <li>Disabled infrastructure cannot produce, fix, or receive units.</li>
+            <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
+            <li><strong>Military Complex:</strong></li>
+            <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
+            <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
+            <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
+        </ul>
 
-    <h2>Infrastructure</h2>`
-    <ul>
-        <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
-        <li>Conquering a territory with a complex disables the complex.</li>
-        <li>Repairs cost half of production cost.</li>
-        <li>Disabled infrastructure cannot produce, fix, or receive units.</li>
-        <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
-        <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
-        <li><strong>Naval Bases:</strong> Can hold a max of 3 ships docked.</li>
-    </ul>
+        <h2>Units</h2>
+        <ul>
+            <li> Any given territory can not have more than 10 units combining all unit types. Units being transported
+                are
+                not counted.</li>
+            <li>Units being transported cannot defend (excepting planes in not-disabled carriers).</li>
+            <li>If a ship is docked it cannot defend if the territory is attacked, and uniits being transported cannot
+                either.</li>
 
-    <h2>Units</h2>
-    <ul>
-        <li> Any given territory can not have more than 10 units combining all unit types. Units being transported are
-            not counted.</li>
-        <li>Units being transported cannot defend (excepting planes in not-disabled carriers).</li>
-        <li>A docked ship cannot defend if the territory is attacked.</li>
-        <li>Sea units can move to an empty sea territory as if it were an attack, yet they do not count as conquered
-            for IPC..</li>
+            <li><strong>Aircraft Carrier:</strong> Can transport up to 3 air units. Requires 2 hits to be destroyed, one
+                hit disables it. Has to dock at a port to be fixed.</li>
 
-        <li><strong>Aircraft Carrier:</strong> Can transport up to 3 air units. Requires 2 hits to be destroyed, one
-            hit disables it. Has to dock at a port to be fixed.</li>
+            <li><strong>Transports:</strong> Can transport up to 2 units (not air units).</li>
 
-        <li><strong>Transports:</strong> Can transport up to 2 units (not air units).</li>
+            <li><strong>**Strategic Bomber:</strong>
+                <ul>
+                    <li>Can be used to transport up to two land troops.</li>
+                    <li>If transporting troops, it cannot attack nor defend from an attack.</li>
+                    <li>It can land with troops on an Aircraft Carrier, yet troops must be unloaded from an Air base.
+                    </li>
+                </ul>
+            </li>
 
-        <li><strong>**Strategic Bomber:</strong>
-            <ul>
-                <li>Can be used to transport up to two land troops.</li>
-                <li>If transporting troops, it cannot attack nor defend from an attack.</li>
-                <li>It can land with troops on an Aircraft Carrier, yet troops must be unloaded from an Air base.
-                </li>
-            </ul>
-        </li>
+            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
+                on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a location with
+                an AAA, the latter can do a preentive attack.</li>
+            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
+                on passing by ships</li>
 
-        <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
-            on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a location with
-            an AAA, the latter can do a preentive attack.</li>
-        <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
-            on passing by ships</li>
+            <li><strong>ICBM:</strong> Can attack any territory (works like strategic bomber attack).
+                <ul>
+                    <li>On a 5 or less the attack succeeds.</li>
+                    <li> Accounts for any number of hits required to destroy what is on the territory.</li>
+                    <li> An AAA can defend from it.</li>
+                </ul>
+            </li>
 
-        <li><strong>ICBM:</strong> Can attack any territory (works like strategic bomber attack).
-            <ul>
-                <li>On a 5 or less the attack succeeds.</li>
-                <li> Accounts for any number of hits required to destroy what is on the territory.</li>
-                <li> An AAA can defend from it.</li>
-            </ul>
-        </li>
-
-        <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
-            continue its movement.</li>
-        <li>Can refuel any air unit in the same territory.
-            A plane can be refueled only once per turn.
-            The unit can complete its movement at the refueler in which case in cannot defend if attacked and other
-            planes cannot refuel at the refueler.
-        </li>
-    </ul>
+            <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
+                continue its movement.</li>
+            <li>Can refuel any air unit in the same territory.
+                A plane can be refueled only once per turn.
+                The unit can complete its movement at the refueler in which case in cannot defend if attacked and other
+                planes cannot refuel at the refueler.
+            </li>
+        </ul>
     </ul>
     <li id="regroup"><strong>Regrouping</strong></li>
     <ul>
