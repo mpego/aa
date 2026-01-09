@@ -1,0 +1,233 @@
+<html>
+
+<head>
+    <title>Estadísticas</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr.category-header {
+            background-color: #888989;
+            font-weight: bold;
+        }
+
+        tr.category-header-land {
+            background-color: #118704;
+            font-weight: bold;
+        }
+
+        tr.category-header-air {
+            background-color: #b4b1b1;
+            font-weight: bold;
+        }
+
+        tr.category-header-sea {
+            background-color: #6ba9db;
+            font-weight: bold;
+        }
+
+        tr.category-header-facilities {
+            background-color: #784c0f;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Estadísticas de Unidades</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Tipo de Unidad</th>
+                <th>Costo</th>
+                <th>Ataque</th>
+                <th>Defensa</th>
+                <th>Movimiento</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Land Units -->
+            <tr class="category-header-land">
+                <td colspan="5">Unidades Terrestres</td>
+            </tr>
+            <tr>
+                <td>Infantería</td>
+                <td>3</td>
+                <td>1</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Infantería Mecanizada</td>
+                <td>4</td>
+                <td>1</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Artillería</td>
+                <td>4</td>
+                <td>2</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Tanque</td>
+                <td>6</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>AAA</td>
+                <td>5</td>
+                <td>-</td>
+                <td>2</td>
+                <td>1</td>
+            </tr>
+
+            <!-- Air Units -->
+            <tr class="category-header-air">
+                <td colspan="5">Unidades Aéreas</td>
+            </tr>
+            <tr>
+                <td>Caza</td>
+                <td>10</td>
+                <td>3</td>
+                <td>4</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Bombardero Táctico</td>
+                <td>11</td>
+                <td>3</td>
+                <td>3</td>
+                <td>4</td>
+            </tr>
+            <tr>
+                <td>Bombardero Estratégico</td>
+                <td>12</td>
+                <td>4</td>
+                <td>1</td>
+                <td>6</td>
+            </tr>
+            <tr>
+                <td>Reabastecedor</td>
+                <td>15</td>
+                <td>-</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>ICBM</td>
+                <td>20</td>
+                <td>5</td>
+                <td>-</td>
+                <td>15</td>
+            </tr>
+
+            <!-- Sea Units -->
+            <tr class="category-header-sea">
+                <td colspan="5">Unidades Navales</td>
+            </tr>
+            <tr>
+                <td>Acorazado</td>
+                <td>20</td>
+                <td>4</td>
+                <td>4</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Crucero</td>
+                <td>12</td>
+                <td>3</td>
+                <td>3</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Destructor</td>
+                <td>8</td>
+                <td>2</td>
+                <td>2</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Submarino</td>
+                <td>6</td>
+                <td>2</td>
+                <td>1</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Portaaviones</td>
+                <td>16</td>
+                <td>-</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+            <tr>
+                <td>Transporte</td>
+                <td>7</td>
+                <td>-</td>
+                <td>-</td>
+                <td>2</td>
+            </tr>
+
+            <!-- Facilities -->
+            <tr class="category-header-facilities">
+                <td colspan="5">Instalaciones</td>
+            </tr>
+            <tr>
+                <td>Complejo Industrial</td>
+                <td>20</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Base Militar</td>
+                <td>15</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Base Aérea</td>
+                <td>15</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Base Naval</td>
+                <td>15</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Lanzador ICBM</td>
+                <td>15</td>
+                <td colspan="3"></td>
+            </tr>
+            <tr>
+                <td>Revuelta</td>
+                <td>10</td>
+                <td colspan="3">Ejército neutral con regla especial de tirada de dados para ejército de revuelta.</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+
+</html>
