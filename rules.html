@@ -53,9 +53,25 @@
 
 <body>
 
+    <div style="margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-bottom: 2px solid #3498db;">
+        <a href="#setup">Game Setup</a> |
+        <a href="#turn">Turn</a> |
+        <a href="#desambiguation">Desambiguation</a> |
+        <a href="#objective">Game Objective</a> |
+        <a href="#production">Production</a> |
+        <a href="#collection">IPC Collection</a> |
+        <a href="#infrastructure">Infrastructure</a> |
+        <a href="#units">Units</a> |
+        <a href="#combat">Combat</a> |
+        <a href="#developments">Developments</a> |
+        <a href="#neutral">Neutral Territories</a> |
+        <a href="#revolts">Revolts</a> |
+        <a href="#regroup">Regrouping</a>
+    </div>
+
     <h1>Game Rules</h1>
 
-    <h2>Game Setup</h2>
+    <h2 id="setup">Game Setup</h2>
 
     <h3>Player Configuration</h3>
     <ul>Small game
@@ -91,7 +107,7 @@
         <br><br>
         Start the turn as normal.
     </ul>
-    <h2>Turn</h2>
+    <h2 id="turn">Turn</h2>
     <ul>
         <li>Buy army or infrastructure. Place it on the map</li>
         <li>Each army roll a dice the highest roll goes first.</li>
@@ -104,7 +120,7 @@
         <li>All players can reacomodate units respecting <a href="#regroup">Regrouping rules</a>.</li>
         <li>Run and resolve <a href="#revolts">Revolts</a></li>
     </ul>
-    <h2>Desambiguation</h2>
+    <h2 id="desambiguation">Desambiguation</h2>
     <ul>
         <li><strong>Sea Territories</strong>
             <ul>
@@ -140,7 +156,7 @@
         </li>
     </ul>
 
-    <h2>Game Objective</h2>
+    <h2 id="objective">Game Objective</h2>
     <p><strong>Goal:</strong> Conquer enemies' central territory.</p>
     <ul>
         <li>Once a central territory is conquered, conquered troops have the following turn to recover it before
@@ -154,7 +170,7 @@
         <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
             best see fit.</li>
 
-        <h2>Production</h2>
+        <h2 id="production">Production</h2>
         <ul>
             <li>Each Industrial Complex accounts for 20 IPC of production per turn.
                 All IPCs of production from all complexes is summed up to determine the total production of the player
@@ -168,7 +184,7 @@
                 <li>Infantry can be freely placed anywhere in a controlled territory.</li>
             </ul>
 
-            <li><strong>IPC Collection </strong></li>
+            <li id="collection"><strong>IPC Collection </strong></li>
             <ul>
                 <li>At end of round players choose one of:</li>
                 <ul>
@@ -178,7 +194,7 @@
                 </ul>
                 <li>Collected IPC accumulate to what already have, to a maximum of 50 IPC.</li>
             </ul>
-            <h2>Infrastructure</h2>`
+            <h2 id="infrastructure">Infrastructure</h2>`
             <ul>
                 <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
                 <li>Conquering a territory with a complex disables the complex.</li>
@@ -191,7 +207,7 @@
                 <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
             </ul>
 
-            <h2>Units</h2>
+            <h2 id="units">Units</h2>
             <ul>
                 <li> Any given territory can not have more than 10 units combining all unit types. Units being
                     transported
@@ -255,7 +271,7 @@
                 friendly
                 territory </li>
         </ul>
-        <h2>Combat</h2>
+        <h2 id="combat">Combat</h2>
         <ul>
             <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
                 conquered as units pass by, this action is counted as an attack on the territory, but units that have
@@ -308,7 +324,7 @@
                 </ul>
             </li>
         </ul>
-        <h2>Developments (under development ...)</h2>
+        <h2 id="developments">Developments (under development ...)</h2>
         <ul>
             Every turn an army can spend up to 10 IPC in development.
             Only one development can be undergoing at a time.
