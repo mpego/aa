@@ -87,12 +87,7 @@
     <ul>
         Place an industrial complex in each home territory.
         <br>
-        Roll four dices, and separate the units according to the <a href="#neutral">Neutral territories</a> units
-        table with special rule.
-        Place units in starting territory.
-        This is the only moment where a territory can have more than ten units in it.
-        <br>
-        Each army starts with 50 IPC.
+        The initial army of each player is 1 infantry, 1 mechanized infantry, 1 artillery, 1 tank and 20 IPC.
         <br><br>
         Start the turn as normal.
     </ul>
@@ -163,205 +158,215 @@
         <ul>
             <li>Each Industrial Complex accounts for 20 IPC of production per turn.
                 All IPCs of production from all complexes is summed up to determine the total production of the player
-                for
-                the turn.
-                <br>Unused production points does not accumulate.
+                for the turn.
+                <br>Unused production points does not accumulate to the next turn.
             </li>
             <li>Production of units cannot be split across multiple turns.</li>
             <ul>
-                <li>Land units can be located away from the Military base up to its maximum movement.</li>
+                <li>Land units can be located away from the Home base or Military base up to its maximum movement.</li>
                 <li>Planes must be located at an Air base.</li>
                 <li>Ships must be located at a Sea base.</li>
                 <li>Infantry can be freely placed anywhere in a controlled territory.</li>
             </ul>
 
-            <li>At end of round players earn 10 IPCs for each of the territories they conquered in the turn, up to a max
-                of 50 IPCs.
-            </li>
-            <li>The maximum possible accumulated IPC is 50 per flag.</li>
-            <li>If the player did not conquer any territory in the turn, he can roll a dice, on a 3 or less he earns 10
-                IPCs.
-            </li>
-            <li id="collection">At end of round, if player have not yet collected IPCs, choose one of:
+            <li><strong>IPC Collection </strong></li>
+            <ul>
+                <li>At end of round players earn:</li>
                 <ul>
-                    <li>Earn 10 IPC for each country conquered.</li>
-                    <li>Roll one die per every two territoies with land troop to a maximum of ten dice, for each 4 or
-                        more each earn 5 IPCs.</li>
-                    <li>If you attacked at least one territory and no territories were conquered, roll dice to gain
-                        IPCs, on a 3 or less earn 10 IPCs.
+                    <li>10 IPCs for each of the territories they conquered in the turn.</li>
+                    <li>If player did not conquered terrytories, roll a dice, on a 3 or less earn 10 IPCs.</li>
+                    <li>for each territory with land troops, roll a dice per terrytory, for each 3 or less he earns 5
+                        IPCs.
                     </li>
                 </ul>
+            </ul>
+            <h2>Infrastructure</h2>`
+            <ul>
+                <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
+                <li>Conquering a territory with a complex disables the complex.</li>
+                <li>Repairs cost half of production cost.</li>
+                <li>Disabled infrastructure cannot produce, fix, or receive units.</li>
+                <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
+                <li><strong>Military Complex:</strong></li>
+                <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
+                <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
+                <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
+            </ul>
+
+            <h2>Units</h2>
+            <ul>
+                <li> Any given territory can not have more than 10 units combining all unit types. Units being
+                    transported
+                    are
+                    not counted.</li>
+                <li>Units being transported cannot defend (excepting planes in not-disabled carriers).</li>
+                <li>If a ship is docked it cannot defend if the territory is attacked, and uniits being transported
+                    cannot
+                    either.</li>
+
+                <li><strong>Aircraft Carrier:</strong> Can transport up to 3 air units. Requires 2 hits to be
+                    destroyed, one
+                    hit disables it. Has to dock at a port to be fixed.</li>
+
+                <li><strong>Transports:</strong> Can transport up to 2 units (not air units).</li>
+
+                <li><strong>**Strategic Bomber:</strong>
+                    <ul>
+                        <li>Can be used to transport up to two land troops.</li>
+                        <li>If transporting troops, it cannot attack nor defend from an attack.</li>
+                        <li>It can land with troops on an Aircraft Carrier, yet troops must be unloaded from an Air
+                            base.
+                        </li>
+                    </ul>
+                </li>
+
+                <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
+                    on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a
+                    location with
+                    an AAA, the latter can do a preentive attack.</li>
+                <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
+                    on passing by ships</li>
+
+                <li><strong>ICBM:</strong> Can attack any territory (works like strategic bomber attack).
+                    <ul>
+                        <li>On a 5 or less the attack succeeds.</li>
+                        <li> Accounts for any number of hits required to destroy what is on the territory.</li>
+                        <li> An AAA can defend from it.</li>
+                    </ul>
+                </li>
+
+                <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
+                    continue its movement.</li>
+                <li>Can refuel any air unit in the same territory.
+                    A plane can be refueled only once per turn.
+                    The unit can complete its movement at the refueler in which case in cannot defend if attacked
+                    and other
+                    planes cannot refuel at the refueler.
+                </li>
+            </ul>
+        </ul>
+        <li id="regroup"><strong>Regrouping</strong></li>
+        <ul>
+            <li> land units, means moving any number of troops follwing own territory up to the
+                maximum
+                movement of the unit type </li>
+            <li>Regrouping air units , moving units to anoter air base or aircraft carrier not passing by any
+                territory
+                with hostile AAA. </li>
+            <li>Regrouping naval units, moving units to nearby empty and without coast sea places or with coast of
+                friendly
+                territory </li>
+        </ul>
+        <h2>Combat</h2>
+        <ul>
+            <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
+                conquered as units pass by, this action is counted as an attack on the territory, but units that have
+                more
+                movement can continue their movement and attack another territory.</li>
+            <li>Each territory can be attacked only once per turn.</li>
+            <li><strong>Dice Rolling:</strong> Roll one die per unit. Each unit accounts damage according its type.</li>
+            <li> The atack can continue as long as attacking units can damage defending units.</li>
+            <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says
+                so,
+                or the die roll makes no damage.</li>
+            <li> The attacker choose what defending unites get the damage.</li>
+            <li>
+                A territory can be attacekd with up to 10 units that can come from different countries. Defending
+                territory
+                defends with all possible units.
+                If the territory is conquered, all attacking units remain in the new territory.
+                Any given unit can only attack an enemy territory with troops once per turn.
             </li>
-        </ul>
-
-        <h2>Infrastructure</h2>`
-        <ul>
-            <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
-            <li>Conquering a territory with a complex disables the complex.</li>
-            <li>Repairs cost half of production cost.</li>
-            <li>Disabled infrastructure cannot produce, fix, or receive units.</li>
-            <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
-            <li><strong>Military Complex:</strong></li>
-            <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
-            <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
-            <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
-        </ul>
-
-        <h2>Units</h2>
-        <ul>
-            <li> Any given territory can not have more than 10 units combining all unit types. Units being transported
-                are
-                not counted.</li>
-            <li>Units being transported cannot defend (excepting planes in not-disabled carriers).</li>
-            <li>If a ship is docked it cannot defend if the territory is attacked, and uniits being transported cannot
-                either.</li>
-
-            <li><strong>Aircraft Carrier:</strong> Can transport up to 3 air units. Requires 2 hits to be destroyed, one
-                hit disables it. Has to dock at a port to be fixed.</li>
-
-            <li><strong>Transports:</strong> Can transport up to 2 units (not air units).</li>
-
-            <li><strong>**Strategic Bomber:</strong>
+            <li>Land units if able can attack sea units on shore.
+            <li id="neutral"><strong>Attacking neutral territories:</strong>
+                Neutral territories can be attacked, The
+                first time a neutral territory is attacked, it rolls a die to determine defending units. Put units
+                according to the roll.
                 <ul>
-                    <li>Can be used to transport up to two land troops.</li>
-                    <li>If transporting troops, it cannot attack nor defend from an attack.</li>
-                    <li>It can land with troops on an Aircraft Carrier, yet troops must be unloaded from an Air base.
-                    </li>
+                    <li>1: no units</li>
+                    <li>2: 1 infantry</li>
+                    <li>3: 1 infantry, 1 mechanized infantry</li>
+                    <li>4: 1 infantry and 1 tank</li>
+                    <li>5: 1 infantry, 1 artillery and 1 tank</li>
+                    <li>6: no units</li>
+                </ul>
+                <ul>
+                    <li><strong>Special rule:</strong> in case of rolling 1, 2 or 6, roll again.</li>
                 </ul>
             </li>
-
-            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
-                on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a location with
-                an AAA, the latter can do a preentive attack.</li>
-            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
-                on passing by ships</li>
-
-            <li><strong>ICBM:</strong> Can attack any territory (works like strategic bomber attack).
+            <li id="revolts"><strong>Revolts</strong>
+                Phase where players can invoke a revolt on any enemy (excluding home base) or neutral territory without
+                army for 10IPC.
                 <ul>
-                    <li>On a 5 or less the attack succeeds.</li>
-                    <li> Accounts for any number of hits required to destroy what is on the territory.</li>
-                    <li> An AAA can defend from it.</li>
+                    <li> In the same order as the turn, each player can start a revolt in a single territory, to a max
+                        of one per turn.</li>
+                    <li>The territory must not have infrastructure complex, it must be disabled or it must be next to a
+                        territory owned by the player calling the revolt.</li>
+                    <li> The attacking unit is decided in the same way as defending units in <a href="#neutral">Neutral
+                            territories</a> applying special rule.</li>
+                    <li>If the revolt succeeds, the territory is neutralized. If there is any infrastructure on the
+                        territory, it remains undamaged. Regular infrastructure rules apply.</li>
+                    <li>Attack and defence system works the same as a regular attack.</li>
                 </ul>
             </li>
-
-            <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
-                continue its movement.</li>
-            <li>Can refuel any air unit in the same territory.
-                A plane can be refueled only once per turn.
-                The unit can complete its movement at the refueler in which case in cannot defend if attacked and other
-                planes cannot refuel at the refueler.
-            </li>
         </ul>
-    </ul>
-    <li id="regroup"><strong>Regrouping</strong></li>
-    <ul>
-        <li> land units, means moving any number of troops follwing own territory up to the
-            maximum
-            movement of the unit type </li>
-        <li>Regrouping air units , moving units to anoter air base or aircraft carrier not passing by any
-            territory
-            with hostile AAA. </li>
-        <li>Regrouping naval units, moving units to nearby empty and without coast sea places or with coast of
-            friendly
-            territory </li>
-    </ul>
-    <h2>Combat</h2>
-    <ul>
-        <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
-            conquered as units pass by, this action is counted as an attack on the territory, but units that have more
-            movement can continue their movement and attack another territory.</li>
-        <li>Each territory can be attacked only once per turn.</li>
-        <li><strong>Dice Rolling:</strong> Roll one die per unit. Each unit accounts damage according its type.</li>
-        <li> The atack can continue as long as attacking units can damage defending units.</li>
-        <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says so,
-            or the die roll makes no damage.</li>
-        <li> The attacker choose what defending unites get the damage.</li>
-        <li>
-            A territory can be attacekd with up to 10 units that can come from different countries. Defending territory
-            defends with all possible units.
-            If the territory is conquered, all attacking units remain in the new territory.
-            Any given unit can only attack an enemy territory with troops once per turn.
-        </li>
-        <li>Land units if able can attack sea units on shore.
-        <li id="neutral"><strong>Attacking neutral territories:</strong>
-            Neutral territories can be attacked, The
-            first time a neutral territory is attacked, it rolls a die to determine defending units. Put units
-            according to the roll.
-            <ul>
-                <li>1: no units</li>
-                <li>2: 1 infantry</li>
-                <li>3: 1 infantry, 1 mechanized infantry</li>
-                <li>4: 1 infantry and 1 tank</li>
-                <li>5: 1 infantry, 1 artillery and 1 tank</li>
-                <li>6: no units</li>
-            </ul>
-            <ul>
-                <li><strong>Special rule:</strong> in case of rolling 1, 2 or 6, roll again.</li>
-            </ul>
-        </li>
-        <li id="revolts"><strong>Revolts</strong>
-            Phase where players can invoke a revolt on any enemy (excluding home base) or neutral territory without
-            army for 10IPC.
-            <ul>
-                <li> In the same order as the turn, each player can start a revolt in a single territory, to a max
-                    of one per turn.</li>
-                <li>The territory must not have infrastructure complex, it must be disabled or it must be next to a
-                    territory owned by the player calling the revolt.</li>
-                <li> The attacking unit is decided in the same way as defending units in <a href="#neutral">Neutral
-                        territories</a> applying special rule.</li>
-                <li>If the revolt succeeds, the territory is neutralized. If there is any infrastructure on the
-                    territory, it remains undamaged. Regular infrastructure rules apply.</li>
-                <li>Attack and defence system works the same as a regular attack.</li>
-            </ul>
-        </li>
-    </ul>
-    <h2>Developments (under development ...)</h2>
-    <ul>
-        Every turn an army can spend up to 10 IPC in development.
-        Only one development can be undergoing at a time.
-        A development is complete when the completion dice roll is 5 or 6.
-        A completion dice is rolled every turn after the spend of development IPC reaches 30.
-        An extra completion dice can be bought with 10 IPC.
+        <h2>Developments (under development ...)</h2>
         <ul>
-            <li><strong>Radar technology:</strong>Develop Radar technology. When a radar is located in a territory or
-                aircraft carrier, it allows pre-attack phase at the location with Radar or any other adjacent to
-                it. AAA
-                can attack passing by planes before planes attack phase.Radar can be placed in territories or Aircraft
-                Carriers.</li>
-            <li><strong>Missile technology:</strong>Develop Missile technology. Factories, Air and Sea bases and
-                Aircraft
-                carriers can be defended by Missile technology is a millie luncher is attached. Defends like
-                AAA.</li>
-            <li><strong>ICBM technology:</strong>Develop ICBM Launchers and Missiles. ICBM Launchers can hold a max of 2
-                ICBMs.</li>
-            <li><strong>Paratrooping:</strong>Allow infantry to jump in any territory when being transported by planes.
-            </li>
-            <li><strong>Espionage:</strong>Allow espionage to be performed. Espionage can be performed on any enevy
-                army.
-                An espionage attempt costs 15 IPC. Roll two dice, if they sum 11 or 12 a successful espionage is
-                performed
-                and any
-                development of that enemy is gained.</li>
+            Every turn an army can spend up to 10 IPC in development.
+            Only one development can be undergoing at a time.
+            A development is complete when the completion dice roll is 5 or 6.
+            A completion dice is rolled every turn after the spend of development IPC reaches 30.
+            An extra completion dice can be bought with 10 IPC.
+            <ul>
+                <li><strong>Radar technology:</strong>Develop Radar technology. When a radar is located in a territory
+                    or
+                    aircraft carrier, it allows pre-attack phase at the location with Radar or any other adjacent to
+                    it. AAA
+                    can attack passing by planes before planes attack phase.Radar can be placed in territories or
+                    Aircraft
+                    Carriers.</li>
+                <li><strong>Missile technology:</strong>Develop Missile technology. Factories, Air and Sea bases and
+                    Aircraft
+                    carriers can be defended by Missile technology is a millie luncher is attached. Defends like
+                    AAA.</li>
+                <li><strong>ICBM technology:</strong>Develop ICBM Launchers and Missiles. ICBM Launchers can hold a max
+                    of 2
+                    ICBMs.</li>
+                <li><strong>Paratrooping:</strong>Allow infantry to jump in any territory when being transported by
+                    planes.
+                </li>
+                <li><strong>Espionage:</strong>Allow espionage to be performed. Espionage can be performed on any enevy
+                    army.
+                    An espionage attempt costs 15 IPC. Roll two dice, if they sum 11 or 12 a successful espionage is
+                    performed
+                    and any
+                    development of that enemy is gained.</li>
 
-            <li><strong>Land units level up:</strong>Land units can be damaged for other units with same or higher
-                level.
-                Before rolling the completion dice, a level up dice must be roll with a value higher that the current
-                level.
-            </li>
-            <li><strong>Air units level up:</strong>Air units can be damaged for other units with same or higher level.
-                Before rolling the completion dice, a level up dice must be roll with a value higher that the current
-                level.
-            </li>
-            <li><strong>Sea units level up:</strong>Sea units can be damaged for other units with same or higher level.
-                Before rolling the completion dice, a level up dice must be roll with a value higher that the current
-                level.
-            </li>
-            <li><strong>Security level up:</strong>Avoid espionage attempts from armies with lower security level.
-                Before rolling the completion dice, a level up dice must be roll with a value higher that the current
-                level.
-            </li>
+                <li><strong>Land units level up:</strong>Land units can be damaged for other units with same or higher
+                    level.
+                    Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                    current
+                    level.
+                </li>
+                <li><strong>Air units level up:</strong>Air units can be damaged for other units with same or higher
+                    level.
+                    Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                    current
+                    level.
+                </li>
+                <li><strong>Sea units level up:</strong>Sea units can be damaged for other units with same or higher
+                    level.
+                    Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                    current
+                    level.
+                </li>
+                <li><strong>Security level up:</strong>Avoid espionage attempts from armies with lower security level.
+                    Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                    current
+                    level.
+                </li>
+            </ul>
         </ul>
-    </ul>
 </body>
 
 </html>
