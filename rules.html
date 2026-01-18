@@ -197,7 +197,10 @@
             <h2 id="infrastructure">Infrastructure</h2>`
             <ul>
                 <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
-                <li>Conquering a territory with a complex disables the complex.</li>
+                <li>Complexes can be attacekd as if they were land units. They always receive one damage if the
+                    terrytory is conquered with a combat.</li>
+                <li>In the case of Air bases, if the base is damaged or destroyed the planes must be sent to other bases
+                    in the range of movement of the plane or be destroyed.</li>
                 <li>Repairs cost half of production cost.</li>
                 <li>Disabled infrastructure cannot produce, fix, or receive units.</li>
                 <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
@@ -205,6 +208,9 @@
                 <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
                 <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
                 <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
+                <li><strong>Roads:</strong>Roads allow units to move faster. The first move from road to raad in any
+                    movement phase is free.</li>
+
             </ul>
 
             <h2 id="units">Units</h2>
@@ -275,20 +281,20 @@
         <ul>
             <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
                 conquered as units pass by, this action is counted as an attack on the territory, but units that have
-                more
-                movement can continue their movement and attack another territory.</li>
+                more movement can continue their movement and attack another territory.</li>
             <li>Each territory can be attacked only once per turn.</li>
             <li><strong>Dice Rolling:</strong> Roll one die per unit. Each unit accounts damage according its type.</li>
             <li> The atack can continue as long as attacking units can damage defending units.</li>
             <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says
-                so,
-                or the die roll makes no damage.</li>
+                so, or the die roll makes no damage.</li>
             <li> The attacker choose what defending unites get the damage.</li>
+            <li> If the territory has constructions, they can also be chosen as a target instead of units.</li>
             <li>
                 A territory can be attacekd with up to 10 units that can come from different countries. Defending
                 territory
                 defends with all possible units.
-                If the territory is conquered, all attacking units remain in the new territory.
+                If the territory is conquered, all attacking units remain in the new territory and complexes or bases
+                gets one damage.
                 Any given unit can only attack an enemy territory with troops once per turn.
             </li>
             <li>Land units if able can attack sea units on shore.
@@ -380,6 +386,11 @@
                     level.
                 </li>
             </ul>
+        </ul>
+        <h3>Proof of concepts</h3>
+        <ul>
+            <li><strong>Improve neutral armada:</strong>Roll a dice, for Neutral Armada if armada in dice is better
+                (more IPC) than in the territory change it according to the roll.</li>
         </ul>
 </body>
 
