@@ -109,15 +109,16 @@
     </ul>
     <h2 id="turn">Turn</h2>
     <ul>
-        <li>Buy army or infrastructure. Place it on the map</li>
-        <li>Each army roll a dice the highest roll goes first.</li>
-        <li>Declare attacks.</li>
-        <li>If never done for the territory roll dice for <a href="#neutral">Neutral army</a>.</li>
-        <li>Resolve attacks.</li>
-        <li>Quick regroup of up to three units.</li>
-        <li>Time for <a href="#collection">IPC collection</a>. </li>
-        <li>End turn. Repeat for every player.</li>
-        <li>All players can reacomodate units respecting <a href="#regroup">Regrouping rules</a>.</li>
+        <li>All players: Buy army or infrastructure. Place it on the map</li>
+        <li>Each player roll a dice the lowest roll goes first.</li>
+        <ul>
+            <li>Declare attacks. See <a href="#neutral">Neutral army</a> in case of attacking neutral territories.</li>
+            <li>Resolve attacks.</li>
+            <li>Quick regroup of up to three units.</li>
+            <li>Time for <a href="#collection">IPC collection</a>. </li>
+            <li>End turn. Repeat for every player.</li>
+        </ul>
+        <li>All players: can regroup units respecting <a href="#regroup">Regrouping rules</a>.</li>
         <li>Run and resolve <a href="#revolts">Revolts</a></li>
     </ul>
     <h2 id="desambiguation">Desambiguation</h2>
@@ -186,11 +187,11 @@
 
             <li id="collection"><strong>IPC Collection </strong></li>
             <ul>
-                <li>At end of round players choose one of:</li>
+                <li>At end of each player turn, the player chooses one of:</li>
                 <ul>
                     <li>Earn 10 IPCs for each of the territories they conquered in the turn.</li>
-                    <li>If player did not conquered terrytories, can roll a dice, on a 3 or less earn 10 IPCs.</li>
                     <li>Roll a dice for each territory with land troops, on each 3 or less earn 5 IPCs.</li>
+                    <li>Roll two dice, on each 3 or less earn 5 IPCs.</li>
                 </ul>
                 <li>Collected IPC accumulate to what already have, to a maximum of 50 IPC.</li>
             </ul>
@@ -279,15 +280,15 @@
         </ul>
         <h2 id="combat">Combat</h2>
         <ul>
-            <li>A territory can be attacked only once per turn, if the territory has no units on it, it is considered
+            <li>A territory can be attacked only once per turn</li>
+            <li>If the territory has no units on it, it is considered
                 conquered as units pass by, this action is counted as an attack on the territory, but units that have
                 more movement can continue their movement and attack another territory.</li>
-            <li>Each territory can be attacked only once per turn.</li>
             <li><strong>Dice Rolling:</strong> Roll one die per unit. Each unit accounts damage according its type.</li>
             <li> The atack can continue as long as attacking units can damage defending units.</li>
             <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says
                 so, or the die roll makes no damage.</li>
-            <li> The attacker choose what defending unites get the damage.</li>
+            <li> The attacker choose what defending unit or complex get the damage.</li>
             <li> If the territory has constructions, they can also be chosen as a target instead of units.</li>
             <li>
                 A territory can be attacekd with up to 10 units that can come from different countries. Defending
@@ -325,7 +326,7 @@
                     <li> The attacking unit is decided in the same way as defending units in <a href="#neutral">Neutral
                             territories</a> applying special rule.</li>
                     <li>If the revolt succeeds, the territory is neutralized. If there is any infrastructure on the
-                        territory, it remains undamaged. Regular infrastructure rules apply.</li>
+                        territory, it remains undamaged.</li>
                     <li>Attack and defence system works the same as a regular attack.</li>
                 </ul>
             </li>
@@ -389,7 +390,7 @@
         </ul>
         <h3>Proof of concepts</h3>
         <ul>
-            <li><strong>Improve neutral armada:</strong>Roll a dice, for Neutral Armada if armada in dice is better
+            <li><strong>Improve neutral armada:</strong>Roll a dice for Neutral Armada. If armada in dice is better
                 (more IPC) than in the territory change it according to the roll.</li>
         </ul>
 </body>
