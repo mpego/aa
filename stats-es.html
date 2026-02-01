@@ -59,7 +59,6 @@
 </head>
 
 <body>
-    <h1>Estadísticas de Unidades</h1>
     <table>
         <thead>
             <tr>
@@ -68,19 +67,21 @@
                 <th>Ataque</th>
                 <th>Defensa</th>
                 <th>Movimiento</th>
+                <th>Efectividad</th>
             </tr>
         </thead>
         <tbody>
             <!-- Land Units -->
             <tr class="category-header-land">
-                <td colspan="5">Unidades Terrestres</td>
+                <td colspan="6">Unidades Terrestres</td>
             </tr>
             <tr>
                 <td>Infantería</td>
                 <td>3</td>
                 <td>1</td>
                 <td>2</td>
-                <td>1</td>
+                <td>2</td>
+                <td>Todo terrestre</td>
             </tr>
             <tr>
                 <td>Infantería Mecanizada</td>
@@ -88,6 +89,7 @@
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
+                <td>Todo terrestre</td>
             </tr>
             <tr>
                 <td>Artillería</td>
@@ -95,6 +97,7 @@
                 <td>2</td>
                 <td>2</td>
                 <td>1</td>
+                <td>Todo terrestre<br>Cazas</td>
             </tr>
             <tr>
                 <td>Tanque</td>
@@ -102,6 +105,7 @@
                 <td>3</td>
                 <td>3</td>
                 <td>2</td>
+                <td>Todo terrestre<br>Barcos de superficie</td>
             </tr>
             <tr>
                 <td>AAA</td>
@@ -109,11 +113,12 @@
                 <td>-</td>
                 <td>1</td>
                 <td>1</td>
+                <td>Todo aéreo<br>Barcos de superficie</td>
             </tr>
 
             <!-- Air Units -->
             <tr class="category-header-air">
-                <td colspan="5">Unidades Aéreas</td>
+                <td colspan="6">Unidades Aéreas</td>
             </tr>
             <tr>
                 <td>Caza</td>
@@ -121,6 +126,7 @@
                 <td>3</td>
                 <td>4</td>
                 <td>4</td>
+                <td>Todo terrestre<br>Todo aéreo<br>Barcos de superficie</td>
             </tr>
             <tr>
                 <td>Bombardero Táctico</td>
@@ -128,6 +134,7 @@
                 <td>3</td>
                 <td>3</td>
                 <td>4</td>
+                <td>Todo terrestre<br>Barcos de superficie</td>
             </tr>
             <tr>
                 <td>Bombardero Estratégico</td>
@@ -135,6 +142,7 @@
                 <td>4</td>
                 <td>1</td>
                 <td>6</td>
+                <td>Todo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
                 <td>Reabastecedor</td>
@@ -142,6 +150,7 @@
                 <td>-</td>
                 <td>-</td>
                 <td>2</td>
+                <td>-</td>
             </tr>
             <tr>
                 <td>ICBM</td>
@@ -149,6 +158,7 @@
                 <td>5</td>
                 <td>-</td>
                 <td>15</td>
+                <td>Cualquier cosa</td>
             </tr>
             <tr>
                 <td>Transporte</td>
@@ -156,11 +166,12 @@
                 <td>-</td>
                 <td>-</td>
                 <td>3</td>
+                <td>-</td>
             </tr>
 
             <!-- Sea Units -->
             <tr class="category-header-sea">
-                <td colspan="5">Unidades Navales</td>
+                <td colspan="6">Unidades Navales</td>
             </tr>
             <tr>
                 <td>Acorazado</td>
@@ -168,6 +179,7 @@
                 <td>4</td>
                 <td>4</td>
                 <td>2</td>
+                <td>Todo terrestre<br>Todo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
                 <td>Crucero</td>
@@ -175,6 +187,7 @@
                 <td>3</td>
                 <td>3</td>
                 <td>2</td>
+                <td>Todo terrestre<br>Todo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
                 <td>Destructor</td>
@@ -182,6 +195,7 @@
                 <td>2</td>
                 <td>2</td>
                 <td>2</td>
+                <td>Todo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
                 <td>Submarino</td>
@@ -189,6 +203,7 @@
                 <td>2</td>
                 <td>1</td>
                 <td>2</td>
+                <td>Todos los barcos</td>
             </tr>
             <tr>
                 <td>Portaaviones</td>
@@ -196,6 +211,7 @@
                 <td>-</td>
                 <td>-</td>
                 <td>2</td>
+                <td>-</td>
             </tr>
             <tr>
                 <td>Transporte</td>
@@ -203,49 +219,50 @@
                 <td>-</td>
                 <td>-</td>
                 <td>2</td>
+                <td>-</td>
             </tr>
 
             <!-- Facilities -->
             <tr class="category-header-facilities">
-                <td colspan="5">Instalaciones</td>
+                <td colspan="6">Instalaciones</td>
             </tr>
             <tr>
                 <td>Complejo Industrial</td>
                 <td>20</td>
-                <td colspan="3">Produce 20 IPCs por turno.</td>
+                <td colspan="4">Produce 20 IPCs por turno.</td>
             </tr>
             <tr>
                 <td>Base Militar</td>
                 <td>15</td>
-                <td colspan="3"></td>
+                <td colspan="4"></td>
             </tr>
             <tr>
                 <td>Base Aérea</td>
                 <td>15</td>
-                <td colspan="3">Puede albergar 5 aviones</td>
+                <td colspan="4">Puede albergar 5 aviones</td>
             </tr>
             <tr>
                 <td>Base Naval</td>
                 <td>15</td>
-                <td colspan="3">Puede atracar 1 barco</td>
+                <td colspan="4">Puede atracar 1 barco</td>
             </tr>
             <tr>
                 <td>Lanzador ICBM</td>
                 <td>15</td>
-                <td colspan="3">Puede albergar 1 ICBM</td>
+                <td colspan="4">Puede albergar 1 ICBM</td>
             </tr>
             <tr>
                 <td>Carretera</td>
                 <td>5</td>
-                <td colspan="3">El primer movimiento de carretera a carretera es gratuito.</td>
+                <td colspan="4">El primer movimiento de carretera a carretera es gratuito.</td>
             </tr>
             <tr class="category-header-other">
-                <td colspan="5">Acciones</td>
+                <td colspan="6">Acciones</td>
             </tr>
             <tr>
                 <td>Revuelta</td>
                 <td>10</td>
-                <td colspan="3">Ejército neutral con regla especial de tirada de dados para ejército de revuelta.</td>
+                <td colspan="4">Ejército neutral con regla especial de tirada de dados para ejército de revuelta.</td>
             </tr>
         </tbody>
     </table>
