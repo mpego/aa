@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Rules</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-bottom: 2px solid #3498db;">
+        <a href="#setup">Game Setup</a> |
+        <a href="#turn">Turn</a> |
+        <a href="#objective">Game Objective</a> |
+        <a href="#production">Production</a> |
+        <a href="#infrastructure">Infrastructure</a> |
+        <a href="#units">Units</a> |
+        <a href="#collection">IPC Collection</a> |
+        <a href="#combat">Combat</a> |
+        <a href="#developments">Developments</a> |
+        <a href="#poc">Proof of Concepts</a> |
+        <a href="stats.html">Stats</a> |
+    </div>
+
+    <h1>Game Rules</h1>
+
+    <h2 id="setup">Game Setup</h2>
+    <ul>
+        Each player choses a starting location at least 10 tiles apart of each other.
+        <br>
+        <br><strong>Army setup</strong><br>
+        Place a main industrial complex in each home tile.
+        <br>
+        The initial army of each player is 1 infantry, 1 mechanized infantry, 1 artillery, 1 tank and 50 IPC.
+        <br><br>
+        Chose a player to go first.
+        Start the turn as normal.
+    </ul>
+    <h2 id="turn">Turn</h2>
+    <ul>
+        <li>Buy units and infrastructure and place them on the map</li>
+        <li>Move units</li>
+        <ul>
+            <li>Chose a tile and move one squad to that tile, the squad can have units from multiple tiles.</li>
+            <li>If the tile is occupied by enemy units, combat is initiated.</li>
+        </ul>
+        <li>Repeat for next player.</li>
+    </ul>
+    <h2 id="objective">Game Objective</h2>
+    <ul>
+        <strong>Goal:</strong> Conquer enemies' central base.<br><br>
+        <li>Once a central base is conquered, conquered troops have the following turn to recover it before
+            getting out of the game. At which point the army is considered conquered.</li>
+        <li>In a more than two player game, the player that conquers a central base rolls a die:</li>
+        <ul>
+            <li>On a 3 or less he preserves the army and infrastructure.</li>
+            <li>On other cases, the troops losing their home base go off the game.</li>
+        </ul>
+        <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
+            best see fit.</li>
+    </ul>
+    <h2 id="production">Production</h2>
+    <ul>
+        <li>Each Industrial Complex accounts for up to 20 IPC of production per turn.
+            All IPCs of production from all complexes is summed up to determine the total production of the player
+            for the turn.
+        </li>
+        <li>Production of units cannot be split across multiple turns.</li>
+        <ul>
+            <li>Land units must be located at a Military Base.</li>
+            <li>Infantry can be located in any tile with units or infrastructure.</li>
+            <li>Planes must be located at an Air Base.</li>
+            <li>Ships must be located at a Sea Base.</li>
+        </ul>
+    </ul>
+    <h2 id="infrastructure">Infrastructure</h2>
+    <ul>
+        Infrastructure can be built in any tile with player units or next to a tile with player complex.
+        <ul>
+            <li><strong>Main Industrial Comples:</strong> It is the main base of the player.
+                <br>If player has no Refineries it allows to roll 2 dice for IPC collection.
+                On a 2 or less earn 5 IPCs for each die.
+                <br>They come with defense against ICBM.
+                Roll three dice, on one 3 or less, the missile is destroyed before attack
+                <br>If the missile hits the complex it counts as one hit
+            </li>
+
+            <li><strong>Industrial Complex:</strong> It increse production of units.
+                <br>These does not come with ICBM defense.
+                <br>For 50 IPC one of these can be swapped with the Main Industrial Complex.
+            </li>
+            <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of 1
+                die when a truck arrives.
+                <br>A Refinery accespts only one transporter at a time.
+                <br>Can be built on land or sea but there must be 3 tiles separating it from any other infrastructure.
+            </li>
+            <li><strong>Military Base:</strong> Is the starting base for land units.</li>
+            <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
+            <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
+            <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
+            <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
+                keeps on
+                the road. Going off the road stops the movement.</li>
+        </ul>
+        <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
+        <li>Complexes can be attacekd as if they were land units. They always receive one damage if the
+            tile is conquered with a combat.</li>
+        <li>Disabled infrastructure cannot produce, fix, lunch or receive units of any kind.
+            <br>In the case of Air bases, the planes must be sent to other bases
+            in the range of movement of the plane or are considered destroyed.
+        </li>
+        <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
+        <li>Repairs of any complex or unit cost half of its construction cost.</li>
+        <li> Any given tile up to one complex and up to 10 units</li>
+
+    </ul>
+    <h2 id="units">Units</h2>
+    <ul>
+        <li> Any given tile can have up to 10 units combining all unit types and one complex.
+            Unit being transported are not counted.</li>
+        <li>A squad is composed of up to 6 units of any type. Units being transported des not count.</li>
+
+        <br>
+        <ul>
+            <li><strong>Mecanized Infantry and sea transport</strong> Can transport Oil</li>
+
+            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as sea bases. Can hold up to 3
+                air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a port to be fixed.</li>
+
+            <li><strong>Sea or Air Transports:</strong> Can be by sea or air.
+                <ul>
+                    <li>Can be used to transport up to two land troops.</li>
+                    <li>It cannot attack nor defend from an attack.</li>
+                    <li>Air transports can land with troops on an Aircraft Carrier, yet troops must be unloaded at
+                        an Air base.
+                    </li>
+                    <li>Sea transport can transport oil from refineries, oil count as 2 units.</li>
+                </ul>
+            </li>
+
+            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
+                on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a
+                location with an AAA, the latter can do a preentive attack.</li>
+            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
+                on passing by ships</li>
+
+            <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
+                <ul>
+                    <li>On a 5 or less the attack succeeds. On a 5 the impact is in the tile and all surroundings.
+                    </li>
+                    <li> Accounts for any number of hits required to destroy what is on the tile.</li>
+                    <li> An AAA can defend from it.</li>
+                </ul>
+            </li>
+
+            <li><strong>Refueler</strong> Refueling implies restore the full range for the plane to
+                continue its movement.</li>
+            <ul>Can refuel any air unit in the same territory.
+                A plane can be refueled only once per turn.
+                The unit can complete its movement at the refueler in which case in cannot defend if attacked
+                and other planes cannot refuel at the refueler.
+            </ul>
+        </ul>
+        <li>Units being transported cannot defend.</li>
+        <li>Units transporting oil cannot attack nor defend.</li>
+        <li>If a ship is docked it cannot defend if the territory is attacked, and uniits being transported
+            cannot either.</li>
+    </ul>
+    <h2 id="collection">IPC Collection</h2>
+    <ul>
+        IPC is collected every time a truck with oil reaches an Industrial Complex or Main Industrial Complex.
+        <p>
+            <li>Oil must be moved from Refineris either be land, sea or combination of both to Industrial Complex or
+                Main
+                Industrial Complex to be converted into production IPCs.
+                <br>Each transport can carry load from one Refinery at a time. To load or unload oil the movement must
+                end
+                in the corresponding complex.
+
+                <br>When the transport with oil ends its movement at an industrial complex, rol 6 dice, for each
+                transport
+                value or
+                less payer collects 5 IPCs for each of such die.
+
+            <li>Collected IPC accumulate to what player already has, up to a maximum of 50 IPC.</li>
+    </ul>
+    <h2 id="combat">Combat</h2>
+    <ul>
+        Each unit has an attack and defence value depending of the unit type.
+        <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for the
+        unit type.<p></p>
+        <li>As squads move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
+            only once per turn</li>
+        <li>At combat the attacking player moves the squad to the tile where attacks occus.
+            <br>The deffending players chooses defending squad from the units in the tile.
+            <br>If attacking squad deffeats defending squad, winning player takes control of remaining units in the
+            tile.
+        </li>
+        <li><strong>Resolving combat:</strong> Roll one die per unit. Each unit accounts damage according its type.
+        </li>
+        <li> The atack can continue as long as attacking units can damage defending units.</li>
+        <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says
+            so, or the die roll makes no damage.</li>
+        <li> The attacker choose what defending unit or complex get the damage. Units can be any unit in the tile.
+        </li>
+        <li> If the tile has constructions, they can also be chosen as a target instead of units.</li>
+        <li> If the tile is conquered, all attacking units remain in the new tile and undestroyed complexes or bases
+            gets one damage.
+            Any given unit can only attack an enemy tile with troops once per turn.
+        </li>
+        <li>Land units if able can attack sea units on shore.
+
+    </ul>
+    <h2 id="developments">Developments (under development ...)</h2>
+    <ul>
+        Every turn a player can spend up to 10 IPC in development.
+        Only one development can be undergoing at a time.<br>
+        A completion dice is rolled every turn after spending in development reaches 30 IPC.
+        A development is complete when the completion dice roll is 5 or 6.<br>
+        An extra completion dice can be bought with 10 IPC.
+        <p>
+        <ul>
+            <li><strong>Land units level up:</strong>Land units can be damaged by other units with same or higher
+                level.
+                Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                current level.
+            </li>
+            <li><strong>Air units level up:</strong>Air units can be damaged by other units with same or higher
+                level.
+                Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                current level.
+            </li>
+            <li><strong>Sea units level up:</strong>Sea units can be damaged by other units with same or higher
+                level.
+                Before rolling the completion dice, a level up dice must be roll with a value higher that the
+                current level.
+            </li>
+            <li><strong>Portable AAA</strong>AAA can be installed in Battleship and Aircraft Carriers
+        </ul>
+    </ul>
+    <h2 id="poc">Proof of concepts</h2>
+    <ul>
+    </ul>
+</body>
+
+</html>

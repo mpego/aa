@@ -4,8 +4,14 @@ The idea is to reach a mid point between the simple rules of Risk and the deep o
 
 [Counters](counters.min.html)
 
-[Rules](rules.html)
+[Rules](v1/rules.html)
 
-[Stats](stats.html)
+[Stats](v1/stats.html)
 
 [Combat cards](combat.png) 
+
+There is a v2 of the rule set, oriented to a resource builder game mechanics.
+
+[Rules](v2/rules.html)
+
+[Stats](v2/stats.html)
