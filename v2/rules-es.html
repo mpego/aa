@@ -54,7 +54,7 @@
 <body>
 
     <div style="margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-bottom: 2px solid #3498db;">
-        <a href="#setup">Preparación del Juego</a> |
+        <a href="#setup">Configuración del Juego</a> |
         <a href="#turn">Turno</a> |
         <a href="#objective">Objetivo del Juego</a> |
         <a href="#production">Producción</a> |
@@ -64,239 +64,257 @@
         <a href="#collection">Recolección de IPC</a> |
         <a href="#combat">Combate</a> |
         <a href="#developments">Desarrollos</a> |
-        <a href="#poc">Pruebas de Concepto</a> |
-        <a href="stats-es.html">Estadísticas</a> |
+        <a href="#poc">Prueba de Conceptos</a> |
+        <a href="stats.html">Estadísticas</a> |
     </div>
 
     <h1>Reglas del Juego</h1>
 
-    <h2 id="setup">Preparación del Juego</h2>
+    <h2 id="setup">Configuración del Juego</h2>
     <ul>
-        Cada jugador elige una ubicación inicial separada por al menos 10 casillas de los demás.
+        Cada jugador elige una ubicación inicial al menos a 10 casillas de distancia entre sí.
         <br>
-        <br><strong>Preparación del Ejército</strong><br>
-        Coloca un complejo industrial principal en cada casilla inicial.
+        <br><strong>Configuración del ejército</strong><br>
+        Coloca un complejo industrial principal en cada casilla de origen.
         <br>
-        El ejército inicial de cada jugador es de 1 infantería, 1 infantería mecanizada, 1 artillería, 1 tanque y 50
-        IPC.
+        El ejército inicial de cada jugador es 1 infantería, 1 infantería mecanizada, 1 artillería, 1 tanque y 50 IPC.
         <br><br>
-        Elige un jugador para que comience.
-        Inicia el turno de forma normal.
-    </ul>
-    <h2 id="turn">Turno</h2>
-    <ul>
-        <li>Compra unidades e infraestructura y colócalas en el mapa</li>
-        <li>Mueve unidades</li>
-        <ul>
-            <li>Elige una casilla y mueve un escuadrón a esa casilla, el escuadrón puede contener unidades de distintas
-                casillas.</li>
-            <li>Si la casilla está ocupada por unidades enemigas, se inicia el combate.</li>
-        </ul>
-        <li>Repite para el siguiente jugador.</li>
+        Elige a un jugador para empezar.
+        Comienza el turno normalmente.
     </ul>
     <h2 id="objective">Objetivo del Juego</h2>
     <ul>
         <strong>Objetivo:</strong> Conquistar la base central de los enemigos.<br><br>
-        <li>Una vez que se conquista una base central, las tropas conquistadas tienen el turno siguiente para
-            recuperarla antes de quedar fuera del juego. En ese punto, el ejército se considera conquistado.</li>
+        <li>Una vez que se conquista una base central, las tropas conquistadas tienen el siguiente turno para recuperarla antes de
+            quedar fuera del juego. En ese punto, el ejército se considera conquistado.</li>
         <li>En un juego de más de dos jugadores, el jugador que conquista una base central lanza un dado:</li>
         <ul>
-            <li>Si saca 3 o menos, conserva el ejército y la infraestructura.</li>
-            <li>En los demás casos, las tropas que pierden su base de origen quedan fuera del juego.</li>
+            <li>Con un 3 o menos, conserva el ejército y la infraestructura.</li>
+            <li>En otros casos, las tropas que pierden su base de origen quedan fuera del juego.</li>
         </ul>
-        <li>El ejército que conquista una base central gana 50 IPC para gastar en el ejército e infraestructura como
-            mejor le parezca.</li>
+        <li>El ejército que conquista una base central gana 50 IPC para gastar en el ejército e infraestructura como el jugador
+            considere mejor.</li>
     </ul>
     <h2 id="production">Producción</h2>
     <ul>
-        <li>Cada Complejo Industrial cuenta con hasta 20 IPC de producción por turno.
+        <li>Cada Complejo Industrial representa hasta 20 IPC de producción por turno.
             Todos los IPC de producción de todos los complejos se suman para determinar la producción total del jugador
             para el turno.
         </li>
         <li>La producción de unidades no se puede dividir en varios turnos.</li>
         <ul>
             <li>Las unidades terrestres deben ubicarse en una Base Militar.</li>
-            <li>La infantería se puede ubicar en cualquier casilla con unidades o infraestructura.</li>
+            <li>La infantería puede ubicarse en cualquier casilla con unidades o infraestructura.</li>
             <li>Los aviones deben ubicarse en una Base Aérea.</li>
             <li>Los barcos deben ubicarse en una Base Naval.</li>
         </ul>
     </ul>
     <h2 id="tiles">Casillas y Movimiento de Unidades</h2>
     <ul>
-        <li>Cualquier casilla dada puede contener hasta un complejo y hasta 10 unidades</li>
+        <li>Cualquier casilla puede contener hasta un complejo y hasta 10 unidades.</li>
         <li>Las unidades que están siendo transportadas no se cuentan.</li>
-        <li>Para que una isla se pueda usar como tierra debe tener el tamaño de al menos media casilla.</li>
+        <li>Para que una isla sea utilizable como tierra debe tener el tamaño de al menos media casilla.</li>
         <li>Un escuadrón es un grupo de hasta cinco unidades moviéndose a la misma casilla.</li>
         <li>La composición del escuadrón se declara cada vez que el jugador mueve unidades a una casilla.</li>
-        <li>Cuando es un movimiento de ataque, el atacante declara primero sus escuadrones atacantes, luego el defensor
-            declara sus escuadrones.</li>
-        <li>Las unidades aéreas deben terminar su movimiento en una Base Aérea, Portaaviones o Avión de
-            Reabastecimiento. De lo contrario, la unidad es destruida.</li>
+        <li>Cuando es un movimiento de ataque, el atacante declara primero los escuadrones atacantes, luego el defensor declara sus
+            escuadrones.</li>
+        <li>Las unidades aéreas deben terminar su movimiento en una Base Aérea, Portaaviones o Avión de Reabastecimiento. De lo contrario, la unidad es destruida.
+        </li>
     </ul>
     <h2 id="infrastructure">Infraestructura</h2>
     <ul>
-        La infraestructura se puede construir en cualquier casilla con unidades del jugador o adyacente a una casilla
-        con un complejo del jugador.
+        La infraestructura se puede construir en cualquier casilla con unidades del jugador o adyacente a una casilla con un complejo del jugador.
         <ul>
             <li><strong>Complejo Industrial Principal:</strong> Es la base principal del jugador.
                 <br>Si el jugador no tiene Refinerías, permite lanzar 2 dados para la recolección de IPC.
-                Si saca 2 o menos, gana 5 IPC por cada dado.
-                <br>Cuentan con defensa contra misiles ICBM.
-                Lanza tres dados, si sale al menos un 3 o menos, el misil es destruido antes de atacar.
-                <br>Si el misil impacta en el complejo, cuenta como un impacto.
+                Con un 2 o menos, gana 5 IPC por cada dado.
+                <br>Vienen con defensa contra ICBM.
+                Lanza tres dados; si obtienes un 3 o menos, el misil es destruido antes del ataque.
+                <br>Si el misil golpea el complejo, cuenta como un impacto.
             </li>
 
-            <li><strong>Complejo Industrial:</strong> Incrementa la producción de unidades.
-                <br>Estos no cuentan con defensa contra ICBM.
-                <br>Por 50 IPC, uno de estos puede ser intercambiado con el Complejo Industrial Principal.
+            <li><strong>Complejo Industrial:</strong> Aumenta la producción de unidades.
+                <br>Estos no vienen con defensa contra ICBM.
+                <br>Por 50 IPC, uno de estos se puede intercambiar por el Complejo Industrial Principal.
             </li>
-            <li><strong>Refinería:</strong> Cada refinería tiene un valor de producción de petróleo igual al valor de la
-                tirada de 1 dado cuando llega un camión.
-                <br>Una Refinería acepta solo un transportador a la vez.
-                <br>Puede construirse en tierra o en mar, pero debe haber 3 casillas separándolo de cualquier otra
-                infraestructura.
+            <li><strong>Refinería:</strong> Cada refinería tiene un valor de producción de petróleo igual al valor de la tirada de 1
+                dado cuando llega un camión.
+                <br>Una Refinería solo acepta un transportador a la vez.
+                <br>Se puede construir en tierra o en el mar, pero debe haber 3 casillas separándola de cualquier otra infraestructura.
             </li>
-            <li><strong>Base Militar:</strong> Es la base de inicio para unidades terrestres.</li>
+            <li><strong>Base Militar:</strong> Es la base de inicio para las unidades terrestres.</li>
             <li><strong>Bases Aéreas:</strong> Pueden albergar un máximo de 5 aviones.</li>
-            <li><strong>Bases Navales:</strong> Pueden tener un máximo de 1 barco amarrado en el puerto.</li>
-            <li><strong>Silo de ICBM:</strong> Puede contener 1 misil ICBM.</li>
-            <li><strong>Carreteras:</strong> Las carreteras permiten a las unidades mover una mitad extra de su
-                movimiento siempre y cuando la unidad se mantenga en la carretera. Salirse de la carretera detiene el
-                movimiento.</li>
+            <li><strong>Bases Navales:</strong> Pueden albergar un máximo de 1 barco atracado.</li>
+            <li><strong>Silo de ICBM:</strong> Puede albergar 1 ICBM.</li>
+            <li><strong>Carreteras:</strong> Las carreteras permiten a las unidades mover la mitad extra de su movimiento siempre y cuando la unidad
+                se mantenga en la carretera. Salirse de la carretera detiene el movimiento.</li>
         </ul>
-        <li>La infraestructura requiere 2 impactos para ser destruida; un impacto la deja inhabilitada.</li>
-        <li>Los complejos pueden ser atacados como si fueran unidades terrestres. Siempre reciben un daño si la casilla
-            es conquistada en combate.</li>
-        <li>La infraestructura inhabilitada no puede producir, reparar, lanzar ni recibir unidades de ningún tipo.
-            <br>En el caso de las bases Aéreas, los aviones deben ser enviados a otras bases en el rango de movimiento
-            del avión, o se consideran destruidos.
+        <li>La infraestructura requiere 2 impactos para ser destruida; un impacto la desactiva.</li>
+        <li>Los complejos pueden ser atacados como si fueran unidades terrestres. Siempre reciben un daño si la
+            casilla es conquistada en combate.</li>
+        <li>La infraestructura desactivada no puede producir, reparar, lanzar o recibir unidades de ningún tipo.
+            <br>En el caso de las bases aéreas, los aviones deben enviarse a otras bases
+            dentro del rango de movimiento del avión, o se considerarán destruidos.
         </li>
-        <li>Las unidades inhabilitadas solo pueden moverse; los aviones no pueden aterrizar ni despegar de ellas.</li>
+        <li>Las unidades desactivadas solo pueden moverse; los aviones no pueden aterrizar ni despegar desde ellas.</li>
         <li>Las reparaciones de cualquier complejo o unidad cuestan la mitad de su costo de construcción.</li>
     </ul>
     <h2 id="units">Unidades</h2>
     <ul>
         <ul>
-            <li><strong>Infantería Mecanizada y Transportes Marítimos:</strong> Pueden transportar petróleo.</li>
+            <li><strong>Infantería Mecanizada y transporte marítimo:</strong> Pueden transportar petróleo.</li>
 
-            <li><strong>Portaaviones:</strong> No son transportes, actúan como bases marítimas. Pueden contener hasta 3
-                unidades aéreas. Requieren 2 impactos para ser destruidos, un impacto los inhabilita. Tienen que atracar
-                en un puerto para ser reparados. El costo de reparación es la mitad del costo de la nave.</li>
+            <li><strong>Portaaviones:</strong> No son transportes, actúan como bases marítimas. Pueden albergar hasta 3
+                unidades aéreas. Requieren 2 impactos para ser destruidos, un impacto los desactiva. Deben atracar en un puerto para ser reparados.
+                El costo de reparación es la mitad del costo del barco.</li>
 
             <li><strong>Transportes Marítimos o Aéreos:</strong> Pueden ser por mar o aire.
                 <ul>
-                    <li>Pueden usarse para transportar hasta dos tropas terrestres.</li>
+                    <li>Se pueden usar para transportar hasta dos tropas terrestres.</li>
                     <li>No pueden atacar ni defenderse de un ataque.</li>
-                    <li>Los transportes aéreos pueden aterrizar con tropas en un Portaaviones, sin embargo, las tropas
-                        deben descargarse en una Base Aérea.
+                    <li>Los transportes aéreos pueden aterrizar con tropas en un Portaaviones, pero las tropas deben descargarse en
+                        una Base Aérea.
                     </li>
-                    <li>Los transportes marítimos pueden transportar petróleo de las refinerías, no pueden combinar
-                        unidades y petróleo al mismo tiempo.
+                    <li>El transporte marítimo puede transportar petróleo de las refinerías, pero no puede combinar unidades y petróleo al mismo tiempo.
                         Cuando transportan petróleo cuentan como 2 unidades, en ese caso tira 2 dados.</li>
                 </ul>
             </li>
 
-            <li><strong>Antiaéreo (AAA):</strong> Tienen un sistema de defensa automático que les permite realizar un
-                ataque defensivo sobre aviones, ICBM o barcos de superficie cercanos a la costa en el turno enemigo.
-            </li>
-            <li><strong>Submarinos:</strong> Tienen un sistema de defensa automático que les permite realizar un ataque
-                defensivo a los barcos que pasen cerca en el turno enemigo.</li>
+            <li><strong>AAA (Antiaéreo):</strong> Tienen un sistema de defensa automático que les permite realizar un ataque defensivo
+                a aviones que pasen, misiles ICBM o barcos de superficie cerca de la costa durante el turno enemigo.</li>
+            <li><strong>Submarinos:</strong> Tienen un sistema de defensa automático que les permite realizar un ataque defensivo
+                a barcos que pasen durante el turno enemigo.</li>
 
-            <li><strong>ICBM:</strong> Puede atacar cualquier casilla (funciona como el ataque del bombardero
-                estratégico).
+            <li><strong>ICBM:</strong> Pueden atacar cualquier casilla (funciona como un ataque de bombardero estratégico).
                 <ul>
-                    <li>Con un 5 o menos el ataque tiene éxito. Con un 5 el impacto es en la casilla y en todas sus
-                        inmediaciones.
+                    <li>Con un 5 o menos el ataque tiene éxito. Con un 5 el impacto es en la casilla y todos los alrededores.
                     </li>
-                    <li>Cuenta como cualquier número de impactos requeridos para destruir lo que se encuentre en la
-                        casilla.</li>
+                    <li>Representa cualquier número de impactos necesarios para destruir lo que hay en la casilla.</li>
                 </ul>
             </li>
 
-            <li><strong>Avión de Reabastecimiento:</strong> Reabastecer implica restaurar el rango de alcance completo
-                para que el avión continúe su movimiento.</li>
+            <li><strong>Reabastecedor:</strong> El reabastecimiento implica restaurar el rango completo para que el avión
+                continúe su movimiento.</li>
             <ul>Puede reabastecer a cualquier unidad aérea en el mismo territorio.
-                Un avión solo puede reabastecerse una vez por turno.
-                La unidad puede completar su movimiento en el reabastecedor, en cuyo caso no puede defender si es
-                atacada y otros aviones no pueden reabastecerse en ese mismo reabastecedor.
+                Un avión solo puede ser reabastecido una vez por turno.
+                La unidad puede completar su movimiento en el reabastecedor, en cuyo caso no puede defenderse si es atacada
+                y otros aviones no pueden reabastecerse en el reabastecedor.
             </ul>
         </ul>
-        <li>Las unidades que están siendo transportadas no pueden defender.</li>
-        <li>Las unidades que transportan petróleo no pueden atacar ni defender.</li>
-        <li>Si un barco está atracado no puede defenderse si el territorio es atacado, y las unidades que están siendo
-            transportadas tampoco.</li>
+        <li>Las unidades que se están transportando no pueden defenderse.</li>
+        <li>Las unidades que transportan petróleo no pueden atacar ni defenderse.</li>
+        <li>Si un barco está atracado no puede defenderse si el territorio es atacado, y las unidades que se están transportando
+            tampoco.</li>
     </ul>
     <h2 id="collection">Recolección de IPC</h2>
     <ul>
-        El IPC se recolecta cada vez que un camión con petróleo llega a un Complejo Industrial o Complejo Industrial
-        Principal.
+        El IPC se recolecta cada vez que un camión con petróleo llega a un Complejo Industrial o Complejo Industrial Principal.
         <p>
-            <li>El petróleo debe moverse desde las Refinerías, ya sea por tierra, mar o una combinación de ambas, hasta
-                el Complejo Industrial o el Complejo Industrial Principal para convertirse en IPCs de producción.
-                <br>Cada transporte puede llevar carga de una Refinería a la vez. Para cargar o descargar petróleo, el
-                movimiento debe finalizar en el complejo respectivo.
-            <li>Los IPC recolectados se acumulan a los que el jugador ya tiene, hasta un máximo de 50 IPC.</li>
+            <li>El petróleo debe moverse desde las Refinerías, ya sea por tierra, mar o una combinación de ambas, al Complejo Industrial o
+                Complejo Industrial Principal para convertirse en IPC de producción.
+                <br>Cada transporte puede llevar carga de una Refinería a la vez. Para cargar o descargar petróleo, el movimiento debe
+                terminar en el complejo correspondiente.
+            <li>El IPC recolectado se acumula a lo que el jugador ya tiene, hasta un máximo de 50 IPC.</li>
     </ul>
     <h2 id="combat">Combate</h2>
     <ul>
-        Cada unidad tiene un valor de ataque y defensa determinado por su tipo.
-        <br>Tanto el ataque como la defensa se consideran un impacto (acierto) si el valor obtenido en el dado de la
-        unidad es igual o menor a su valor correspondiente.<p></p>
-        <li>A medida que las unidades se mueven, si hay unidades enemigas en la casilla de destino, ocurre el combate.
-            Una casilla solo puede ser atacada una vez por turno por cada escuadrón.
-            Múltiples unidades pueden atacar la misma casilla en el mismo turno solo si los atacantes se declararon
-            antes de que el primer ataque en la casilla tuviera lugar.
-            En este caso el jugador atacante puede organizar los escuadrones como desee.
-            <br>El jugador defensor puede organizar los escuadrones como desee. Las unidades defensoras pueden
-            participar en tantos ataques como sea necesario.
-        <li>Si el atacante derrota al escuadrón defensor, el defensor puede optar por retirarse a una casilla aliada
-            adyacente si le es posible.
-            En ese caso, en el turno siguiente el defensor no podrá atacar la casilla de la que se retiró.</li>
+        Cada unidad tiene un valor de ataque y defensa dependiendo del tipo de unidad.
+        <br>Tanto el ataque como la defensa son un impacto si el valor de la tirada de dado para la unidad es igual o menor al valor
+        para el tipo de unidad.<p></p>
+        <li>A medida que las unidades se mueven, si hay unidades enemigas en la casilla de destino, ocurre un combate. Una casilla solo puede ser atacada
+            una vez por turno por cada escuadrón.
+            Varias unidades pueden atacar la misma casilla en el mismo turno solo si los atacantes fueron declarados antes de que tuviera lugar el primer
+            ataque en la casilla.
+            En este caso, el jugador atacante puede organizar los escuadrones como desee.
+            <br>El jugador defensor puede organizar los escuadrones como desee. Las unidades defensoras pueden participar en tantos ataques como sea
+            necesario.
+        <li>Si el atacante derrota al escuadrón defensor, el defensor puede elegir retirarse a una casilla aliada adyacente si le es posible.
+            En ese caso, en el turno siguiente, el defensor no podrá atacar la casilla de la que se retiró.</li>
 
-        <li>El jugador ganador toma control de los complejos restantes en la casilla.
+        <li>El jugador ganador toma el control de los complejos restantes en la casilla.
         </li>
-        <li><strong>Resolución del combate:</strong> Lanza un dado por cada unidad. Cada unidad provoca daño según su
-            tipo.
+        <li><strong>Resolución del combate:</strong> Tira un dado por unidad. Cada unidad inflige daño según su tipo.
         </li>
-        <li> El ataque puede continuar mientras las unidades atacantes puedan hacer daño a las unidades defensivas.</li>
-        <li> Si las unidades defensoras no pueden defenderse de las unidades atacantes, el ataque para ese escuadrón
-            finaliza cuando el atacante lo decide, o cuando ninguna tirada haga daño.</li>
-        <li> El atacante elige qué unidad o complejo defensor recibe el daño. Pueden ser cualquier unidad de la casilla.
+        <li>El ataque puede continuar siempre que las unidades atacantes puedan dañar a las unidades defensoras.</li>
+        <li>Si las unidades defensoras no pueden defenderse contra las unidades atacantes, el ataque para ese escuadrón finaliza cuando los atacantes
+            lo decidan, o si la tirada de dados no causa daño.</li>
+        <li>El atacante elige qué unidad o complejo defensor recibe el daño. Las unidades pueden ser cualquier unidad en la casilla.
         </li>
-        <li> Si la casilla tiene infraestructuras, también pueden ser elegidas como objetivo en lugar de las unidades.
-        </li>
-        <li> Si la casilla es conquistada, todas las unidades atacantes permanecen en la nueva casilla y a los complejos
-            o bases no destruidos se les asigna un daño.
+        <li>Si la casilla tiene construcciones, también se pueden elegir como objetivo en lugar de las unidades.</li>
+        <li>Si la casilla es conquistada, todas las unidades atacantes permanecen en la nueva casilla y los complejos o bases no destruidos
+            reciben un daño.
         </li>
     </ul>
+    <h2 id="turn">Turno</h2>
+    <ul>
+        <li>Mover unidades</li>
+        <ul>
+            <li>Mueve tantas unidades como desees. Cada unidad solo puede moverse una vez.</li>
+            <li>Si la casilla está ocupada por unidades enemigas, se declara combate.</li>
+            <li>El combate habilita dos opciones para el jugador atacado:</li>
+            <ul>
+                <li>Mover unidades a la casilla atacada:</li>
+                <ul>
+                    <li>El jugador atacado puede mover unidades a cada casilla bajo ataque.</li>
+                </ul>
+                <li>Retirar unidades de la casilla atacada:</li>
+                <ul>
+                    <li>Las unidades pueden moverse siempre que terminen su movimiento en una casilla aliada.</li>
+                </ul>
+                <br>
+                <br>Si ocurre cualquiera de estas acciones en una casilla, el jugador atacante puede mover más unidades que aún no se hayan movido, hacia la casilla, o retirar unidades de ella.
+                <br>Las unidades que reaccionan a un ataque no consumen puntos de movimiento para su próximo turno.
+                <br>Las unidades que atacan o defienden como reacción no pueden ser retiradas.
+                <br>El jugador que retira una unidad de una casilla atacada no puede mover más unidades hacia ella.
+                <br>Todos los movimientos deben cumplir con los puntos de movimiento máximos de la unidad en todo momento.
+                <br>Los jugadores pierden 3 IPC por cada unidad retirada.
+
+            </ul>
+        </ul>
+        <li>Resolver combates</li>
+        <ul>
+            <li>Tirar dados para atacantes y defensores.</li>
+            <li>Si no hay unidades enemigas en la casilla, el jugador conquista la casilla y la infraestructura sin dañarla.</li>
+            <li>Cuando termina el combate, las unidades aéreas deben usar sus puntos de movimiento restantes para llegar a una base aérea.</li>
+        </ul>
+        <li>Reagrupar</li>
+        <ul>Los puntos de movimiento de la unidad se restablecen. Las unidades pueden reagruparse siempre y cuando su movimiento termine en una casilla aliada.
+        </ul>
+        <li>Comprar unidades o construir infraestructura</li>
+        <ul>
+            Compra unidades e infraestructura y colócalas en el mapa.
+        </ul>
+        En ningún momento la casilla debe contener más unidades de un jugador que excedan el máximo permitido por casilla.
+        Todos los movimientos deben cumplir con los puntos de movimiento máximos de la unidad cada vez.
+
+        <li>Repetir para el siguiente jugador.</li>
+    </ul>
+
     <h2 id="developments">Desarrollos (en desarrollo ...)</h2>
     <ul>
-        Cada turno un jugador puede gastar hasta 10 IPC en desarrollos.
-        Solo un desarrollo puede llevarse a cabo a la vez.<br>
-        Se lanza un dado de finalización cada turno una vez que la inversión en desarrollo alcanza los 30 IPC.
-        Un desarrollo se completa cuando el dado arroja 5 o 6.<br>
-        Se puede comprar un dado extra de finalización con 10 IPC.
+        Cada turno, un jugador puede gastar hasta 10 IPC en desarrollo.
+        Solo puede haber un desarrollo en curso a la vez.<br>
+        Se lanza un dado de finalización cada turno después de que el gasto en desarrollo alcance los 30 IPC.
+        Un desarrollo se completa cuando la tirada del dado de finalización es 5 o 6.<br>
+        Se puede comprar un dado de finalización adicional con 10 IPC.
         <p>
         <ul>
-            <li><strong>Subida de nivel de unidades terrestres:</strong> Las unidades terrestres pueden recibir daño de
-                otras unidades con nivel igual o superior.
-                Antes de tirar el dado de finalización, se debe lanzar un dado de subida de nivel y obtener un valor
-                mayor a su nivel actual.
+            <li><strong>Subida de nivel de unidades terrestres:</strong> Las unidades terrestres pueden ser dañadas por otras unidades del mismo nivel o superior.
+                Antes de lanzar el dado de finalización, se debe lanzar un dado de subida de nivel con un valor mayor al
+                nivel actual.
             </li>
-            <li><strong>Subida de nivel de unidades aéreas:</strong> Las unidades aéreas pueden recibir daño de otras
-                unidades con nivel igual o superior.
-                Antes de tirar el dado de finalización, se debe lanzar un dado de subida de nivel y obtener un valor
-                mayor a su nivel actual.
+            <li><strong>Subida de nivel de unidades aéreas:</strong> Las unidades aéreas pueden ser dañadas por otras unidades del mismo nivel o superior.
+                Antes de lanzar el dado de finalización, se debe lanzar un dado de subida de nivel con un valor mayor al
+                nivel actual.
             </li>
-            <li><strong>Subida de nivel de unidades marítimas:</strong> Las unidades marítimas pueden recibir daño de
-                otras unidades con nivel igual o superior.
-                Antes de tirar el dado de finalización, se debe lanzar un dado de subida de nivel y obtener un valor
-                mayor a su nivel actual.
+            <li><strong>Subida de nivel de unidades marítimas:</strong> Las unidades marítimas pueden ser dañadas por otras unidades del mismo nivel o superior.
+                Antes de lanzar el dado de finalización, se debe lanzar un dado de subida de nivel con un valor mayor al
+                nivel actual.
             </li>
-            <li><strong>Antiaéreo (AAA) portátil:</strong> Se puede instalar AAA portátil en Acorazados y Portaaviones.
+            <li><strong>AAA Portátil:</strong> El AAA puede instalarse en Acorazados y Portaaviones.</li>
         </ul>
     </ul>
-    <h2 id="poc">Pruebas de concepto</h2>
+    <h2 id="poc">Prueba de conceptos</h2>
     <ul>
     </ul>
 </body>
