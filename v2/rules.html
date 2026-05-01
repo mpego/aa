@@ -58,6 +58,7 @@
         <a href="#turn">Turn</a> |
         <a href="#objective">Game Objective</a> |
         <a href="#production">Production</a> |
+        <a href="#tiles">Tiles and Unit movement</a> |
         <a href="#infrastructure">Infrastructure</a> |
         <a href="#units">Units</a> |
         <a href="#collection">IPC Collection</a> |
@@ -108,9 +109,21 @@
             <li>Ships must be located at a Sea Base.</li>
         </ul>
     </ul>
+    <h2 id="tiles">Tiles and Unit movement</h2>
+    <ul>
+        <li>Any given tile can hold up to one complex and up to 10 units</li>
+        <li>Unit being transported are not counted.</li>
+        <li>For an island to be usable as land must be the size of at least half of a tile.</li>
+        <li>A squad is a group of up ot five units moving to the seame tile.</li>
+        <li>Squad composition is declared every time player moves units to a tile.</li>
+        <li>When it is an attacking movment, attacker declare attacking squads first, then denffeneder declares its
+            squads.</li>
+        <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is destroyed
+        </li>
+    </ul>
     <h2 id="infrastructure">Infrastructure</h2>
     <ul>
-        Infrastructure can be built in any tile with player units or next to a tile with player complex.
+        Infrastructure can be built in any tile with player units or next to a tile with a player complex.
         <ul>
             <li><strong>Main Industrial Comples:</strong> It is the main base of the player.
                 <br>If player has no Refineries it allows to roll 2 dice for IPC collection.
@@ -134,8 +147,7 @@
             <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
             <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
             <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
-                keeps on
-                the road. Going off the road stops the movement.</li>
+                keeps on the road. Going off the road stops the movement.</li>
         </ul>
         <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
         <li>Complexes can be attacekd as if they were land units. They always receive one damage if the
@@ -146,21 +158,15 @@
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
-        <li> Any given tile up to one complex and up to 10 units</li>
-
     </ul>
     <h2 id="units">Units</h2>
     <ul>
-        <li> Any given tile can have up to 10 units combining all unit types and one complex.
-            Unit being transported are not counted.</li>
-        <li>A squad is composed of up to 6 units of any type. Units being transported des not count.</li>
-
-        <br>
         <ul>
-            <li><strong>Mecanized Infantry and sea transport</strong> Can transport Oil</li>
+            <li><strong>Mechanized Infantry and sea transport</strong> Can transport Oil</li>
 
             <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as sea bases. Can hold up to 3
-                air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a port to be fixed.</li>
+                air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a port to be fixed.
+                Repair cost is half the ship costs.</li>
 
             <li><strong>Sea or Air Transports:</strong> Can be by sea or air.
                 <ul>
@@ -169,22 +175,21 @@
                     <li>Air transports can land with troops on an Aircraft Carrier, yet troops must be unloaded at
                         an Air base.
                     </li>
-                    <li>Sea transport can transport oil from refineries, oil count as 2 units.</li>
+                    <li>Sea transport can transport oil from refineries, cannot combine units and oil at the same time.
+                        When tranporing oil they count as 2 units, in that case roll 2 dice.</li>
                 </ul>
             </li>
 
-            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an attack
-                on passing by planes or surface ships at or passing by shore. If an ICBM where to attack a
-                location with an AAA, the latter can do a preentive attack.</li>
-            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an attack
-                on passing by ships</li>
+            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive attack
+                on passing by planes, ICBM or surface ships at shore on enemy turn.</li>
+            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an defensive attack
+                on passing by ships on enemy turn.</li>
 
             <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
                 <ul>
                     <li>On a 5 or less the attack succeeds. On a 5 the impact is in the tile and all surroundings.
                     </li>
                     <li> Accounts for any number of hits required to destroy what is on the tile.</li>
-                    <li> An AAA can defend from it.</li>
                 </ul>
             </li>
 
@@ -206,17 +211,9 @@
         IPC is collected every time a truck with oil reaches an Industrial Complex or Main Industrial Complex.
         <p>
             <li>Oil must be moved from Refineris either be land, sea or combination of both to Industrial Complex or
-                Main
-                Industrial Complex to be converted into production IPCs.
+                Main Industrial Complex to be converted into production IPCs.
                 <br>Each transport can carry load from one Refinery at a time. To load or unload oil the movement must
-                end
-                in the corresponding complex.
-
-                <br>When the transport with oil ends its movement at an industrial complex, rol 6 dice, for each
-                transport
-                value or
-                less payer collects 5 IPCs for each of such die.
-
+                end in the corresponding complex.
             <li>Collected IPC accumulate to what player already has, up to a maximum of 50 IPC.</li>
     </ul>
     <h2 id="combat">Combat</h2>
@@ -224,27 +221,31 @@
         Each unit has an attack and defence value depending of the unit type.
         <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for the
         unit type.<p></p>
-        <li>As squads move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
-            only once per turn</li>
-        <li>At combat the attacking player moves the squad to the tile where attacks occus.
-            <br>The deffending players chooses defending squad from the units in the tile.
-            <br>If attacking squad deffeats defending squad, winning player takes control of remaining units in the
-            tile.
+        <li>As units move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
+            only once per turn by each squad.
+            Multiple units can attack the same tile in the same turn only if the attackers were declared before the
+            first
+            attack on the tile took place.
+            In this case attacking player can organize squads as he wants.
+            <br>Defending player can organize squads as he wants. Deffending units can participate in as many attacks as
+            needed.
+        <li>If attacker defeate defending squad, the deffender can choose to retreat to an adjacent friendly tile if
+            able.
+            In that case the following turn the deffender cannot attack the tile he retreated from.</li>
+
+        <li>Winning player takes control of remaining complexes in the tile.
         </li>
         <li><strong>Resolving combat:</strong> Roll one die per unit. Each unit accounts damage according its type.
         </li>
         <li> The atack can continue as long as attacking units can damage defending units.</li>
-        <li> If defending units cannot defend against attacking units, the atatack finalizes when the attackers says
-            so, or the die roll makes no damage.</li>
+        <li> If defending units cannot defend against attacking units, the atatack for that squad finalizes when the
+            attackers says so, or the die roll makes no damage.</li>
         <li> The attacker choose what defending unit or complex get the damage. Units can be any unit in the tile.
         </li>
         <li> If the tile has constructions, they can also be chosen as a target instead of units.</li>
         <li> If the tile is conquered, all attacking units remain in the new tile and undestroyed complexes or bases
             gets one damage.
-            Any given unit can only attack an enemy tile with troops once per turn.
         </li>
-        <li>Land units if able can attack sea units on shore.
-
     </ul>
     <h2 id="turn">Turn</h2>
     <ul>
