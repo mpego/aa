@@ -114,10 +114,6 @@
         <li>Any given tile can hold up to one complex and up to 10 units</li>
         <li>Unit being transported are not counted.</li>
         <li>For an island to be usable as land must be the size of at least half of a tile.</li>
-        <li>A squad is a group of up ot five units moving to the seame tile.</li>
-        <li>Squad composition is declared every time player moves units to a tile.</li>
-        <li>When it is an attacking movment, attacker declare attacking squads first, then denffeneder declares its
-            squads.</li>
         <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is destroyed
         </li>
     </ul>
@@ -220,25 +216,18 @@
     <ul>
         Each unit has an attack and defence value depending of the unit type.
         <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for the
-        unit type.<p></p>
-        <li>As units move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
-            only once per turn by each squad.
-            Multiple units can attack the same tile in the same turn only if the attackers were declared before the
-            first
-            attack on the tile took place.
-            In this case attacking player can organize squads as he wants.
-            <br>Defending player can organize squads as he wants. Deffending units can participate in as many attacks as
-            needed.
-        <li>If attacker defeate defending squad, the deffender can choose to retreat to an adjacent friendly tile if
-            able.
-            In that case the following turn the deffender cannot attack the tile he retreated from.</li>
+        unit type.
+        <br>As units move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
+        only once per turn.
+        <br>Multiple units can attack the same tile in the same turn only if the attackers were declared before the
+        first
+        attack on the tile took place.
+        <br>Winning player takes control of remaining complexes in the tile.
 
-        <li>Winning player takes control of remaining complexes in the tile.
-        </li>
         <li><strong>Resolving combat:</strong> Roll one die per unit. Each unit accounts damage according its type.
         </li>
         <li> The atack can continue as long as attacking units can damage defending units.</li>
-        <li> If defending units cannot defend against attacking units, the atatack for that squad finalizes when the
+        <li> If defending units cannot defend against attacking units, the atatack finalizes when the
             attackers says so, or the die roll makes no damage.</li>
         <li> The attacker choose what defending unit or complex get the damage. Units can be any unit in the tile.
         </li>
@@ -246,6 +235,7 @@
         <li> If the tile is conquered, all attacking units remain in the new tile and undestroyed complexes or bases
             gets one damage.
         </li>
+        <li>Abandoning an on-going attack does not count as retreat.</li>
     </ul>
     <h2 id="turn">Turn</h2>
     <ul>
