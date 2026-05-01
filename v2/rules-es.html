@@ -114,10 +114,6 @@
         <li>Cualquier casilla puede contener hasta un complejo y hasta 10 unidades.</li>
         <li>Las unidades que están siendo transportadas no se cuentan.</li>
         <li>Para que una isla sea utilizable como tierra debe tener el tamaño de al menos media casilla.</li>
-        <li>Un escuadrón es un grupo de hasta cinco unidades moviéndose a la misma casilla.</li>
-        <li>La composición del escuadrón se declara cada vez que el jugador mueve unidades a una casilla.</li>
-        <li>Cuando es un movimiento de ataque, el atacante declara primero los escuadrones atacantes, luego el defensor declara sus
-            escuadrones.</li>
         <li>Las unidades aéreas deben terminar su movimiento en una Base Aérea, Portaaviones o Avión de Reabastecimiento. De lo contrario, la unidad es destruida.
         </li>
     </ul>
@@ -220,19 +216,13 @@
     <ul>
         Cada unidad tiene un valor de ataque y defensa dependiendo del tipo de unidad.
         <br>Tanto el ataque como la defensa son un impacto si el valor de la tirada de dado para la unidad es igual o menor al valor
-        para el tipo de unidad.<p></p>
-        <li>A medida que las unidades se mueven, si hay unidades enemigas en la casilla de destino, ocurre un combate. Una casilla solo puede ser atacada
-            una vez por turno por cada escuadrón.
-            Varias unidades pueden atacar la misma casilla en el mismo turno solo si los atacantes fueron declarados antes de que tuviera lugar el primer
-            ataque en la casilla.
-            En este caso, el jugador atacante puede organizar los escuadrones como desee.
-            <br>El jugador defensor puede organizar los escuadrones como desee. Las unidades defensoras pueden participar en tantos ataques como sea
-            necesario.
-        <li>Si el atacante derrota al escuadrón defensor, el defensor puede elegir retirarse a una casilla aliada adyacente si le es posible.
-            En ese caso, en el turno siguiente, el defensor no podrá atacar la casilla de la que se retiró.</li>
+        para el tipo de unidad.
+        <br>A medida que las unidades se mueven, si hay unidades enemigas en la casilla de destino, ocurre un combate. Una casilla solo puede ser atacada
+        una vez por turno.
+        <br>Varias unidades pueden atacar la misma casilla en el mismo turno solo si los atacantes fueron declarados antes de que tuviera lugar el primer
+        ataque en la casilla.
+        <br>El jugador ganador toma el control de los complejos restantes en la casilla.
 
-        <li>El jugador ganador toma el control de los complejos restantes en la casilla.
-        </li>
         <li><strong>Resolución del combate:</strong> Tira un dado por unidad. Cada unidad inflige daño según su tipo.
         </li>
         <li>El ataque puede continuar siempre que las unidades atacantes puedan dañar a las unidades defensoras.</li>
@@ -244,6 +234,7 @@
         <li>Si la casilla es conquistada, todas las unidades atacantes permanecen en la nueva casilla y los complejos o bases no destruidos
             reciben un daño.
         </li>
+        <li>Abandonar un ataque en curso no cuenta como retirada.</li>
     </ul>
     <h2 id="turn">Turno</h2>
     <ul>
