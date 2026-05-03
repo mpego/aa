@@ -134,7 +134,7 @@
                 <br>For 50 IPC one of these can be swapped with the Main Industrial Complex.
             </li>
             <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of 1
-                die when a truck arrives.
+                die. Each turn it can roll a die and production change to the higher value.
                 <br>A Refinery accespts only one transporter at a time.
                 <br>Can be built on land or sea but there must be 3 tiles separating it from any other infrastructure.
             </li>
@@ -238,9 +238,11 @@
     </ul>
     <h2 id="turn">Turn</h2>
     <ul>
+        <li>Update oil production at Refineries</li>
         <li>Move units</li>
         <ul>
             <li>Move as many units as wanted. Each unit can move only once.</li>
+            <li>Units at or arriving at a Refinery might choose to collect oil.</li>
             <li>If the tile is occupied by enemy units, combat is declared.</li>
             <li>Combat enables options for the attacked player:</li>
             <ul>
@@ -266,7 +268,6 @@
                 <br>Player retreating a unit from an attacked tile cannot move more units to it.
                 <br>All movements must comply with maximum unit moving points each time.
                 <br>Players lose 3IPC per each retreated unit.
-
             </ul>
         </ul>
         <li>Resolve combats</li>
@@ -275,6 +276,7 @@
             <li>If no enemy units in tile, player conquers the tile and infrastructure without damaging it.</li>
             <li>When combat finishes air units must use its remaining movement points to reach an airbase</li>
         </ul>
+        <li>Collect production from trucks with oil at Industrial Complex or Main Industrial Complex</li>
         <li>Regroup</li>
         <ul>Unit moving points gets reset. Units can regroup as long as their movement ends in a friendly tile
         </ul>
