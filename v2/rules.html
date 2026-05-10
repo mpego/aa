@@ -116,6 +116,10 @@
         <li>For an island to be usable as land must be the size of at least half of a tile.</li>
         <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is destroyed
         </li>
+        <li>Movement of units cannot be split in parts.
+            E.g. a transport with movement 4 cannot move 2 tile wait for units to be loaded and then move again.</li>
+
+        </li>
     </ul>
     <h2 id="infrastructure">Infrastructure</h2>
     <ul>
@@ -135,8 +139,9 @@
             </li>
             <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of 1
                 die. Each turn it can roll a die and production change to the higher value.
+                <br>If built on water, it produces two dice.
                 <br>A Refinery accespts only one transporter at a time.
-                <br>Can be built on land or sea but there must be 3 tiles separating it from any other infrastructure.
+                <br>Can be built on land or sea but there must be 3 tiles separating it from any other Refinery.
             </li>
             <li><strong>Military Base:</strong> Is the starting base for land units.</li>
             <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
@@ -154,10 +159,12 @@
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
+        <li>It is possible to sell an undamaged complex for half of its construction cost.</li>
     </ul>
     <h2 id="units">Units</h2>
     <ul>
         <ul>
+            <li>Infantry when bought can be placed at any tile with units or complexes.</li>
             <li><strong>Mechanized Infantry and sea transport</strong> Can transport Oil</li>
 
             <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as sea bases. Can hold up to 3
@@ -176,9 +183,9 @@
                 </ul>
             </li>
 
-            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive attack
+            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive engage
                 on passing by planes, ICBM or surface ships at shore on enemy turn.</li>
-            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an defensive attack
+            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an defensive engage
                 on passing by ships on enemy turn.</li>
 
             <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
@@ -318,6 +325,19 @@
         </ul>
     </ul>
     <h2 id="poc">Proof of concepts</h2>
+    <li>Bridges
+        <ul>
+            <br>A bridge can be built in tiles with friendly units on them.
+            <br>Te tile can have a bridge only if there is no diagonal with vortex out of lands being linked that leaves
+            both such lands in different half of the tile.
+            <br>If lands are in different tiles, in each case consider the edge closest to the land in the other tile.
+            <br>Each tile needs its own bridge.
+            <br>A bridge allows land units to cross water. Each bridge section count as one tile in regards to movement.
+            <br>Units in a bridge cannot deffend.
+            <br>Bridges can be attacked like any other infrastructure.
+            <br>Only submarines and transports can pass by water under bridges.
+        </ul>
+    </li>
     <ul>
     </ul>
 </body>
