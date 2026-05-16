@@ -86,8 +86,13 @@
         <br>
         The initial army of each player is 1 infantry, 1 mechanized infantry, 1 artillery, 1 tank and 50 IPC.
         <br><br>
-        Chose a player to go first.
-        Start the turn as normal.
+        Given the turn dynamics, players can do their movements all at the same time.
+        <br>Players that finished the turn must wait for the one that does not.
+        <br>Only when pyers want to move to the same tile precedence must be resolved. Roll a die the lowest gets
+        precedence.
+        <br>For turn based play, resolve player precedence at the begining of the game.
+
+        <br><br>Start the turn as normal.
     </ul>
     <h2 id=" objective">Game Objective</h2>
     <ul>
@@ -255,7 +260,7 @@
     </ul>
     <h2 id="turn">Turn</h2>
     <ul>
-        <li>Update oil production at Refineries</li>
+        <li>Update oil production at Refineries. Roll all dice at once and allocate production at payer choice.</li>
         <li>Move units</li>
         <ul>
             <li>Move as many units as wanted. Each unit can move only once.</li>
@@ -295,7 +300,8 @@
         </ul>
         <li>Collect production from trucks with oil at Industrial Complex or Main Industrial Complex</li>
         <li>Regroup</li>
-        <ul>Unit moving points gets reset. Units can regroup as long as their movement ends in a friendly tile
+        <ul>Unit moving points gets reset. Units can regroup as long as they are not transporting cargo and
+            their movement ends in a friendly tile.
         </ul>
         <li>Buy units or build infrastructure</li>
         <ul>

@@ -72,6 +72,13 @@
 
     <h2 id="setup">Configuración del Juego</h2>
     <ul>
+        <li>Mapa:</li>
+        <li>La recomendación es jugar en una cuadrícula hexagonal de 20 hexágonos de alto y 40 hexágonos de ancho.</li>
+        <li>El tamaño del mapa debe ser de al menos 5 por 5 hojas A4 en modo horizontal.</li>
+        <li>Generación de mapas: <a href="https://azgaar.github.io/Fantasy-Map-Generator">herramienta de código abierto de Azgaar</a>
+            (simplemente increíble).</li>
+        <br>
+
         Cada jugador elige una ubicación inicial al menos a 10 casillas de distancia entre sí.
         <br>
         <br><strong>Configuración del ejército</strong><br>
@@ -79,8 +86,12 @@
         <br>
         El ejército inicial de cada jugador es 1 infantería, 1 infantería mecanizada, 1 artillería, 1 tanque y 50 IPC.
         <br><br>
-        Elige a un jugador para empezar.
-        Comienza el turno normalmente.
+        Dada la dinámica de los turnos, los jugadores pueden hacer sus movimientos todos al mismo tiempo.
+        <br>Los jugadores que hayan terminado el turno deben esperar a los que no lo hayan hecho.
+        <br>Solo cuando los jugadores quieran moverse a la misma casilla se debe resolver la precedencia. Lanza un dado, el número más bajo obtiene la precedencia.
+        <br>Para el juego por turnos, resuelve la precedencia de los jugadores al comienzo del juego.
+
+        <br><br>Comienza el turno normalmente.
     </ul>
     <h2 id="objective">Objetivo del Juego</h2>
     <ul>
@@ -238,6 +249,7 @@
     </ul>
     <h2 id="turn">Turno</h2>
     <ul>
+        <li>Actualizar la producción de petróleo en las Refinerías. Lanza todos los dados a la vez y asigna la producción a elección del jugador.</li>
         <li>Mover unidades</li>
         <ul>
             <li>Mueve tantas unidades como desees. Cada unidad solo puede moverse una vez.</li>
@@ -273,8 +285,9 @@
             <li>Si no hay unidades enemigas en la casilla, el jugador conquista la casilla y la infraestructura sin dañarla.</li>
             <li>Cuando termina el combate, las unidades aéreas deben usar sus puntos de movimiento restantes para llegar a una base aérea.</li>
         </ul>
+        <li>Recolectar producción de los camiones con petróleo en el Complejo Industrial o Complejo Industrial Principal</li>
         <li>Reagrupar</li>
-        <ul>Los puntos de movimiento de la unidad se restablecen. Las unidades pueden reagruparse siempre y cuando su movimiento termine en una casilla aliada.
+        <ul>Los puntos de movimiento de la unidad se restablecen. Las unidades pueden reagruparse siempre y cuando no estén transportando carga y su movimiento termine en una casilla aliada.
         </ul>
         <li>Comprar unidades o construir infraestructura</li>
         <ul>
