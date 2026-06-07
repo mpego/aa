@@ -69,10 +69,22 @@
     </div>
 
     <h1>Game Rules</h1>
-
-    <h2 id="setup">Game Setup</h2>
+    <h2 id=" objective">Game Objective</h2>
     <ul>
-        <li>Map:</li>
+        <strong>Goal:</strong> Conquer enemies' central base.<br><br>
+        <li>Once a central base is conquered, conquered troops have the following turn to recover it before
+            getting out of the game. At which point the army is considered conquered.</li>
+        <li>In a more than two player game, the player that conquers a central base rolls a die:</li>
+        <ul>
+            <li>On a 3 or less he preserves the army and infrastructure.</li>
+            <li>On other cases, the troops losing their home base go off the game.</li>
+        </ul>
+        <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
+            best see fit.</li>
+    </ul>
+    <h2 id="setup">Setup</h2>
+    <ul>
+        Map:
         <li>Recomendation is to play in a hexagonal grid of 20 hex height and 40 hex width</li>
         <li>Map size to be at least 5 by 5 A4 sheet in landcape mode.</li>
         <li>Map generation <a href="https://azgaar.github.io/Fantasy-Map-Generator">open source tool by Azgaar</a>
@@ -88,40 +100,13 @@
         <br><br>
         Given the turn dynamics, players can do their movements all at the same time.
         <br>Players that finished the turn must wait for the one that does not.
-        <br>Only when pyers want to move to the same tile precedence must be resolved. Roll a die the lowest gets
+        <br>Only when players want to move to the same tile precedence must be resolved. Roll a die the lowest gets
         precedence.
         <br>For turn based play, resolve player precedence at the begining of the game.
 
         <br><br>Start the turn as normal.
     </ul>
-    <h2 id=" objective">Game Objective</h2>
-    <ul>
-        <strong>Goal:</strong> Conquer enemies' central base.<br><br>
-        <li>Once a central base is conquered, conquered troops have the following turn to recover it before
-            getting out of the game. At which point the army is considered conquered.</li>
-        <li>In a more than two player game, the player that conquers a central base rolls a die:</li>
-        <ul>
-            <li>On a 3 or less he preserves the army and infrastructure.</li>
-            <li>On other cases, the troops losing their home base go off the game.</li>
-        </ul>
-        <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
-            best see fit.</li>
-    </ul>
-    <h2 id="production">Production</h2>
-    <ul>
-        <li>Each Industrial Complex accounts for up to 20 IPC of production per turn.
-            All IPCs of production from all complexes is summed up to determine the total production of the
-            player
-            for the turn.
-        </li>
-        <li>Production of units cannot be split across multiple turns.</li>
-        <ul>
-            <li>Land units must be located at a Military Base.</li>
-            <li>Infantry can be located in any tile with units or infrastructure.</li>
-            <li>Planes must be located at an Air Base.</li>
-            <li>Ships must be located at a Sea Base.</li>
-        </ul>
-    </ul>
+
     <h2 id="tiles">Tiles and Unit movement</h2>
     <ul>
         <li>Any given tile can hold up to one complex and up to 10 units</li>
@@ -136,9 +121,11 @@
 
         </li>
     </ul>
+
     <h2 id="infrastructure">Infrastructure</h2>
     <ul>
         Infrastructure can be built in any tile with player units or next to a tile with a player complex.
+        <p><strong>Facilities</strong>
         <ul>
             <li><strong>Main Industrial Comples:</strong> It is the main base of the player.
                 <br>If player has no Refineries it allows to roll 2 dice for IPC collection.
@@ -162,12 +149,6 @@
             <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
             <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked.</li>
             <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
-            <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
-                keeps on the road. Going off the road stops the movement.</li>
-            <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main
-                Industrial Complex. When a pipe is built from a Refinery to Main Industrial Complex, the Refinery is
-                considered to be connected to Main Industrial Complex and production is available to the player in the
-                every turn. A pipe in a tile count as one unit.</li>
         </ul>
         <li>Complexes requires 2 hits to be destroyed; one hit disables it anything else one hit destroys it.</li>
 
@@ -179,6 +160,15 @@
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
+        <ul>
+            <p><strong>Infrastructure</strong></p>
+            <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
+                keeps on the road. Going off the road stops the movement.</li>
+            <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main
+                Industrial Complex. When a pipe is built from a Refinery to Main Industrial Complex, the Refinery is
+                considered to be connected to Main Industrial Complex and production is available to the player in the
+                every turn. A pipe in a tile count as one unit.</li>
+        </ul>
     </ul>
     <h2 id="units">Units</h2>
     <ul>
@@ -238,8 +228,26 @@
                 end in the corresponding complex.
             <li>Collected IPC accumulate to what player already has, up to a maximum of 50 IPC.</li>
     </ul>
+
+    <h2 id="production">Production</h2>
+    <ul>
+        <li>Each Industrial Complex accounts for up to 20 IPC of production per turn.
+            All IPCs of production from all complexes is summed up to determine the total production of the
+            player
+            for the turn.
+        </li>
+        <li>Production of units cannot be split across multiple turns.</li>
+        <ul>
+            <li>Land units must be located at a Military Base.</li>
+            <li>Infantry can be located in any tile with units or infrastructure.</li>
+            <li>Planes must be located at an Air Base.</li>
+            <li>Ships must be located at a Sea Base.</li>
+        </ul>
+    </ul>
+
     <h2 id="combat">Combat</h2>
     <ul>
+        Combar is resolved rolling one D6 for each unit.
         Each unit has an attack and defence value depending of the unit type.
         <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for the
         unit type.
