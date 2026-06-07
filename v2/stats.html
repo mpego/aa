@@ -50,7 +50,13 @@
             font-weight: bold;
         }
 
-        tr.category-header-other {
+        tr.category-header-infrastructure {
+            background-color: #5e5d59;
+            color: white;
+            font-weight: bold;
+        }
+
+        tr.category-header-actions {
             background-color: #cf984a;
             color: white;
             font-weight: bold;
@@ -231,7 +237,7 @@
                 <td>-</td>
                 <td>4</td>
                 <td>Transport:<br>
-                    Tow land units<br>
+                    Two land units<br>
                     Two oils
                 </td>
             </tr>
@@ -247,7 +253,7 @@
             </tr>
             <tr>
                 <td>Refinery</td>
-                <td>10</td>
+                <td>15</td>
                 <td colspan="4">Can receive 1 oil transporter</td>
             </tr>
             <tr>
@@ -270,13 +276,31 @@
                 <td>15</td>
                 <td colspan="4">Can hold 1 ICBM</td>
             </tr>
+            <tr class="category-header-infrastructure">
+                <td id="infrastructure" colspan="6">Infrastructure</td>
+            </tr>
             <tr>
                 <td>Roads</td>
                 <td>5</td>
                 <td colspan="4">Extra half of the unit movement</td>
             </tr>
-            <tr class="category-header-other">
+            <tr>
+                <td>Pipes</td>
+                <td>5</td>
+                <td colspan="4">Transport oil</td>
+            </tr>
+            <tr>
+                <td>Bridges</td>
+                <td>5</td>
+                <td colspan="4">Per section of road. Each section counts as one tile</td>
+            </tr>
+            <tr class="category-header-actions">
                 <td id="actions" colspan="6">Actions</td>
+            </tr>
+            <tr>
+                <td>Rellocate complexes</td>
+                <td>10</td>
+                <td colspan="4">Undamaged with no units complexes to tile with units.</td>
             </tr>
         </tbody>
     </table>

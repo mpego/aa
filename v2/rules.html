@@ -164,8 +164,13 @@
             <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
             <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
                 keeps on the road. Going off the road stops the movement.</li>
+            <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main
+                Industrial Complex. When a pipe is built from a Refinery to Main Industrial Complex, the Refinery is
+                considered to be connected to Main Industrial Complex and production is available to the player in the
+                every turn. A pipe in a tile count as one unit.</li>
         </ul>
-        <li>Infrastructure requires 2 hits to be destroyed; one hit disables it.</li>
+        <li>Complexes requires 2 hits to be destroyed; one hit disables it anything else one hit destroys it.</li>
+
         <li>Complexes can be attacekd as if they were land units. They always receive one damage if the
             tile is conquered with a combat.</li>
         <li>Disabled infrastructure cannot produce, fix, lunch or receive units of any kind.
@@ -174,7 +179,6 @@
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
-        <li>It is possible to sell an undamaged complex for half of its construction cost.</li>
     </ul>
     <h2 id="units">Units</h2>
     <ul>
@@ -313,6 +317,37 @@
         <li>Repeat for next player.</li>
     </ul>
 
+    <h2 id="poc">Proof of concepts</h2>
+    <li>Bridges
+        <ul>
+            <br>A bridge can be built in tiles with friendly units on them.
+            <br>Te tile can have a bridge only if there is no diagonal with vortex out of lands being linked that leaves
+            both such lands in different half of the tile.
+            <br>If lands are in different tiles, in each case consider the edge closest to the land in the other tile.
+            <br>Each tile needs its own bridge.
+            <br>A bridge allows land units to cross water. Each bridge section count as one tile in regards to movement.
+            <br>Units in a bridge cannot deffend.
+            <br>Bridges can be attacked like any other infrastructure.
+            <br>Only submarines and transports can pass by water under bridges.
+        </ul>
+    </li>
+    <li>
+        Destroying or relocating own infrastructure
+        <ul>
+            <br>A player can destroy its own infrastructure by two means:
+            <ul>
+                <li>By attacking it following regular attack rules</li>
+                <li>By spending 5 IPC when no units in the tile</li>
+            </ul>
+            It is possible to relocate an undamaged complex
+            <ul>
+                <li>By spending 10 IPC when no units in the tile</li>
+            </ul>
+            <br>
+
+            Replaced rule:
+            <br>It is possible to sell an undamaged complex for half of its construction cost.
+    </li>
     <h2 id="developments">Developments (under development ...)</h2>
     <ul>
         Every turn a player can spend up to 10 IPC in development.
@@ -322,6 +357,9 @@
         An extra completion dice can be bought with 10 IPC.
         <p>
         <ul>
+            <li><strong>Radar:</strong>Radars work in conjuction with AAA. Radars can detect air units passing by its
+                adjascent tiles and
+                extend the pre-attack of aaa to thier surronding tiles.</li>
             <li><strong>Land units level up:</strong>Land units can be damaged by other units with same or higher
                 level.
                 Before rolling the completion dice, a level up dice must be roll with a value higher that the
@@ -340,20 +378,6 @@
             <li><strong>Portable AAA</strong>AAA can be installed in Battleship and Aircraft Carriers
         </ul>
     </ul>
-    <h2 id="poc">Proof of concepts</h2>
-    <li>Bridges
-        <ul>
-            <br>A bridge can be built in tiles with friendly units on them.
-            <br>Te tile can have a bridge only if there is no diagonal with vortex out of lands being linked that leaves
-            both such lands in different half of the tile.
-            <br>If lands are in different tiles, in each case consider the edge closest to the land in the other tile.
-            <br>Each tile needs its own bridge.
-            <br>A bridge allows land units to cross water. Each bridge section count as one tile in regards to movement.
-            <br>Units in a bridge cannot deffend.
-            <br>Bridges can be attacked like any other infrastructure.
-            <br>Only submarines and transports can pass by water under bridges.
-        </ul>
-    </li>
     <ul>
     </ul>
 </body>
