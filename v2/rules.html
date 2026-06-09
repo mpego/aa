@@ -160,15 +160,14 @@
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
-        <ul>
-            <p><strong>Infrastructure</strong></p>
-            <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
-                keeps on the road. Going off the road stops the movement.</li>
-            <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main
-                Industrial Complex. When a pipe is built from a Refinery to Main Industrial Complex, the Refinery is
-                considered to be connected to Main Industrial Complex and production is available to the player in the
-                every turn. A pipe in a tile count as one unit.</li>
-        </ul>
+
+        <p><strong>Infrastructure</strong></p>
+        <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
+            keeps on the road. Going off the road stops the movement.</li>
+        <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main
+            Industrial Complex. When a pipe is built from a Refinery to Main Industrial Complex, the Refinery is
+            considered to be connected to Main Industrial Complex and production is available to the player in the
+            every turn. A pipe in a tile count as one unit.</li>
     </ul>
     <h2 id="units">Units</h2>
     <ul>
@@ -315,7 +314,7 @@
         <ul>Unit moving points gets reset. Units can regroup as long as they are not transporting cargo and
             their movement ends in a friendly tile.
         </ul>
-        <li>Buy units or build infrastructure</li>
+        <li>Buy units, build or relocate infrastructure</li>
         <ul>
             Buy units and infrastructure and place in map
         </ul>
@@ -386,6 +385,25 @@
             <li><strong>Portable AAA</strong>AAA can be installed in Battleship and Aircraft Carriers
         </ul>
     </ul>
+    <h2 id="poc">Proof of concepts</h2>
+    <li>Bridges
+        <ul>
+            <br>A bridge can not be built in tiles with enemy units on them.
+            <br>The max lenght of a bridge is three sections of road.
+            <br>Each bridge section counts as one tile in regards to movement same with every side of land.
+            <br>Units on a bridge cannot deffend.
+            <br>Bridges can be attacked like any other infrastructure (not individual sections of the bridge).
+            <br>Only submarines and transports can pass by water under bridges.
+        </ul>
+    </li>
+    <li>Pipes
+        <ul>
+            <br>Pipes are meant to transport oil from refineries to main conplexes.
+            <br>Pipes can be built in tiles with friendly units.
+            <br>Each refinery must have its onw line of pipes.
+            <br>Pipes can be attacked as any other infrastructure
+        </ul>
+    </li>
     <ul>
     </ul>
 </body>
