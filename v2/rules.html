@@ -82,6 +82,7 @@
         </li>
         <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
             best see fit.</li>
+        <li>In a two player game the game is over.</li>
     </ul>
 
     <h2 id="setup">Setup</h2>
@@ -126,10 +127,11 @@
         <p><strong>Facilities</strong>
         <ul>
             <li><strong>Main Industrial Comples:</strong> It is the main base of the player.
-                <br>If player has no Refineries it allows to roll a die for IPC collection.
-                On a 2 or less earn 5 IPCs.
+                <br>Player can choose to roll dice for IPC collection for each refinery or only one for the Main
+                Industrial Complex.
+                <br>If rolling for the Main complex on a 2 or less earn 5 IPCs.
                 <br>They come with defense against ICBM.
-                On ICBM attack roll three dice, on one 3 or less, the missile is destroyed before attack
+                <br>On ICBM attack roll three dice, on one 3 or less, the missile is destroyed before attack
                 <br>If the missile hits the complex it counts as one hit
             </li>
 
@@ -209,6 +211,8 @@
                         an Air base.
                     </li>
                     <li>Sea transport can transport oil from refineries, cannot combine units and oil at the same time.
+                        <br>In this case when the ship in on shore the oli can be loaded onto a mechanized infantery in
+                        the same territory (no cost) or to Main complex if located on the same tile.
                     </li>
                 </ul>
             </li>
@@ -235,13 +239,15 @@
         </ul>
         <li>Units being transported cannot defend.</li>
         <li>Units transporting oil cannot attack nor defend.</li>
-        <li>If a ship is docked it cannot defend if the territory is attacked, and uniits being transported
-            cannot either.</li>
+        <li>If a ship is docked it cannot defend if the territory is attacked, and units being transported
+            cannot either.
+            <br>If the tail is conquered, docked ship is captured
+        </li>
     </ul>
 
     <h2 id="collection">IPC Collection</h2>
     <ul>
-        IPC is collected every time a Mechanized Infantry with oil reaches an Industrial Complex or Main Industrial
+        IPC is collected every time a transport with oil reaches an Industrial Complex or Main Industrial
         Complex.
         <p>
             <li>Oil must be moved from Refineris either be land, sea or combination of both to Industrial Complex or
@@ -259,8 +265,7 @@
     <ul>
         <li>Each Industrial Complex accounts for up to 20 IPC of production per turn.
             All IPCs of production from all complexes is summed up to determine the total production of the
-            player
-            for the turn.
+            player for the turn.
         </li>
         <li>Production of units cannot be split across multiple turns.</li>
         <ul>
@@ -277,18 +282,18 @@
         Combat is resolved rolling one D6 for each atacking and defending unit.
         Each unit has an attack and defence value depending of the unit type.
         <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for
-        the
-        unit type.
-        <br>As units move, if there are enemy units in the destination tile, combat occurs. A tile can be attacked
-        only once per turn.
+        the unit type.
+        <br>As units move, if there are enemy units in the destination tile, combat occurs.
 
         <br>Each tile can be attacked only once per turn.
 
         <li><strong>Resolving combat:</strong>
             <br>From attacking units chose up to 5 units to run the attack.
             <br>From defending units, chose up to 5 units to run the defence.
+            <br>These are the only units that will combat this turn.
             <br>All other units remain in the tail as backup units.
             <br>Roll one die per attacking or defending unit. Each unit accounts damage according its type.
+            <br>At the end of attack there is no frontline or backup units. All units are in the same group.
         </li>
         <li> The player causing damage choose what unit or complex get the damage.
             If damage surpasses frontline units, damage can go to backup units in the tile according to attacking unit
@@ -314,10 +319,10 @@
         <li>Resolve combats</li>
         <ul>
             <li>Roll dice for attackers and defenders.</li>
-            <li>If no enemy units in tile.</li>
+            <li>If no enemy units in the tile, the player conquers the tile and its remaining infrastructure.</li>
             <li>When combat finishes air units must use its remaining movement points to reach an airbase</li>
         </ul>
-        <li>Collect production from Mechanized Infantry with oil at Main Industrial Complex or through pipelines.</li>
+        <li>Collect production from transports with oil at Main Industrial Complex or through pipelines.</li>
         <li>Regroup</li>
         <ul>Units that have not yet move can be moved.
             <br>Units can move to any tile with friendly units, including battle tiles or friendly complexes.
