@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Stats</title>
+    <title>Estadísticas</title>
     <style>
         table {
             border-collapse: collapse;
@@ -65,62 +65,62 @@
 </head>
 
 <body>
-    <a href="#land"">Land</a> |
-    <a href=" #air"">Air</a> |
-    <a href="#sea"">Sea</a> |
-    <a href=" #fac"">Facilites</a> |
-    <a href="#actions"">Actions</a> |
-    <a href=" rules.html">Rules</a>
+    <a href="#land">Tierra</a> |
+    <a href="#air">Aire</a> |
+    <a href="#sea">Mar</a> |
+    <a href="#fac">Instalaciones</a> |
+    <a href="#actions">Acciones</a> |
+    <a href="rules-es.html">Reglas</a>
     <table>
         <thead>
             <tr>
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th>Attack</th>
-                <th>Defense</th>
-                <th>Move</th>
-                <th>Effective</th>
+                <th>Tipo de Unidad</th>
+                <th>Costo</th>
+                <th>Ataque</th>
+                <th>Defensa</th>
+                <th>Movimiento</th>
+                <th>Efectividad</th>
 
             </tr>
         </thead>
         <tbody>
-            <!-- Land Units -->
+            <!-- Unidades Terrestres -->
             <tr class="category-header-land">
-                <td id="land" colspan="6">Land Units</td>
+                <td id="land" colspan="6">Unidades Terrestres</td>
             </tr>
             <tr>
-                <td>Infantry</td>
+                <td>Infantería</td>
                 <td>3</td>
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
-                <td>All land</td>
+                <td>Todo lo terrestre</td>
             </tr>
             <tr>
-                <td>Mechanized Infantry</td>
+                <td>Infantería Mecanizada</td>
                 <td>4</td>
                 <td>1</td>
                 <td>2</td>
                 <td>4</td>
-                <td>All land<br>
-                    <br><sup>Can transport oil</sup>
+                <td>Todo lo terrestre<br>
+                    <br><sup>Puede transportar petróleo</sup>
                 </td>
             </tr>
             <tr>
-                <td>Artillery</td>
+                <td>Artillería</td>
                 <td>4</td>
                 <td>2</td>
                 <td>2</td>
                 <td>2</td>
-                <td>All land<br>Fighters</td>
+                <td>Todo lo terrestre<br>Cazas</td>
             </tr>
             <tr>
-                <td>Tank</td>
+                <td>Tanque</td>
                 <td>6</td>
                 <td>3</td>
                 <td>3</td>
                 <td>4</td>
-                <td>All land<br>Surface ships</td>
+                <td>Todo lo terrestre<br>Barcos de superficie</td>
             </tr>
             <tr>
                 <td>AAA</td>
@@ -128,38 +128,38 @@
                 <td>1</td>
                 <td>2</td>
                 <td>2</td>
-                <td>All air<br>Surface ships<br><br><sup>defensive-engage</sup></td>
+                <td>Todo lo aéreo<br>Barcos de superficie<br><br><sup>Ataque defensivo</sup></td>
             </tr>
 
-            <!-- Air Units -->
+            <!-- Unidades Aéreas -->
             <tr class="category-header-air">
-                <td id="air" colspan="6">Air Units</td>
+                <td id="air" colspan="6">Unidades Aéreas</td>
             </tr>
             <tr>
-                <td>Fighter</td>
+                <td>Caza</td>
                 <td>10</td>
                 <td>3</td>
                 <td>4</td>
                 <td>8</td>
-                <td>All land<br>All air<br>Surface ships</td>
+                <td>Todo lo terrestre<br>Todo lo aéreo<br>Barcos de superficie</td>
             </tr>
             <tr>
-                <td>Tactical Bomber</td>
+                <td>Bombardero Táctico</td>
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
                 <td>8</td>
-                <td>All land<br>All ships
-                    <br><br><sup>can equip 2 Long Range Missile</sup>
+                <td>Todo lo terrestre<br>Todos los barcos
+                    <br><br><sup>Puede equipar 2 misiles de largo alcance</sup>
                 </td>
             </tr>
             <tr>
-                <td>Strategic Bomber</td>
+                <td>Bombardero Estratégico</td>
                 <td>14</td>
                 <td>4</td>
                 <td>1</td>
                 <td>12</td>
-                <td>All land<br>All ships</td>
+                <td>Todo lo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
                 <td>ICBM</td>
@@ -167,68 +167,68 @@
                 <td>5</td>
                 <td>-</td>
                 <td>10</td>
-                <td>Anything</td>
+                <td>Cualquier cosa</td>
             </tr>
             <tr>
-                <td>Refueler</td>
+                <td>Reabastecedor</td>
                 <td>15</td>
                 <td>-</td>
                 <td>-</td>
                 <td>2</td>
-                <td>One air unit at a time</td>
+                <td>Una unidad aérea a la vez</td>
             </tr>
             <tr>
-                <td>Transport</td>
+                <td>Transporte</td>
                 <td>7</td>
                 <td>-</td>
                 <td>-</td>
                 <td>6</td>
-                <td>Transports:<br>
-                    Tow land units<br>
+                <td>Transporta:<br>
+                    Dos unidades terrestres<br>
                 </td>
             </tr>
 
-            <!-- Sea Units -->
+            <!-- Unidades Marítimas -->
             <tr class="category-header-sea">
-                <td id="sea" colspan="6">Sea Units</td>
+                <td id="sea" colspan="6">Unidades Marítimas</td>
             </tr>
             <tr>
-                <td>Battleship</td>
+                <td>Acorazado</td>
                 <td>20</td>
                 <td>4</td>
                 <td>4</td>
                 <td>4</td>
-                <td>All land<br>All air<br>All surface ships</td>
+                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
-                <td>Cruiser</td>
+                <td>Crucero</td>
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
                 <td>4</td>
-                <td>All land<br>All air<br>All surface ships</td>
+                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
-                <td>Destroyer</td>
+                <td>Destructor</td>
                 <td>8</td>
                 <td>2</td>
                 <td>2</td>
                 <td>4</td>
-                <td>All land<br>All ships</td>
+                <td>Todo lo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
-                <td>Submarine</td>
+                <td>Submarino</td>
                 <td>6</td>
                 <td>2</td>
                 <td>1</td>
                 <td>4</td>
-                <td>All ships
-                    <br><br><sup>defensive-engage
-                        <br>can equip 2 torpedoes</sup>
+                <td>Todos los barcos
+                    <br><br><sup>Ataque defensivo
+                        <br>Puede equipar 2 torpedos</sup>
                 </td>
             </tr>
             <tr>
-                <td>Aircraft Carrier</td>
+                <td>Portaaviones</td>
                 <td>16</td>
                 <td>-</td>
                 <td>-</td>
@@ -236,18 +236,18 @@
                 <td>-</td>
             </tr>
             <tr>
-                <td>Transport</td>
+                <td>Transporte</td>
                 <td>7</td>
                 <td>-</td>
                 <td>-</td>
                 <td>4</td>
-                <td>Transport:<br>
-                    Two land units<br>
-                    Two oils
+                <td>Transporta:<br>
+                    Dos unidades terrestres<br>
+                    Dos unidades de petróleo
                 </td>
             </tr>
             <tr class="category-header-other">
-                <td id="equipment" colspan="6">Equipment</td>
+                <td id="equipment" colspan="6">Equipamiento</td>
             </tr>
             <tr>
                 <td>Torpedo</td>
@@ -255,93 +255,92 @@
                 <td>2</td>
                 <td>-</td>
                 <td>2</td>
-                <td>All ships
-                    <br><br><sup>Place Cruiser or Submarine</sup>
+                <td>Todos los barcos
+                    <br><br><sup>Colocar en Crucero o Submarino</sup>
                 </td>
             </tr>
             <tr>
-                <td>Long range missile</td>
+                <td>Misil de largo alcance</td>
                 <td>3</td>
                 <td>2</td>
                 <td>-</td>
                 <td>2</td>
-                <td>All land
-                    <br>Al surface ships
-                    <br><br><sup>Place on Tactical Bomber</sup>
+                <td>Todo lo terrestre
+                    <br>Todos los barcos de superficie
+                    <br><br><sup>Colocar en Bombardero Táctico</sup>
                 </td>
             </tr>
 
-            <!-- Facilities -->
+            <!-- Instalaciones -->
             <tr class="category-header-facilities">
-                <td id="fac" colspan="6">Facilities</td>
+                <td id="fac" colspan="6">Instalaciones</td>
             </tr>
             <tr>
-                <td>Financial Complex</td>
+                <td>Complejo Financiero</td>
                 <td>20</td>
-                <td colspan="4">Increase production limit by 20 IPCs per turn.</td>
+                <td colspan="4">Aumenta el límite de producción en 20 IPCs por turno.</td>
             </tr>
             <tr>
-                <td>Industrial Complex</td>
+                <td>Complejo Industrial</td>
                 <td>15</td>
-                <td colspan="4">Produces units and equipment.</td>
+                <td colspan="4">Produce unidades y equipamiento.</td>
             </tr>
             <tr>
-                <td>Refinery</td>
+                <td>Refinería</td>
                 <td>15</td>
-                <td colspan="4">Can receive 1 oil transporter</td>
+                <td colspan="4">Puede recibir 1 transporte de petróleo</td>
             </tr>
             <tr>
-                <td>Military Base</td>
+                <td>Base Militar</td>
                 <td>10</td>
-                <td colspan="4">Can store 3 units of equipment</td>
+                <td colspan="4">Puede almacenar 3 unidades de equipamiento</td>
             </tr>
             <tr>
-                <td>Air Base</td>
+                <td>Base Aérea</td>
                 <td>10</td>
-                <td colspan="4">Can park 5 airplanes </td>
+                <td colspan="4">Puede estacionar 5 aviones</td>
             </tr>
             <tr>
-                <td>Naval Base</td>
+                <td>Base Naval</td>
                 <td>10</td>
-                <td colspan="4">Can dock 2 ship</td>
+                <td colspan="4">Puede atracar 2 barcos</td>
             </tr>
             <tr>
-                <td>ICBM Silo</td>
+                <td>Silo de ICBM</td>
                 <td>10</td>
-                <td colspan="4">Can hold 1 ICBM</td>
+                <td colspan="4">Puede albergar 1 ICBM</td>
             </tr>
             <tr class="category-header-infrastructure">
-                <td id="infrastructure" colspan="6">Infrastructure</td>
+                <td id="infrastructure" colspan="6">Infraestructura</td>
             </tr>
             <tr>
-                <td>Roads</td>
+                <td>Carreteras</td>
                 <td>5</td>
-                <td colspan="4">Allow distribution of units and equipment</td>
+                <td colspan="4">Permiten la distribución de unidades y equipamiento</td>
             </tr>
             <tr>
-                <td>Bridge</td>
+                <td>Puente</td>
                 <td>10</td>
-                <td colspan="4">Maximum three sections of roads</td>
+                <td colspan="4">Máximo tres secciones de carreteras</td>
             </tr>
             <tr>
-                <td>Oil Pipe</td>
+                <td>Tubería de Petróleo</td>
                 <td>5</td>
-                <td colspan="4">Transports oil from refineries to main conplexes</td>
+                <td colspan="4">Transporta petróleo desde las refinerías a los complejos base</td>
             </tr>
             <tr class="category-header-other">
-                <td id="actions" colspan="6">Actions</td>
+                <td id="actions" colspan="6">Acciones</td>
             </tr>
             <tr>
-                <td>Relocate Base complex</td>
+                <td>Reubicar Complejo Base</td>
                 <td>50</td>
-                <td colspan="4">Move Base Complex to another tile. </td>
+                <td colspan="4">Mueve el Complejo Base a otra casilla.</td>
             </tr>
 
             <tr>
-                <td>Rellocate complexes</td>
+                <td>Reubicar complejos</td>
                 <td>10</td>
-                <td colspan="4">Undamaged with no units complexes to tile with units.
-                </td>
+                <td colspan="4">Complejos intactos sin unidades a casillas con unidades.</td>
             </tr>
         </tbody>
     </table>

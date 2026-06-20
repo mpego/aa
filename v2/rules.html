@@ -97,9 +97,9 @@
         Each player choses a starting location at least 15 tiles apart of each other.
         <br>
         <br><strong>Army setup</strong><br>
-        Place a main industrial complex in each home tile.
+        Place a Base Complex in each home tile.
         <br>
-        The initial army of each player is 1 infantry, 1 mechanized infantry, 1 artillery, 1 tank and 50 IPC.
+        The initial army of each player is 4 infantry and 50 IPC.
         <br><br>
         <br>Resolve player precedence at the begining of the game.
 
@@ -108,8 +108,8 @@
 
     <h2 id="tiles">Tiles and Unit movement</h2>
     <ul>
-        <li>Any given tile can hold up to one complex and up to 10 units</li>
-        <li>Unit being transported are not counted.</li>
+        <li>Any given tile can hold up to 10 between infrastructure and units per player</li>
+        <li>Units or equipment being transported are not counted.</li>
         <li>For an island to be usable as land must be the size of at least half of a tile.</li>
         <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is
             destroyed, except refuelers.
@@ -126,18 +126,16 @@
         Infrastructure can be built in any tile with player units or next to a tile with a player complex.
         <p><strong>Facilities</strong>
         <ul>
-            <li><strong>Main Industrial Comples:</strong> It is the main base of the player.
-                <br>Player can choose to roll dice for IPC collection for each refinery or only one for the Main
-                Industrial Complex.
-                <br>If rolling for the Main complex on a 2 or less earn 5 IPCs.
+            <li><strong>Base Complex:</strong>
+                It is the Base Complex of the player.
                 <br>They come with defense against ICBM.
                 <br>On ICBM attack roll three dice, on one 3 or less, the missile is destroyed before attack
                 <br>If the missile hits the complex it counts as one hit
             </li>
 
-            <li><strong>Industrial Complex:</strong> It increse production for units.
-                <br>These does not come with ICBM defense.
-                <br>For 50 IPC one of these can be swapped with the Main Industrial Complex.
+            <li><strong>Financial Complex:</strong>
+                It increse production for units.
+                <br>For 50 IPC one of these can be swapped with the Base Complex.
             </li>
             <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of 1
                 die. Each turn it can roll a die and production change to the higher value.
@@ -145,13 +143,23 @@
                 <br>When oil is loaded onto a transport, move the marker to the corresponding transporter unit
                 <br>A Refinery accespts only one transporter at a time.
                 <br>Can be built on land or sea but there must be 3 tiles separating it from any other Refinery.
+                <br>If built on a tile with water and land, it is always built on land.
+            </li>
+            <li><strong>Industrial Complex</strong>
+                These are for production of units and equipment.
+                <br>For production to occur, it must be connected by road to the destination base.
+                <br>Although ships are sea units they must still be produced in industrial complexes connected by road
+                to
+                a Naval base.
+                <br>They can hold up to three units, these units cannot move, attack nor defend.
             </li>
             <li><strong>Military Base:</strong> Is the starting base for land units.</li>
             <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
-            <li><strong>Naval Bases:</strong> Can hold a max of 1 ships docked. Docking is required to repair ships</li>
+            <li><strong>Naval Bases:</strong> Can hold a max of 2 ships docked. Docking is required to repair ships</li>
             <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
         </ul>
         <li>Complexes requires 2 hits to be destroyed; one hit disables it, the next hit, if not fixed, destroys it.
+            <br>If there are units in the complex when it is destroyed, they are also destroyed.
         </li>
 
         <li>Complexes can be attacekd as if they were land units.</li>
@@ -160,16 +168,16 @@
             in the range of movement of the plane or are considered destroyed.
         </li>
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
+        <li>For storage at complexes, two packs of equipment count as one unit</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
-        <li>It is possible to relocate an undamaged complex by spending 10 IPC when no units in the complex tile.
-            Relocation must be to a tile with friendly units. This excludes Main Industrial Complex.</li>
 
         <p><strong>Infrastructure</strong></p>
-        <li><strong>Roads:</strong> Roads allow units to move an extra half of their movement as long as the unit
-            keeps on the road. Going off the road stops the movement.</li>
-        <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Main Industrial Complex.
-            <br>When a pipe line is built from a Refinery to Main Industrial Complex, the Refinery is
-            considered to be connected to Main Industrial Complex and production is available to the player in the
+        <li><strong>Roads:</strong> Roads allow production to reach the destination base.
+            <br>Roads are not conquered, they are either destroyed or remains usabble.
+        </li>
+        <li><strong>Pipes:</strong>Pipes can be used by refineries to pump oil to Base Complex.
+            <br>When a pipe line is built from a Refinery to Base Complex, the Refinery is
+            considered to be connected to Base Complex and production is available to the player in the
             every turn.
             <br>A pipe line in a tile count as one unit. So it can be attacked and destroyed.
             <br>Pipelines are not conquered, they are either destroyed of keeps passing oil.
@@ -192,30 +200,25 @@
     <h2 id="units">Units</h2>
     <ul>
         <ul>
-            <li><strong>Infantry:</strong> when bought can be placed at any tile with units or complexes.</li>
-            <li><strong>Mechanized Infantry and sea transport</strong> Can transport Oil.
-                <br>Mechanized units can transport one unit of Oil.
-                <br>sea transport can transport 2 units of oil or 1 land unit and 1 unit of oil
+            <li><strong>Infantry:</strong>Infantry is not produced, it is directly bought and can be placed at any tile
+                with friendly units or complexes.</li>
+            <li><strong>Transports</strong> Can transport Oil or units or equipment.
+                <br>Mechanized units can transport one unit of oil or pack of equipment.
+                <br>Sea transport can transport 2 units of oil or 2 units between land units and pack of equipment.
+                <br>Air transport can transport 2 between land units and pack of equipment.
+                <br>
+            <li>Air transports can land with troops on an Aircraft Carrier, yet troops must be unloaded at
+                an Air base.
+            </li>
+            <li>Sea transport when the ship in on shore the oil can be loaded onto a mechanized infantery in
+                the same territory or to Base Complex if located on the same tile.
+            </li>
             </li>
 
-            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as sea bases. Can hold up to 3
+            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as naval bases. Can hold up to 3
                 air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a Naval Base to be
                 fixed.
                 Repair cost is half the ship costs.</li>
-
-            <li><strong>Sea or Air Transports:</strong>
-                <ul>
-                    <li>Can be used to transport up to two land units.</li>
-                    <li>It cannot attack nor defend from an attack.</li>
-                    <li>Air transports can land with troops on an Aircraft Carrier, yet troops must be unloaded at
-                        an Air base.
-                    </li>
-                    <li>Sea transport can transport oil from refineries, cannot combine units and oil at the same time.
-                        <br>In this case when the ship in on shore the oli can be loaded onto a mechanized infantery in
-                        the same territory (no cost) or to Main complex if located on the same tile.
-                    </li>
-                </ul>
-            </li>
 
             <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive engage
                 on passing by planes, ICBM or surface ships at shore on enemy turn. Use attacking stats.</li>
@@ -237,43 +240,66 @@
                 and other planes cannot refuel at the refueler.
             </ul>
         </ul>
-        <li>Units being transported cannot defend.</li>
-        <li>Units transporting oil cannot attack nor defend.</li>
-        <li>If a ship is docked it cannot defend if the territory is attacked, and units being transported
-            cannot either.
-            <br>If the tail is conquered, docked ship is captured
+        <li>Units transporting or being transported cannot attack or defend.</li>
+        <li>If a ship is docked it cannot defend if the territory is attacked
+            <br>If the tile is conquered, docked ship is captured
         </li>
+        <li>Units in storage, docked or parked count towards the limit of units per tile.</li>
     </ul>
 
+    <h2 id="equipment">Equipment</h2>
+    <ul>
+        <strong>Long Range Missiles</strong>
+        <li>Can be equipped onto Tactical Bombers.</li>
+        <li>A Long Range Missile is consumed after use.</li>
+        <li>One pack consist of two missiles</li>
+        <p></p>
+        <strong>Torpedo </strong>
+        <li>Can be equipped onto submarines or destroyers.</li>
+        <li>A torpedo can be used to attack any ship.</li>
+        <li>A torpedo is consumed after use.</li>
+        <li>One pack consist of two torpedo</li>
+    </ul>
+    <br>A pack of equipment count as one unit for storage or transport.
+    <li>A unit can be equiped only at the corresponding base of the unit</li>
     <h2 id="collection">IPC Collection</h2>
     <ul>
-        IPC is collected every time a transport with oil reaches an Industrial Complex or Main Industrial
-        Complex.
+        <br>Player can choose to roll dice for IPC collection for each refinery or one die for the Base Complex.
+        <br>If rolling for the Base Complex on a 2 or less earns 5 IPCs.
+
+        IPC is collected every time a unit of oil reaches the Base Complex.
         <p>
-            <li>Oil must be moved from Refineris either be land, sea or combination of both to Industrial Complex or
-                Main Industrial Complex to be converted into production IPCs.
+            <li>Oil must be moved from Refineris either by land, sea or combination of both to the
+                Base Complex to be converted into production IPCs.
                 <br>Each transport can load from one Refinery at a time. To load or unload oil the movement must
                 end in the corresponding complex.
 
-                <br>Refineries connected to Main complex through a pipe line collect production without the need of
+                <br>Refineries connected to Base Complex through a pipe line collect production without the need of
                 transports.
                 <br>Conversion value is 1 to 1 the value of the dice of the Refinery to IPC.
-            <li>Collected IPC accumulate to what player already has, up to a maximum of 50 IPC.</li>
+            <li>Collected IPC accumulates to what player already has, up to a maximum of 50 IPC.</li>
     </ul>
 
     <h2 id="production">Production</h2>
     <ul>
-        <li>Each Industrial Complex accounts for up to 20 IPC of production per turn.
+        <li>Base Complex allows for 20 IPC of production.</li>
+        <li>Each Financial Complex accounts for 20 IPC of additional production per turn.
             All IPCs of production from all complexes is summed up to determine the total production of the
             player for the turn.
         </li>
         <li>Production of units cannot be split across multiple turns.</li>
+
+        <br>Units and equipment are produced in Industrial Complexes.
+        <br>When produced they are automatically transported by roads connected to the destination base.
+        <br>If there are no roads, the unit is temporarily stored on the Industrial Complex.
+        <br>Up to three units can wait on Industrial Complex for transport.
+        <br>If more units are produced, the units must be transported or discarded.
+
         <ul>
-            <li>Land units must be located at a Military Base.</li>
-            <li>Infantry can be located in any tile with units or infrastructure.</li>
-            <li>Airplanes must be located at an Air Base.</li>
-            <li>Ships must be located at a Sea Base.</li>
-            <li>ICBM must be located at an ICBM Silo.</li>
+            <li>Land units must be transported to a Military Base.</li>
+            <li>Airplanes must be transported to an Air Base.</li>
+            <li>Ships must be transported to a Naval Base.</li>
+            <li>ICBM must be transported to an ICBM Silo.</li>
         </ul>
     </ul>
 
@@ -303,6 +329,8 @@
 
         <br>After the attack remaning units stais in the tile except for airplanes that must return to an airbase or
         refueler.
+
+        <br>When a unit is equiped the equipment moving range is attacking range of such equipment
     </ul>
 
     <h2 id="turn">Turn</h2>
@@ -322,7 +350,7 @@
             <li>If no enemy units in the tile, the player conquers the tile and its remaining infrastructure.</li>
             <li>When combat finishes air units must use its remaining movement points to reach an airbase</li>
         </ul>
-        <li>Collect production from transports with oil at Main Industrial Complex or through pipelines.</li>
+        <li>Collect production from transports with oil at Base Complex or through pipelines.</li>
         <li>Regroup</li>
         <ul>Units that have not yet move can be moved.
             <br>Units can move to any tile with friendly units, including battle tiles or friendly complexes.

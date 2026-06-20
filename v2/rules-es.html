@@ -65,7 +65,7 @@
         <a href="#combat">Combate</a> |
         <a href="#developments">Desarrollos</a> |
         <a href="#poc">Prueba de Conceptos</a> |
-        <a href="stats.html">Estadísticas</a> |
+        <a href="stats-es.html">Estadísticas</a> |
     </div>
 
     <h1>Reglas del Juego</h1>
@@ -94,9 +94,9 @@
         Cada jugador elige una ubicación inicial al menos a 15 casillas de distancia entre sí.
         <br>
         <br><strong>Configuración del ejército</strong><br>
-        Coloca un complejo industrial principal en cada casilla de origen.
+        Coloca un Complejo Base en cada casilla de origen.
         <br>
-        El ejército inicial de cada jugador es 1 infantería, 1 infantería mecanizada, 1 artillería, 1 tanque y 50 IPC.
+        El ejército inicial de cada jugador es de 4 infanterías y 50 IPC.
         <br><br>
         <br>Resolver la precedencia de los jugadores al principio de la partida.
 
@@ -105,8 +105,8 @@
 
     <h2 id="tiles">Casillas y Movimiento de Unidades</h2>
     <ul>
-        <li>Cualquier casilla puede contener hasta un complejo y hasta 10 unidades.</li>
-        <li>Las unidades que están siendo transportadas no se cuentan.</li>
+        <li>Cualquier casilla puede contener hasta un máximo de 10 elementos combinados entre infraestructura y unidades por jugador.</li>
+        <li>Las unidades o el equipamiento que están siendo transportados no se cuentan.</li>
         <li>Para que una isla sea utilizable como tierra firme, debe tener el tamaño de al menos media casilla.</li>
         <li>Las unidades aéreas deben terminar su movimiento en una Base Aérea, Portaaviones o Avión de Reabastecimiento. De lo contrario, la unidad es destruida, excepto los reabastecedores.
         </li>
@@ -120,42 +120,49 @@
         La infraestructura se puede construir en cualquier casilla con unidades propias o adyacente a una casilla con un complejo propio.
         <p><strong>Instalaciones</strong>
         <ul>
-            <li><strong>Complejo Industrial Principal:</strong> Es la base principal del jugador.
-                <br>El jugador puede elegir lanzar dados para la recolección de IPC por cada refinería o solo uno por el Complejo Industrial Principal.
-                <br>Si se lanza para el complejo principal, con un 2 o menos gana 5 IPCs.
+            <li><strong>Complejo Base:</strong> Es la base principal del jugador.
                 <br>Cuentan con defensa contra ICBM. Ante un ataque de ICBM, lanza tres dados; con al menos un 3 o menos, el misil es destruido antes del ataque.
                 <br>Si el misil impacta en el complejo, cuenta como un impacto.
             </li>
 
-            <li><strong>Complejo Industrial:</strong> Aumenta la producción de unidades.
-                <br>Estos no cuentan con defensa contra ICBM.
-                <br>Por 50 IPC, uno de estos complejos se puede intercambiar por el Complejo Industrial Principal.
+            <li><strong>Complejo Financiero:</strong> Aumenta la producción para las unidades.
+                <br>Por 50 IPC, uno de estos complejos se puede intercambiar por el Complejo Base.
             </li>
             <li><strong>Refinería:</strong> Cada refinería tiene un valor de producción de petróleo igual al valor del lanzamiento de 1 dado. Cada turno se puede lanzar un dado y la producción cambia al valor más alto.
                 <br>Si se construye en el agua, produce dos dados. Colocar marcadores de valor en cada refinería.
                 <br>Cuando el petróleo se carga en un transporte, mueve el marcador a la unidad de transporte correspondiente.
                 <br>Una refinería solo acepta un transporte a la vez.
                 <br>Se puede construir en tierra o mar, pero debe haber una distancia de 3 casillas con respecto a cualquier otra refinería.
+                <br>Si se construye en una casilla con agua y tierra, se construye siempre en la parte de tierra.
+            </li>
+            <li><strong>Complejo Industrial:</strong> Son para la producción de unidades y equipamiento.
+                <br>Para que ocurra la producción, debe estar conectado por carretera a la base de destino.
+                <br>Aunque los barcos son unidades marítimas, deben seguir produciéndose en complejos industriales conectados por carretera a una Base Naval.
+                <br>Pueden albergar hasta tres unidades; estas unidades no pueden moverse, atacar ni defenderse.
             </li>
             <li><strong>Base Militar:</strong> Es la base de inicio para las unidades terrestres.</li>
             <li><strong>Base Aérea:</strong> Puede albergar un máximo de 5 aviones.</li>
-            <li><strong>Base Naval:</strong> Puede albergar un máximo de 1 barco atracado. Se requiere atracar para reparar barcos.</li>
+            <li><strong>Base Naval:</strong> Puede albergar un máximo de 2 barcos atracados. Se requiere atracar para reparar barcos.</li>
             <li><strong>Silo de ICBM:</strong> Puede albergar 1 ICBM.</li>
         </ul>
-        <li>Los complejos requieren 2 impactos para ser destruidos: un impacto los desactiva y el siguiente impacto, si no se repara, los destruye.</li>
+        <li>Los complejos requieren 2 impactos para ser destruidos: un impacto los desactiva y el siguiente impacto, si no se repara, los destruye.
+            <br>Si hay unidades en el complejo cuando se destruye, también son destruidas.
+        </li>
 
         <li>Los complejos pueden ser atacados como si fueran unidades terrestres.</li>
         <li>La infraestructura desactivada no puede producir, reparar, lanzar ni recibir unidades de ningún tipo.
             <br>En el caso de las bases aéreas, los aviones deben enviarse a otras bases al alcance de su movimiento o serán destruidos.
         </li>
         <li>Las unidades desactivadas solo pueden moverse; los aviones no pueden despegar ni aterrizar en ellas.</li>
+        <li>Para el almacenamiento en complejos, dos paquetes de equipamiento cuentan como una unidad.</li>
         <li>Las reparaciones de cualquier complejo o unidad cuestan la mitad de su costo de construcción.</li>
-        <li>Es posible reubicar un complejo intacto gastando 10 IPC cuando no haya unidades en la casilla del complejo. La reubicación debe ser a una casilla con unidades aliadas. Esto excluye al Complejo Industrial Principal.</li>
 
         <p><strong>Infraestructura de tránsito</strong></p>
-        <li><strong>Carreteras:</strong> Las carreteras permiten a las unidades mover la mitad extra de su movimiento siempre y cuando la unidad se mantenga en la carretera. Salirse de la carretera detiene el movimiento.</li>
-        <li><strong>Tuberías:</strong> Las tuberías pueden ser utilizadas por las refinerías para bombear petróleo al Complejo Industrial Principal.
-            <br>Cuando se construye una línea de tubería desde una refinería hasta el Complejo Industrial Principal, la refinería se considera conectada al Complejo Industrial Principal y la producción está disponible para el jugador en cada turno.
+        <li><strong>Carreteras:</strong> Las carreteras permiten que la producción llegue a la base de destino.
+            <br>Las carreteras no se conquistan; se destruyen o continúan utilizables.
+        </li>
+        <li><strong>Tuberías:</strong> Las tuberías pueden ser utilizadas por las refinerías para bombear petróleo al Complejo Base.
+            <br>Cuando se construye una línea de tubería desde una refinería hasta el Complejo Base, la refinería se considera conectada al Complejo Base y la producción está disponible para el jugador en cada turno.
             <br>Una línea de tubería en una casilla cuenta como una unidad. Por lo tanto, puede ser atacada y destruida.
             <br>Las tuberías no se conquistan: o son destruidas, o continúan transportando petróleo.
             <br>Las tuberías se pueden construir en casillas con unidades aliadas.
@@ -167,7 +174,7 @@
                 <br>La longitud máxima de un puente es de tres secciones de carretera.
                 <br>Cada sección de puente cuenta como una casilla en lo que respecta al movimiento, al igual que cualquier orilla de tierra.
                 <br>Las unidades en un puente no pueden defenderse.
-                <br>Los puentes pueden ser atacados como cualquier otra infraestructura (not las secciones individuales del puente).
+                <br>Los puentes pueden ser atacados como cualquier otra infraestructura (no las secciones individuales del puente).
                 <br>Solo los submarinos y transportes pueden pasar por agua bajo los puentes.
             </ul>
         </li>
@@ -177,24 +184,17 @@
     <h2 id="units">Unidades</h2>
     <ul>
         <ul>
-            <li><strong>Infantería:</strong> al comprarse se puede colocar en cualquier casilla con unidades o complejos.</li>
-            <li><strong>Infantería mecanizada y transporte marítimo:</strong> Pueden transportar petróleo.
-                <br>Las unidades mecanizadas pueden transportar una unidad de petróleo.
-                <br>El transporte marítimo puede transportar 2 unidades de petróleo o 1 unidad terrestre y 1 unidad de petróleo.
+            <li><strong>Infantería:</strong> La infantería no se produce, se compra directamente y se puede colocar en cualquier casilla con unidades o complejos aliados.</li>
+            <li><strong>Transportes:</strong> Pueden transportar petróleo, unidades o equipamiento.
+                <br>Las unidades mecanizadas pueden transportar una unidad de petróleo o un paquete de equipamiento.
+                <br>El transporte marítimo puede transportar 2 unidades de petróleo, o bien 2 unidades combinadas entre unidades terrestres y paquetes de equipamiento.
+                <br>El transporte aéreo puede transportar 2 unidades combinadas entre unidades terrestres y paquetes de equipamiento.
+                <br>
+            <li>Los transportes aéreos pueden aterrizar con tropas en un Portaaviones, pero las tropas deben descargarse en una Base Aérea.</li>
+            <li>Cuando el transporte marítimo está en la costa, el petróleo puede cargarse en una infantería mecanizada en el mismo territorio o en el Complejo Base si se encuentra en la misma casilla.</li>
             </li>
 
-            <li><strong>Portaaviones:</strong> No son transportes; actúan como bases marítimas. Pueden albergar hasta 3 unidades aéreas. Requieren 2 impactos para ser destruidos, y un impacto los desactiva. Tienen que atracar en una Base Naval para ser reparados. El costo de reparación es la mitad del costo del barco.</li>
-
-            <li><strong>Transportes Marítimos o Aéreos:</strong>
-                <ul>
-                    <li>Se pueden usar para transportar hasta dos unidades terrestres.</li>
-                    <li>No pueden atacar ni defenderse de un ataque.</li>
-                    <li>Los transportes aéreos pueden aterrizar con tropas en un Portaaviones, pero las tropas deben descargarse en una Base Aérea.</li>
-                    <li>El transporte marítimo puede transportar petróleo de las refinerías; no puede combinar unidades y petróleo al mismo tiempo.
-                        <br>En este caso, cuando el barco está en la costa, el petróleo puede cargarse en una infantería mecanizada en el mismo territorio (sin costo) o en el Complejo Principal si se encuentra en la misma casilla.
-                    </li>
-                </ul>
-            </li>
+            <li><strong>Portaaviones:</strong> No son transportes; actúan como bases navales. Pueden albergar hasta 3 unidades aéreas. Requieren 2 impactos para ser destruidos, y un impacto los desactiva. Tienen que atracar en una Base Naval para ser reparados. El costo de reparación es la mitad del costo del barco.</li>
 
             <li><strong>AAA:</strong> Cuenta con un sistema de defensa automático que le permite realizar un ataque defensivo a aviones que pasen, misiles ICBM o barcos de superficie en la costa durante el turno enemigo. Usa estadísticas de ataque.</li>
             <li><strong>Submarinos:</strong> Cuentan con un sistema de defensa automático que les permite realizar un ataque defensivo a barcos que pasen durante el turno enemigo. Usa estadísticas de ataque.</li>
@@ -213,35 +213,62 @@
                 </ul>
             </li>
         </ul>
-        <li>Las unidades que están siendo transportadas no pueden defenderse.</li>
-        <li>Las unidades que transportan petróleo no pueden atacar ni defenderse.</li>
-        <li>Si un barco está atracado no puede defenderse si la casilla es atacada, y las unidades que están siendo transportadas tampoco.
+        <li>Las unidades que están siendo transportadas o que transportan carga no pueden atacar ni defenderse.</li>
+        <li>Si un barco está atracado no puede defenderse si la casilla es atacada.
             <br>Si la casilla es conquistada, el barco atracado es capturado.
         </li>
+        <li>Las unidades almacenadas, atracadas o estacionadas cuentan para el límite de unidades por casilla.</li>
     </ul>
+
+    <h2 id="equipment">Equipamiento</h2>
+    <ul>
+        <strong>Misiles de Largo Alcance</strong>
+        <li>Se pueden equipar en los Bombarderos Tácticos.</li>
+        <li>Un misil de largo alcance se consume después de su uso.</li>
+        <li>Un paquete consiste de dos misiles.</li>
+        <p></p>
+        <strong>Torpedos</strong>
+        <li>Se pueden equipar en submarinos o destructores.</li>
+        <li>Un torpedo se puede usar para atacar cualquier barco.</li>
+        <li>Un torpedo se consume después de su uso.</li>
+        <li>Un paquete consiste de dos torpedos.</li>
+    </ul>
+    <br>Un paquete de equipamiento cuenta como una unidad para almacenamiento o transporte.
+    <li>Una unidad solo puede ser equipada en la base correspondiente del tipo de unidad.</li>
+    <li>Cuando una unidad está equipada, el rango de movimiento del equipamiento es el rango de ataque de dicho equipamiento.</li>
 
     <h2 id="collection">Recolección de IPC</h2>
     <ul>
-        El IPC se recolecta cada vez que una infantería mecanizada con petróleo llega a un Complejo Industrial o Complejo Industrial Principal.
+        <br>El jugador puede elegir lanzar dados para la recolección de IPC por cada refinería o un dado para el Complejo Base.
+        <br>Si se lanza para el Complejo Base, con un 2 o menos se ganan 5 IPCs.
+
+        IPC se recolecta cada vez que una unidad de petróleo llega al Complejo Base.
         <p>
-            <li>El petróleo debe moverse desde las refinerías, ya sea por tierra, mar o una combinación de ambos, al Complejo Industrial o al Complejo Industrial Principal para convertirse en producción de IPC.
+            <li>El petróleo debe moverse desde las refinerías, ya sea por tierra, mar o una combinación de ambos, al Complejo Base para convertirse en producción de IPC.
                 <br>Cada transporte puede cargar de una refinería a la vez. Para cargar o descargar petróleo, el movimiento debe terminar en el complejo correspondiente.
 
-                <br>Las refinerías conectadas al Complejo Principal a través de una línea de tuberías recolectan la producción sin necesidad de transportes.
+                <br>Las refinerías conectadas al Complejo Base a través de una línea de tuberías recolectan la producción sin necesidad de transportes.
                 <br>El valor de conversión es de 1 a 1 entre el valor del dado de la refinería y el IPC.
             <li>El IPC recolectado se acumula con lo que el jugador ya tiene, hasta un máximo de 50 IPC.</li>
     </ul>
 
     <h2 id="production">Producción</h2>
     <ul>
-        <li>Cada Complejo Industrial representa hasta 20 IPC de producción por turno. Todo el IPC de producción de todos los complejos se suma para determinar la producción total del jugador en el turno.</li>
+        <li>El Complejo Base permite 20 IPC de producción.</li>
+        <li>Cada Complejo Financiero representa 20 IPC de producción adicional por turno. Todo el IPC de producción de todos los complejos se suma para determinar la producción total del jugador en el turno.</li>
         <li>La producción de unidades no se puede fraccionar entre varios turnos.</li>
+
+        <br>Las unidades y el equipamiento se producen en los Complejos Industriales.
+        <br>Al ser producidos, se transportan automáticamente por carreteras conectadas a la base de destino.
+        <br>Si no hay carreteras, la unidad se almacena temporalmente en el Complejo Industrial.
+        <br>Hasta tres unidades pueden esperar en el Complejo Industrial para su transporte.
+        <br>Si se producen más unidades, estas deben ser transportadas o descartadas.
+
         <ul>
-            <li>Las unidades terrestres deben ubicarse en una Base Militar.</li>
-            <li>La infantería puede ubicarse en cualquier casilla con unidades o infraestructura.</li>
-            <li>Los aviones deben ubicarse en una Base Aérea.</li>
-            <li>Los barcos deben ubicarse en una Base Naval.</li>
-            <li>El ICBM debe ubicarse en un Silo de ICBM.</li>
+            <li>Las unidades terrestres deben ser transportadas a una Base Militar.</li>
+            <li>Los aviones deben ser transportados a una Base Aérea.</li>
+            <li>Los barcos deben ser transportados a una Base Naval.</li>
+            <li>El ICBM debe ser transportado a un Silo de ICBM.</li>
         </ul>
     </ul>
 
@@ -256,6 +283,7 @@
         <li><strong>Resolución del combate:</strong>
             <br>De las unidades atacantes, elige hasta 5 unidades para liderar el ataque.
             <br>De las unidades defensoras, elige hasta 5 unidades para liderar la defensa.
+            <br>Estas son las únicas unidades que combatirán este turno.
             <br>Todas las demás unidades permanecen en la casilla como unidades de reserva.
             <br>Lanza un dado por cada unidad atacante o defensora en el frente. Cada unidad inflige daño según su tipo.
             <br>Al final del ataque no hay unidades de frente o de reserva. Todas las unidades están en el mismo grupo.
@@ -281,7 +309,7 @@
             <li>Si no hay unidades enemigas en la casilla, se conquista la casilla y su infraestructura restante.</li>
             <li>Cuando termina el combate, las unidades aéreas deben usar sus puntos de movimiento restantes para llegar a una base aérea.</li>
         </ul>
-        <li>Recolectar producción de los transportes con petróleo en el Complejo Principal o a través de tuberías.</li>
+        <li>Recolectar producción de los transportes con petróleo en el Complejo Base o a través de tuberías.</li>
         <li>Reagrupar</li>
         <ul>Las unidades que aún no se hayan movido pueden moverse.
             <br>Las unidades pueden moverse a cualquier casilla con unidades aliadas, incluyendo casillas de batalla o complejos aliados.
