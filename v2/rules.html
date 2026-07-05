@@ -78,10 +78,9 @@
             <ul>
                 <li>On a 3 or less he preserves the army and infrastructure.</li>
                 <li>On other cases, the troops losing their home base are removed from the board.</li>
+                <li>IPCs of the loosing player passes to the conqueror up to its maximum possible IPC cap.</li>
             </ul>
         </li>
-        <li>The army that conquers a central base wins 50 IPC to spend in amry and infrastructure as player
-            best see fit.</li>
         <li>In a two player game the game is over.</li>
     </ul>
 
@@ -98,11 +97,7 @@
         <br>
         <br><strong>Army setup</strong><br>
         Place a Base Complex in each home tile.
-        <br>
-        The initial army of each player is 4 infantry and 50 IPC.
-        <br><br>
-        <br>Resolve player precedence at the begining of the game.
-
+        <br>The initial army of each player is 4 infantry and 50 IPC.
         <br><br>Start the turn as normal.
     </ul>
 
@@ -117,13 +112,16 @@
         <li>Movement of units cannot be split in parts.
             E.g. a transport with movement 4 cannot move 2 tile wait for units to be loaded and then move
             again.</li>
+        <li>Except for ICBM, any unit passing through a contested tile ends the movement.</li>
 
         </li>
     </ul>
 
     <h2 id="infrastructure">Infrastructure</h2>
     <ul>
-        Infrastructure can be built in any tile with player units or next to a tile with a player complex.
+        Infrastructure can be built only by player infantry units. Each unit can build once infrastructure per turn and
+        only where it is located.
+        Since happens in different phases, building does not exhaust unit movement.
         <p><strong>Facilities</strong>
         <ul>
             <li><strong>Base Complex:</strong>
@@ -137,9 +135,11 @@
                 It increse production for units.
                 <br>For 50 IPC one of these can be swapped with the Base Complex.
             </li>
-            <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of 1
-                die. Each turn it can roll a die and production change to the higher value.
-                <br>If built on water, it produces two dice. Put value markers in each refinery.
+            <li><strong>Refinery:</strong> Each refinery has oil production value equal to the value of a roll of one
+                die when build on land, and two dice when built on water (as if it were two refineries). Each turn it
+                roll corresponding dice.
+                <br>If production in a refinery was not collected in the previous turn, change to the higher value.
+                <br>Put value markers in each refinery to state production of the turn.
                 <br>When oil is loaded onto a transport, move the marker to the corresponding transporter unit
                 <br>A Refinery accespts only one transporter at a time.
                 <br>Can be built on land or sea but there must be 3 tiles separating it from any other Refinery.
@@ -170,6 +170,9 @@
         <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
         <li>For storage at complexes, two packs of equipment count as one unit</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
+        <li>Complexes can be repaired in contested tiles, but cannot build new ones unless the tile is friendly.
+        </li>
+        <li>Refineries in contested tiles keep producing as long as they are not disabled</li>
 
         <p><strong>Infrastructure</strong></p>
         <li><strong>Roads:</strong> Roads allow production to reach the destination base.
@@ -191,6 +194,7 @@
                 <br>Each bridge section counts as one tile in regards to movement same with every side of land.
                 <br>Units on a bridge cannot defend.
                 <br>Bridges can be attacked like any other infrastructure (not individual sections of the bridge).
+                <br>Destroying a bridge destroy units on the bridge.
                 <br>Only submarines and transports can pass by water under bridges.
             </ul>
         </li>
@@ -204,8 +208,8 @@
                 with friendly units or complexes.</li>
             <li><strong>Transports</strong> Can transport Oil or units or equipment.
                 <br>Mechanized units can transport one unit of oil or pack of equipment.
-                <br>Sea transport can transport 2 units of oil or 2 units between land units and pack of equipment.
-                <br>Air transport can transport 2 between land units and pack of equipment.
+                <br>Sea transport can transport 3 units of oil or 3 units between land units and pack of equipment.
+                <br>Air transport can transport 3 between land units and pack of equipment.
                 <br>
             <li>Air transports can land with troops on an Aircraft Carrier, yet troops must be unloaded at
                 an Air base.
@@ -215,15 +219,19 @@
             </li>
             </li>
 
+            <li><strong>Battleship</strong>Requires 2 hits to be destroyed, one hit disables it. Has to dock at a Naval
+                Base to be fixed.
+                Repair cost is half the ship costs.</li>
             <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as naval bases. Can hold up to 3
                 air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a Naval Base to be
                 fixed.
                 Repair cost is half the ship costs.</li>
 
             <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive engage
-                on passing by planes, ICBM or surface ships at shore on enemy turn. Use attacking stats.</li>
+                on passing by planes, ICBM or surface ships at shore on enemy turn, once per turn. Use attacking stats.
+            </li>
             <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an defensive engage
-                on passing by ships on enemy turn. Use attacking stats.</li>
+                on passing by ships on enemy turn, once per turn. Use attacking stats.</li>
 
             <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
                 <ul>
@@ -285,6 +293,7 @@
     </ul>
     <br>A pack of equipment count as one unit for storage or transport.
     <li>A unit can be equiped only at the corresponding base of the unit</li>
+
     <h2 id="collection">IPC Collection</h2>
     <ul>
         <br>Player can choose to roll dice for IPC collection for each refinery or one die for the Base Complex.
@@ -311,7 +320,7 @@
             player for the turn.
         </li>
         <li>Production of units cannot be split across multiple turns.</li>
-
+        <li>Refinery production does not exhaust</li>
         <br>Units and equipment are produced in Industrial Complexes.
         <br>When produced they are automatically transported by roads connected to the destination base.
         <br>If there are no roads, the unit is temporarily stored on the Industrial Complex.
@@ -324,10 +333,12 @@
             <li>Ships must be transported to a Naval Base.</li>
             <li>ICBM must be transported to an ICBM Silo.</li>
         </ul>
+        <br>Everything is in play from the next moving phase of the turn in which it is bought or produced.
     </ul>
 
     <h2 id="combat">Combat</h2>
     <ul>
+        Combat is resolved after all players moved, so order of contested tiles is not important.
         Combat is resolved rolling one D6 for each atacking and defending unit.
         Each unit has an attack and defence value depending of the unit type.
         <br>Either attack or defence is a hit if the die roll value for the unit is equal or less of the value for
@@ -341,7 +352,8 @@
             <br>From defending units, chose up to 5 units to run the defence.
             <br>These are the only units that will combat this turn.
             <br>All other units remain in the tail as backup units.
-            <br>Roll one die per attacking or defending unit. Each unit accounts damage according its type.
+            <br>Roll one die per chosen attacking and defending unit. Each unit accounts damage according its type.
+            <br>Both attacking and defending damage is acounted.
             <br>At the end of attack there is no frontline or backup units. All units are in the same group.
         </li>
         <li> The player causing damage choose what unit or complex get the damage.
@@ -350,44 +362,66 @@
         </li>
         <li> If the tile has constructions, they can also be chosen as a target instead of units.</li>
 
-        <br>After the attack remaning units stais in the tile except for airplanes that must return to an airbase or
-        refueler.
-
+        <br>After the attack remaning units stays in the tile except for airplanes that must return to an airbase or
+        refueler, the tile remains contested.
+        <br>Ownership of contested tiles do not change until only one player has units in the tile at which point he
+        owns the tile.
+        <br>Infrastruce is fully operative (including pipes, roads and bridges) in contested tiles unles it receives
+        damage.
         <br>When a unit is equiped the equipment moving range is attacking range of such equipment
+        <br>Infantry bought cannot be placed in constested tiles.
+
+        <br><br>
+        Attack of equiptment is resolved at the end of the movement phase of the player that is moving.
+        When the attaked is a base with units, if able such units leave the base and can move in its turn if able.
+
+
+        <br><br>Preemptive-attack does not wait unitil combat phase.
+        It can happen as many times as the conditions are met during the same movement phase even for the same unit.
+        The only restriction is each unit with preemptive-attack can only be used once per occurrence.
+        <br>A preemptive-attack is neutralized if attacking army also has at least one unit with preemptive-attack.
+        In this case the preemptive-attack does not happen.
+        <br><br>
+
     </ul>
 
     <h2 id="turn">Turn</h2>
     <ul>
-        <li>Update oil production at Refineries. Roll all dice at once and allocate production at payer choice.</li>
+        <li>Update oil production at Refineries.
+            <ul>Each player rolls one die per each refinery and allocate production at payer choice.
+                <br>Markers of production can be placed face up or down.
+            </ul>
+        </li>
+        <li>Buy units and build/relocate infrastructure</li>
+        <ul>
+            Buy units up to the max production IPC. All units must be placed in the corresponding complex.
+            <br>Infantry can be placed in any tile with friendly units or complexes.
+            <br>Buy infrastructure and place in map, tiles must have friendly units.
+            <br>Relocate infrastructure paying the relocation cost.
+        </ul>
         <li>Move units</li>
         <ul>
-            <li>Move as many units as wanted. Each unit can move only once.
-                This is the only time unit can retreat from a combat tile.
-            </li>
-            <li>Units at a Refinery might choose to collect oil.</li>
-            <li>If the tile is occupied by enemy units, combat is declared.</li>
+            Decide playing order for moving units.
+            <br>Each player roll a die, the lower goes first.
+
+            <br>Move as many units as wanted. Each unit can move only once per turn.
+            <br>If retreating from a contested tile, the destination must be friendly non contested.
+            <br>Units can move to contested tiles.
+            <br>If the destination tile is occupied by enemy units, combat is declared.
+
+            <p>At no time the tile must contains units of a player exceeding the maximum allowed per tile.
+                <br>Units at a Refinery might choose to collect oil or stay as defending units.
+                <br>To keep track of attackers at contested tiles, place a counter for the attacking player in the tile.
         </ul>
         <li>Resolve combats</li>
         <ul>
-            <li>Roll dice for attackers and defenders.</li>
-            <li>If no enemy units in the tile, the player conquers the tile and its remaining infrastructure.</li>
-            <li>When combat finishes air units must use its remaining movement points to reach an airbase</li>
+            Roll dice for attackers and defenders.
+            <br>If no enemy units in the tile, the player conquers the tile and its remaining infrastructure.
+            <br>When combat finishes air units must use its remaining movement points to reach an airbase
         </ul>
-        <li>Collect production from transports with oil at Base Complex or through pipelines.</li>
-        <li>Regroup</li>
-        <ul>Units that have not yet move can be moved.
-            <br>Units can move to any tile with friendly units, including battle tiles or friendly complexes.
-            <br>Units cannot leave battle tile in this phase.
-        </ul>
-        <li>Buy units, build or relocate infrastructure</li>
-        <ul>
-            Buy units up to the max production IPC. All units must be placed in the corresponding complex.
-            Infantry can be placed in any tile with friendly units or complexes.
-            Buy infrastructure and place in map, tiles must have friendly units.
-        </ul>
-        At no time the tile must contains units of a player exceeding the maximum allowed per tile.
 
-        <li>Repeat for next player.</li>
+        <strong>Collection</strong>
+        <ul>All players collect production from transports with oil at Base Complex or through pipelines.</ul>
     </ul>
 
     <h2 id="poc">Proof of concepts</h2>
