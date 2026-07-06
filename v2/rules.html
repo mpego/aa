@@ -118,8 +118,6 @@
             E.g. a transport with movement 4 cannot move 2 tile wait for units to be loaded and then move
             again.</li>
         <li>Except for ICBM, any unit passing through a contested tile ends the movement.</li>
-
-        </li>
     </ul>
 
     <h2 id="infrastructure">Infrastructure</h2>
@@ -240,6 +238,7 @@
 
             <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
                 <ul>
+                    <li>Must move at least three tiles in the same direction before changing direction.</li>
                     <li>On a 5 or less the attack succeeds. On a 1 the impact is in the tile and all surroundings.
                     </li>
                     <li> Accounts for any number of hits required to destroy what is on the tile.</li>
@@ -269,12 +268,16 @@
         <strong>Long Range Missiles</strong>
         <li>Can be equipped onto Tactical Bombers.</li>
         <li>A Long Range Missile is consumed after use.</li>
+        <li>As with planes can overfly territory with enemy units</li>
+        <li>It is affected by preemptive attack</li>
         <li>One pack consist of two missiles</li>
         <p></p>
         <strong>Torpedo</strong>
         <li>Can be equipped onto submarines or destroyers.</li>
         <li>A torpedo can be used to attack any ship.</li>
         <li>A torpedo is consumed after use.</li>
+        <li>As with ships cannot overpass territory with enemy units</li>
+        <li>It is not affected by preemptive attack</li>
         <li>One pack consist of two torpedo</li>
         <p></p>
         <strong>Landmine</strong>
@@ -380,7 +383,6 @@
         Attack of equiptment is resolved at the end of the movement phase of the player that is moving.
         When the attaked is a base with units, if able such units leave the base and can move in its turn if able.
 
-
         <br><br>Preemptive-attack does not wait unitil combat phase.
         It can happen as many times as the conditions are met during the same movement phase even for the same unit.
         The only restriction is each unit with preemptive-attack can only be used once per occurrence.
@@ -411,6 +413,7 @@
 
             <br>Move as many units as wanted. Each unit can move only once per turn.
             <br>If retreating from a contested tile, the destination must be friendly non contested.
+            Retreating units cannot move through the edge enemies come from.
             <br>Units can move to contested tiles.
             <br>If the destination tile is occupied by enemy units, combat is declared.
 
@@ -443,6 +446,9 @@
                 <li><strong>Radar</strong>Radars work in conjuction with AAA. Radars can detect air units passing by
                     its adjascent tiles and extend AAA pre-attack to thier surronding tiles.</li>
                 <li><strong>Stealth technology</strong>Once developed radar cannot detect air units</li>
+                <li><strong>Portable AAA</strong>AAA can be installed in Battleship and Aircraft Carriers</li>
+                <li><strong>Drones</strong>Works like short range ICBMs</li>
+                <li>Paratroopers: Infantry can be dropped in any tile that is not under combat.</li>
                 <li><strong>Land units level up</strong>Land units can be damaged by units with same or higher
                     level.
                     Before rolling the completion dice, a level up dice must be roll with a value higher that the
@@ -457,8 +463,6 @@
                     Before rolling the completion dice, a level up dice must be roll with a value higher that the
                     current level.
                 </li>
-                <li><strong>Portable AAA</strong>AAA can be installed in Battleship and Aircraft Carriers</li>
-                <li><strong>Drones</strong>Works like short range ICBMs</li>
             </ul>
         </ul>
 
