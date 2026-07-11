@@ -107,6 +107,7 @@
     <h2 id="tiles">Casillas y Movimiento de Unidades</h2>
     <ul>
         <li>Cualquier casilla puede contener hasta un máximo de 10 elementos combinados entre infraestructura y unidades por jugador.</li>
+        <li>Cada base cuenta como 3 unidades de espacio.</li>
         <li>Las unidades o el equipamiento que están siendo transportados no se cuentan.</li>
         <li>Para que una isla sea utilizable como tierra firme, debe tener el tamaño de al menos media casilla.</li>
         <li>Las unidades aéreas deben terminar su movimiento en una Base Aérea, Portaaviones o Avión de Reabastecimiento. De lo contrario, la unidad es destruida, excepto los reabastecedores.
@@ -114,6 +115,7 @@
         <li>El movimiento de las unidades no se puede fraccionar.
             <br>Ej. un transporte con movimiento 4 no puede mover 2 casillas, esperar a que carguen las unidades y luego mover el resto.</li>
         <li>Excepto por los ICBM, cualquier unidad que pase por una casilla en disputa (contested) termina su movimiento.</li>
+        <li>Una unidad puede pasar por una casilla ocupada por unidades enemigas solo si dichas unidades no pueden atacar a ninguna de las unidades que se están moviendo y la casilla no está en disputa.</li>
     </ul>
 
     <h2 id="infrastructure">Infraestructura</h2>
@@ -243,7 +245,6 @@
         <p></p>
         <strong>Torpedos</strong>
         <li>Se pueden equipar en submarinos o destructores.</li>
-        <li>Un torpedo se puede usar para atacar cualquier barco.</li>
         <li>Un torpedo se consume después de su uso.</li>
         <li>Al igual que los barcos, no puede atravesar territorio con unidades enemigas.</li>
         <li>No se ve afectado por el ataque preventivo.</li>
