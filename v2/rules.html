@@ -109,6 +109,7 @@
     <h2 id="tiles">Tiles and Unit movement</h2>
     <ul>
         <li>Any given tile can hold up to 10 between infrastructure and units per player</li>
+        <li>Each base accounts for 3 units of space</li>
         <li>Units or equipment being transported are not counted.</li>
         <li>For an island to be usable as land must be the size of at least half of a tile.</li>
         <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is
@@ -118,6 +119,9 @@
             E.g. a transport with movement 4 cannot move 2 tile wait for units to be loaded and then move
             again.</li>
         <li>Except for ICBM, any unit passing through a contested tile ends the movement.</li>
+        <li>A unit can pass by a tile occupied by enemy units only if such units cannot attack any of
+            the units being moved and the tile is not contested.</li>
+        </li>
     </ul>
 
     <h2 id="infrastructure">Infrastructure</h2>
@@ -274,7 +278,6 @@
         <p></p>
         <strong>Torpedo</strong>
         <li>Can be equipped onto submarines or destroyers.</li>
-        <li>A torpedo can be used to attack any ship.</li>
         <li>A torpedo is consumed after use.</li>
         <li>As with ships cannot overpass territory with enemy units</li>
         <li>It is not affected by preemptive attack</li>

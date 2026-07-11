@@ -9,6 +9,11 @@
             font-family: Arial, sans-serif;
         }
 
+        thead th {
+            font-size: x-small;
+            background-color: #eae2aa;
+        }
+
         th,
         td {
             border: 1px solid #dddddd;
@@ -71,23 +76,24 @@
     <a href=" #fac"">Facilites</a> |
     <a href="#actions"">Actions</a> |
     <a href=" rules.html">Rules</a>
+    <p></p>
     <table>
-        <thead>
-            <tr>
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th>Attack</th>
-                <th>Defense</th>
-                <th>Move</th>
-                <th>Effective</th>
-
-            </tr>
-        </thead>
+        <thead></thead>
         <tbody>
             <!-- Land Units -->
             <tr class="category-header-land">
                 <td id="land" colspan="6">Land Units</td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Unit Type</th>
+                    <th>Cost</th>
+                    <th>Attack</th>
+                    <th>Defense</th>
+                    <th>Move</th>
+                    <th>Effective</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Infantry</td>
                 <td>3</td>
@@ -135,6 +141,16 @@
             <tr class="category-header-air">
                 <td id="air" colspan="6">Air Units</td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Unit Type</th>
+                    <th>Cost</th>
+                    <th>Attack</th>
+                    <th>Defense</th>
+                    <th>Move</th>
+                    <th>Effective</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Fighter</td>
                 <td>10</td>
@@ -192,6 +208,16 @@
             <tr class="category-header-sea">
                 <td id="sea" colspan="6">Sea Units</td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Unit Type</th>
+                    <th>Cost</th>
+                    <th>Attack</th>
+                    <th>Defense</th>
+                    <th>Move</th>
+                    <th>Effective</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Battleship</td>
                 <td>20</td>
@@ -249,13 +275,21 @@
             <tr class="category-header-other">
                 <td id="equipment" colspan="6">Equipment</td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Unit Type</th>
+                    <th>Cost</th>
+                    <th>Attack</th>
+                    <th>Range</th>
+                    <th colspan="2">Effective</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Torpedo</td>
                 <td>3</td>
                 <td>2</td>
-                <td>-</td>
                 <td>2</td>
-                <td>All ships
+                <td colspan="2">All ships
                     <br><br><sup>Place Cruiser or Submarine</sup>
                 </td>
             </tr>
@@ -263,9 +297,8 @@
                 <td>Long range missile</td>
                 <td>3</td>
                 <td>2</td>
-                <td>-</td>
                 <td>2</td>
-                <td>All land
+                <td colspan="2">All land
                     <br>Al surface ships
                     <br><br><sup>Place on Tactical Bomber</sup>
                 </td>
@@ -275,6 +308,13 @@
             <tr class="category-header-facilities">
                 <td id="fac" colspan="6">Facilities</td>
             </tr>
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Cost</th>
+                    <th colspan="4">Comment</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Financial Complex</td>
                 <td>20</td>

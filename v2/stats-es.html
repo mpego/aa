@@ -1,17 +1,17 @@
 <html>
 
 <head>
-    <!-- Prevent caching -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
     <title>Estadísticas</title>
     <style>
         table {
             border-collapse: collapse;
             width: 100%;
             font-family: Arial, sans-serif;
+        }
+
+        thead th {
+            font-size: x-small;
+            background-color: #eae2aa;
         }
 
         th,
@@ -21,14 +21,17 @@
             padding: 8px;
         }
 
+        th {
+            background-color: #f2f2f2;
+        }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
 
         tr.category-header {
-            background-color: rgb(104, 104, 104);
+            background-color: #888989;
             font-weight: bold;
-            font-size: 0.6em;
         }
 
         tr.category-header-land {
@@ -67,42 +70,44 @@
 </head>
 
 <body>
-    <a href="#land">Tierra</a> |
-    <a href="#air">Aire</a> |
-    <a href="#sea">Mar</a> |
-    <a href="#fac">Instalaciones</a> |
-    <a href="#actions">Acciones</a> |
-    <a href="rules-es.html">Reglas</a>
+    <a href="#land"">Tierra</a> |
+    <a href=" #air"">Aire</a> |
+    <a href="#sea"">Mar</a> |
+    <a href=" #fac"">Instalaciones</a> |
+    <a href="#actions"">Acciones</a> |
+    <a href=" rules-es.html">Reglas</a>
+    <p></p>
     <table>
+        <thead></thead>
         <tbody>
             <!-- Unidades Terrestres -->
             <tr class="category-header-land">
                 <td id="land" colspan="6">Unidades Terrestres</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th>Ataque</th>
-                <th>Defensa</th>
-                <th>Movimiento</th>
-                <th>Efectividad</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Tipo de Unidad</th>
+                    <th>Costo</th>
+                    <th>Ataque</th>
+                    <th>Defensa</th>
+                    <th>Movimiento</th>
+                    <th>Efectividad</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Infantería</td>
                 <td>3</td>
                 <td>1</td>
                 <td>2</td>
-                <td>1</td>
-                <td>Todo lo terrestre
-                    <br><br><sup>Constructores</sup>
-                </td>
+                <td>2</td>
+                <td>Todo lo terrestre</td>
             </tr>
             <tr>
                 <td>Infantería Mecanizada</td>
                 <td>4</td>
                 <td>1</td>
                 <td>2</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Todo lo terrestre<br>
                     <br><sup>Puede transportar petróleo</sup>
                 </td>
@@ -112,7 +117,7 @@
                 <td>4</td>
                 <td>2</td>
                 <td>2</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Todo lo terrestre<br>Cazas</td>
             </tr>
             <tr>
@@ -120,37 +125,38 @@
                 <td>6</td>
                 <td>3</td>
                 <td>3</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Todo lo terrestre<br>Barcos de superficie</td>
             </tr>
             <tr>
                 <td>AAA</td>
                 <td>5</td>
+                <td>1</td>
                 <td>2</td>
-                <td>1</td>
-                <td>1</td>
-                <td>Todo lo aéreo<br>Barcos de superficie<br><br><sup>ataque-preventivo</sup></td>
+                <td>2</td>
+                <td>Todo lo aéreo<br>Barcos de superficie<br><br><sup>ataque defensivo</sup></td>
             </tr>
 
             <!-- Unidades Aéreas -->
             <tr class="category-header-air">
                 <td id="air" colspan="6">Unidades Aéreas</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th>Ataque</th>
-                <th>Defensa</th>
-                <th>Movimiento</th>
-                <th>Efectividad</th>
-
-            </tr>
+            <thead>
+                <tr>
+                    <th>Tipo de Unidad</th>
+                    <th>Costo</th>
+                    <th>Ataque</th>
+                    <th>Defensa</th>
+                    <th>Movimiento</th>
+                    <th>Efectividad</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Caza</td>
                 <td>10</td>
                 <td>3</td>
                 <td>4</td>
-                <td>4</td>
+                <td>8</td>
                 <td>Todo lo terrestre<br>Todo lo aéreo<br>Barcos de superficie</td>
             </tr>
             <tr>
@@ -158,9 +164,9 @@
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
-                <td>4</td>
+                <td>8</td>
                 <td>Todo lo terrestre<br>Todos los barcos
-                    <br><br><sup>Acepta 2 misiles de largo alcance</sup>
+                    <br><br><sup>puede equipar 2 misiles de largo alcance</sup>
                 </td>
             </tr>
             <tr>
@@ -168,7 +174,7 @@
                 <td>14</td>
                 <td>4</td>
                 <td>1</td>
-                <td>6</td>
+                <td>12</td>
                 <td>Todo lo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
@@ -194,7 +200,7 @@
                 <td>-</td>
                 <td>6</td>
                 <td>Transporta:<br>
-                    Tres unidades terrestres<br>
+                    Dos unidades terrestres<br>
                 </td>
             </tr>
 
@@ -202,30 +208,30 @@
             <tr class="category-header-sea">
                 <td id="sea" colspan="6">Unidades Marítimas</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th>Ataque</th>
-                <th>Defensa</th>
-                <th>Movimiento</th>
-                <th>Efectividad</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Tipo de Unidad</th>
+                    <th>Costo</th>
+                    <th>Ataque</th>
+                    <th>Defensa</th>
+                    <th>Movimiento</th>
+                    <th>Efectividad</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Acorazado</td>
                 <td>20</td>
                 <td>4</td>
                 <td>4</td>
-                <td>3</td>
-                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie
-                    <br><br><sup>Soporta 2 impactos</sup>
-                </td>
+                <td>4</td>
+                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
                 <td>Crucero</td>
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie</td>
             </tr>
             <tr>
@@ -233,20 +239,18 @@
                 <td>8</td>
                 <td>2</td>
                 <td>2</td>
-                <td>2</td>
-                <td>Todo lo terrestre<br>Todos los barcos
-                    <br><br><sup>Acepta 2 torpedos</sup>
-                </td>
+                <td>4</td>
+                <td>Todo lo terrestre<br>Todos los barcos</td>
             </tr>
             <tr>
                 <td>Submarino</td>
                 <td>6</td>
                 <td>2</td>
                 <td>1</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Todos los barcos
-                    <br><br><sup>ataque-preventivo
-                        <br>Acepta 2 torpedos</sup>
+                    <br><br><sup>ataque defensivo
+                        <br>puede equipar 2 torpedos</sup>
                 </td>
             </tr>
             <tr>
@@ -254,53 +258,49 @@
                 <td>16</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2</td>
-                <td> <br><br><sup>Soporta 2 impactos</sup>
-                </td>
+                <td>4</td>
+                <td>-</td>
             </tr>
             <tr>
                 <td>Transporte</td>
                 <td>7</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Transporta:<br>
-                    Tres unidades terrestres<br>
-                    Tres unidades de petróleo
+                    Dos unidades terrestres<br>
+                    Dos unidades de petróleo
                 </td>
             </tr>
-
-            <!-- Equipamiento -->
             <tr class="category-header-other">
                 <td id="equipment" colspan="6">Equipamiento</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th>Ataque</th>
-                <th>Defensa</th>
-                <th>Movimiento</th>
-                <th>Efectividad</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Tipo de Unidad</th>
+                    <th>Costo</th>
+                    <th>Ataque</th>
+                    <th>Alcance</th>
+                    <th colspan="2">Efectividad</th>
+                </tr>
+            </thead>
             <tr>
                 <td>Torpedo</td>
-                <td>5</td>
+                <td>3</td>
                 <td>2</td>
-                <td>-</td>
                 <td>2</td>
-                <td>Todos los barcos
-                    <br><br><sup>Paquete de 2</sup>
+                <td colspan="2">Todos los barcos
+                    <br><br><sup>Colocar en Crucero o Submarino</sup>
                 </td>
             </tr>
             <tr>
                 <td>Misil de largo alcance</td>
-                <td>5</td>
+                <td>3</td>
                 <td>2</td>
-                <td>-</td>
                 <td>2</td>
-                <td>Todo lo terrestre
+                <td colspan="2">Todo lo terrestre
                     <br>Todos los barcos de superficie
-                    <br><br><sup>Paquete de 2</sup>
+                    <br><br><sup>Colocar en Bombardero Táctico</sup>
                 </td>
             </tr>
 
@@ -308,77 +308,51 @@
             <tr class="category-header-facilities">
                 <td id="fac" colspan="6">Instalaciones</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Instalación</th>
-                <th>Costo</th>
-                <th colspan="4">Nota</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Tipo</th>
+                    <th>Costo</th>
+                    <th colspan="4">Comentario</th>
+                </tr>
+            </thead>
             <tr>
-                <td>
-                    <img src="../images/financial.png" width="64">
-                    Complejo Financiero
-                </td>
+                <td>Complejo Financiero</td>
                 <td>20</td>
                 <td colspan="4">Aumenta el límite de producción en 20 IPCs por turno.</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/industry.png" width="64">
-                    Complejo Industrial
-                </td>
+                <td>Complejo Industrial</td>
                 <td>15</td>
                 <td colspan="4">Produce unidades y equipamiento.</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/refinery.png" width="64">
-                    Refinería
-                </td>
+                <td>Refinería</td>
                 <td>15</td>
                 <td colspan="4">Puede recibir 1 transporte de petróleo</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/military.png" width="64">
-                    Base Militar
-                </td>
+                <td>Base Militar</td>
                 <td>10</td>
                 <td colspan="4">Puede almacenar 3 paquetes de equipamiento</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/air.png" width="64">
-                    Base Aérea
-                </td>
+                <td>Base Aérea</td>
                 <td>10</td>
-                <td colspan="4">Puede estacionar 5 unidades</td>
+                <td colspan="4">Puede estacionar 5 aviones </td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/naval.png" width="64">
-                    Base Naval
-                </td>
+                <td>Base Naval</td>
                 <td>10</td>
-                <td colspan="4">Puede atracar 3 unidades</td>
+                <td colspan="4">Puede atracar 2 barcos</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/silo.png" width="64">
-                    Silo de ICBM
-                </td>
+                <td>Silo de ICBM</td>
                 <td>10</td>
                 <td colspan="4">Puede albergar 1 ICBM</td>
             </tr>
-
             <tr class="category-header-infrastructure">
                 <td id="infrastructure" colspan="6">Infraestructura</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th colspan="4">Nota</th>
-            </tr>
-
             <tr>
                 <td>Carreteras</td>
                 <td>5</td>
@@ -397,15 +371,10 @@
             <tr class="category-header-other">
                 <td id="actions" colspan="6">Acciones</td>
             </tr>
-            <tr class="category-header">
-                <th>Tipo de Unidad</th>
-                <th>Costo</th>
-                <th colspan="4">Nota</th>
-            </tr>
             <tr>
                 <td>Reubicar Complejo Base</td>
                 <td>50</td>
-                <td colspan="4">Mueve el Complejo Base a otra casilla.</td>
+                <td colspan="4">Mueve el Complejo Base a otra casilla. </td>
             </tr>
 
             <tr>
