@@ -109,8 +109,11 @@
     <h2 id="tiles">Tiles and Unit movement</h2>
     <ul>
         <li>Any given tile can hold up to 10 between infrastructure and units per player</li>
-        <li>Each base accounts for 3 units of space</li>
-        <li>Units or equipment being transported are not counted.</li>
+        <ul>
+            <li>Each base accounts for 3 units of space</li>
+            <li>Units in storage, docked or parked count towards the limit of units per complex and tile.</li>
+            <li>Units or equipment being transported does not counted.</li>
+        </ul>
         <li>For an island to be usable as land must be the size of at least half of a tile.</li>
         <li>Air units must end its movement in an Air Base, Aircra Carrier or Refueler. If not the unit is
             destroyed, except refuelers.
@@ -121,6 +124,12 @@
         <li>Except for ICBM, any unit passing through a contested tile ends the movement.</li>
         <li>A unit can pass by a tile occupied by enemy units only if such units cannot attack any of
             the units being moved and the tile is not contested.</li>
+        </li>
+        <li>Some units need more than one hit to be destroyed.
+            These, the first hit disables it, the second destroys it.
+            If disabled, units only can be moved; planes cannot land nor take off from them.
+            Need to go to the corresponding base to be fixed.
+            Repair cost is half the unit cost.
         </li>
     </ul>
 
@@ -154,28 +163,22 @@
             </li>
             <li><strong>Industrial Complex</strong>
                 These are for production of units and equipment.
-                <br>For production to occur, it must be connected by road to the destination base.
-                <br>Although ships are sea units they must still be produced in industrial complexes connected by road
-                to
-                a Naval base.
-                <br>They can hold up to three units, these units cannot move, attack nor defend.
+                <br>All unites are produced here; they are moved automatically by road to the destination base.
+                <br>If cannot be moved, the complex can hold up to three units, these units cannot move, attack or
+                defend.
             </li>
             <li><strong>Military Base:</strong> Is the starting base for land units.</li>
-            <li><strong>Air Bases:</strong> Can hold a max of 5 planes.</li>
-            <li><strong>Naval Bases:</strong> Can hold a max of 2 ships docked. Docking is required to repair ships</li>
-            <li><strong>ICBM Silo:</strong> Can hold 1 ICBM.</li>
+            <li><strong>Air Bases:</strong> Is the starting base for air units.</li>
+            <li><strong>Naval Bases:</strong> Is the starting base for naval units.
+                <br>Docking is required to repair ships
+            </li>
+            <li><strong>ICBM Silo:</strong> It is from where ICBM are launched.</li>
         </ul>
-        <li>Complexes requires 2 hits to be destroyed; one hit disables it, the next hit, if not fixed, destroys it.
+        <li>Complexes can be attacekd as if they were land units.</li>
+        <li>Complexes requires 2 hits to be destroyed; one hit disables it, the next hit, if not repaired, destroys it.
             <br>If there are units in the complex when it is destroyed, they are also destroyed.
         </li>
-
-        <li>Complexes can be attacekd as if they were land units.</li>
-        <li>Disabled infrastructure cannot produce, fix, lunch or receive units of any kind.
-            <br>In the case of Air bases, the planes must be sent to other bases
-            in the range of movement of the plane or are considered destroyed.
-        </li>
-        <li>Disabled units only can be moved; planes cannot land nor take off from them.</li>
-        <li>For storage at complexes, two packs of equipment count as one unit</li>
+        <li>Disabled infrastructure cannot produce, fix, launch or receive units of any kind.</li>
         <li>Repairs of any complex or unit cost half of its construction cost.</li>
         <li>Complexes can be repaired in contested tiles, but cannot build new ones unless the tile is friendly.
         </li>
@@ -212,7 +215,7 @@
     <ul>
         <ul>
             <li><strong>Infantry:</strong>Infantry is not produced, it is directly bought and can be placed at any tile
-                with friendly units or complexes.</li>
+                with friendly units or complexes in non contested tiles.</li>
             <li><strong>Transports</strong> Can transport Oil or units or equipment.
                 <br>Mechanized units can transport one unit of oil or pack of equipment.
                 <br>Sea transport can transport 3 units of oil or 3 units between land units and pack of equipment.
@@ -224,15 +227,11 @@
             <li>Sea transport when the ship in on shore the oil can be loaded onto a mechanized infantery in
                 the same territory or to Base Complex if located on the same tile.
             </li>
-            </li>
 
-            <li><strong>Battleship</strong>Requires 2 hits to be destroyed, one hit disables it. Has to dock at a Naval
-                Base to be fixed.
-                Repair cost is half the ship costs.</li>
-            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as naval bases. Can hold up to 3
-                air units. Requires 2 hits to be destroyed, one hit disables it. Has to dock at a Naval Base to be
-                fixed.
-                Repair cost is half the ship costs.</li>
+            <li><strong>Battleship</strong>Requires 2 hits to be destroyed.</li>
+            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as air bases at sea. Requires 2
+                hits to be destroyed.
+            </li>
 
             <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive engage
                 on passing by planes, ICBM or surface ships at shore on enemy turn, once per turn. Use attacking stats.
@@ -243,45 +242,38 @@
             <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
                 <ul>
                     <li>When moving can have only one change of direction.</li>
-                    <li>On a 5 or less the attack succeeds. On a 1 the impact is in the tile and all surroundings.
+                    <li>On a 5 or less the attack succeeds. On a 1 the impact is in the tile and all adyacent tiles.
                     </li>
-                    <li> Accounts for any number of hits required to destroy what is on the tile.</li>
+                    <li> Accounts for any number of hits required to destroy what is on the tiles.</li>
                 </ul>
             </li>
 
             <li><strong>Refueler</strong> Refueling implies restore the full range for the plane.</li>
-            <ul>Can refuel one air unit in the same territory.
-                A plane (except refuelers) can be refueled only once per turn.
-                The unit can complete its movement at the refueler in which case in cannot defend if attacked
-                and other planes cannot refuel at the refueler.
+            <ul>Can refuel one air unit in the same territory per turn.
+                Refuelers can be used like air bases at air or to extend the range of movement of a plane.
             </ul>
         </ul>
         <li>Units transporting or being transported cannot attack or defend.</li>
         <li>If a ship is docked it cannot defend if the territory is attacked
             <br>If the tile is conquered, docked ship is captured
         </li>
-        <li>Units in storage, docked or parked count towards the limit of units per tile.</li>
     </ul>
 
     <h2 id="equipment">Equipment</h2>
-    <br>Equipment is all kind of unit that needs to be transporded and can either enhance another unit or be placed on a
-    tile.
-    <p>When unit or tile is equipped, the range of attack of the equipment is the range of movement of said equipment
-    </p>
+    <br>Equipment enhance another unit or be placed on a tile.
+    <br>Can be used only from the equiped unit or tile it can equipt.
     <ul>
         <strong>Long Range Missiles</strong>
         <li>Can be equipped onto Tactical Bombers.</li>
         <li>A Long Range Missile is consumed after use.</li>
-        <li>As with planes can overfly territory with enemy units</li>
         <li>It is affected by preemptive attack</li>
-        <li>One pack consist of two missiles</li>
+        <li>Can overfly territory with enemy units</li>
         <p></p>
         <strong>Torpedo</strong>
         <li>Can be equipped onto submarines or destroyers.</li>
         <li>A torpedo is consumed after use.</li>
-        <li>As with ships cannot overpass territory with enemy units</li>
-        <li>It is not affected by preemptive attack</li>
-        <li>One pack consist of two torpedo</li>
+        <li>Can overpass territory with enemy ship units</li>
+        <li>It is affected by preemptive attack</li>
         <p></p>
         <strong>Landmine</strong>
         <li>Can be placed on a tile.</li>
@@ -302,7 +294,7 @@
         <li>Swarm drone is consumed after use</li>
         <p></p>
     </ul>
-    <br>A pack of equipment count as one unit for storage or transport.
+    <br>A pack of equipment count as one unit for storage and transport.
     <li>A unit can be equiped only at the corresponding base of the unit</li>
 
     <h2 id="collection">IPC Collection</h2>
