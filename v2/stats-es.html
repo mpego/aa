@@ -1,6 +1,11 @@
 <html>
 
 <head>
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
     <title>Estadísticas</title>
     <style>
         table {
@@ -88,7 +93,9 @@
                 <td>1</td>
                 <td>2</td>
                 <td>1</td>
-                <td>Todo lo terrestre</td>
+                <td>Todo lo terrestre
+                    <br><br><sup>Constructores</sup>
+                </td>
             </tr>
             <tr>
                 <td>Infantería Mecanizada</td>
@@ -119,10 +126,10 @@
             <tr>
                 <td>AAA</td>
                 <td>5</td>
-                <td>1</td>
                 <td>2</td>
                 <td>1</td>
-                <td>Todo lo aéreo<br>Barcos de superficie<br><br><sup>Ataque defensivo</sup></td>
+                <td>1</td>
+                <td>Todo lo aéreo<br>Barcos de superficie<br><br><sup>ataque-preventivo</sup></td>
             </tr>
 
             <!-- Unidades Aéreas -->
@@ -177,7 +184,7 @@
                 <td>15</td>
                 <td>-</td>
                 <td>-</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Una unidad aérea a la vez</td>
             </tr>
             <tr>
@@ -187,7 +194,7 @@
                 <td>-</td>
                 <td>6</td>
                 <td>Transporta:<br>
-                    Dos unidades terrestres<br>
+                    Tres unidades terrestres<br>
                 </td>
             </tr>
 
@@ -208,8 +215,10 @@
                 <td>20</td>
                 <td>4</td>
                 <td>4</td>
-                <td>2</td>
-                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie</td>
+                <td>3</td>
+                <td>Todo lo terrestre<br>Todo lo aéreo<br>Todos los barcos de superficie
+                    <br><br><sup>Soporta 2 impactos</sup>
+                </td>
             </tr>
             <tr>
                 <td>Crucero</td>
@@ -225,7 +234,9 @@
                 <td>2</td>
                 <td>2</td>
                 <td>2</td>
-                <td>Todo lo terrestre<br>Todos los barcos</td>
+                <td>Todo lo terrestre<br>Todos los barcos
+                    <br><br><sup>Acepta 2 torpedos</sup>
+                </td>
             </tr>
             <tr>
                 <td>Submarino</td>
@@ -234,7 +245,7 @@
                 <td>1</td>
                 <td>2</td>
                 <td>Todos los barcos
-                    <br><br><sup>Ataque defensivo
+                    <br><br><sup>ataque-preventivo
                         <br>Acepta 2 torpedos</sup>
                 </td>
             </tr>
@@ -244,7 +255,8 @@
                 <td>-</td>
                 <td>-</td>
                 <td>2</td>
-                <td>-</td>
+                <td> <br><br><sup>Soporta 2 impactos</sup>
+                </td>
             </tr>
             <tr>
                 <td>Transporte</td>
@@ -253,8 +265,8 @@
                 <td>-</td>
                 <td>2</td>
                 <td>Transporta:<br>
-                    Dos unidades terrestres<br>
-                    Dos unidades de petróleo
+                    Tres unidades terrestres<br>
+                    Tres unidades de petróleo
                 </td>
             </tr>
 
@@ -272,23 +284,23 @@
             </tr>
             <tr>
                 <td>Torpedo</td>
-                <td>3</td>
+                <td>5</td>
                 <td>2</td>
                 <td>-</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Todos los barcos
-                    <br><br><sup>Colocar en Crucero o Submarino</sup>
+                    <br><br><sup>Paquete de 2</sup>
                 </td>
             </tr>
             <tr>
                 <td>Misil de largo alcance</td>
-                <td>3</td>
+                <td>5</td>
                 <td>2</td>
                 <td>-</td>
-                <td>1</td>
+                <td>2</td>
                 <td>Todo lo terrestre
                     <br>Todos los barcos de superficie
-                    <br><br><sup>Colocar en Bombardero Táctico</sup>
+                    <br><br><sup>Paquete de 2</sup>
                 </td>
             </tr>
 
@@ -339,7 +351,7 @@
                     Base Aérea
                 </td>
                 <td>10</td>
-                <td colspan="4">Puede estacionar 5 unidates entre aviones y equipamiento</td>
+                <td colspan="4">Puede estacionar 5 unidades</td>
             </tr>
             <tr>
                 <td>
@@ -347,7 +359,7 @@
                     Base Naval
                 </td>
                 <td>10</td>
-                <td colspan="4">Puede atracar 2 nunidades entre barcos y equipamiento</td>
+                <td colspan="4">Puede atracar 3 unidades</td>
             </tr>
             <tr>
                 <td>

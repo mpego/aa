@@ -1,11 +1,6 @@
 <html>
 
 <head>
-    <!-- Prevent caching -->
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-
     <title>Stats</title>
     <style>
         table {
@@ -21,14 +16,17 @@
             padding: 8px;
         }
 
+        th {
+            background-color: #f2f2f2;
+        }
+
         tr:nth-child(even) {
             background-color: #f9f9f9;
         }
 
         tr.category-header {
-            background-color: rgb(104, 104, 104);
+            background-color: #888989;
             font-weight: bold;
-            font-size: 0.6em;
         }
 
         tr.category-header-land {
@@ -67,42 +65,43 @@
 </head>
 
 <body>
-    <a href="#land">Land</a> |
-    <a href="#air">Air</a> |
-    <a href="#sea">Sea</a> |
-    <a href="#fac">Facilities</a> |
-    <a href="#actions">Actions</a> |
-    <a href="rules.html">Rules</a>
+    <a href="#land"">Land</a> |
+    <a href=" #air"">Air</a> |
+    <a href="#sea"">Sea</a> |
+    <a href=" #fac"">Facilites</a> |
+    <a href="#actions"">Actions</a> |
+    <a href=" rules.html">Rules</a>
     <table>
-        <tbody>
-            <!-- Land Units -->
-            <tr class="category-header-land">
-                <td id="land" colspan="6">Land Units</td>
-            </tr>
-            <tr class="category-header">
+        <thead>
+            <tr>
                 <th>Unit Type</th>
                 <th>Cost</th>
                 <th>Attack</th>
                 <th>Defense</th>
                 <th>Move</th>
                 <th>Effective</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Land Units -->
+            <tr class="category-header-land">
+                <td id="land" colspan="6">Land Units</td>
             </tr>
             <tr>
                 <td>Infantry</td>
                 <td>3</td>
                 <td>1</td>
                 <td>2</td>
-                <td>1</td>
-                <td>All land
-                    <br><br><sup>Builders</sup>
-                </td>
+                <td>2</td>
+                <td>All land</td>
             </tr>
             <tr>
                 <td>Mechanized Infantry</td>
                 <td>4</td>
                 <td>1</td>
                 <td>2</td>
-                <td>2</td>
+                <td>4</td>
                 <td>All land<br>
                     <br><sup>Can transport oil</sup>
                 </td>
@@ -112,7 +111,7 @@
                 <td>4</td>
                 <td>2</td>
                 <td>2</td>
-                <td>1</td>
+                <td>2</td>
                 <td>All land<br>Fighters</td>
             </tr>
             <tr>
@@ -120,36 +119,28 @@
                 <td>6</td>
                 <td>3</td>
                 <td>3</td>
-                <td>2</td>
+                <td>4</td>
                 <td>All land<br>Surface ships</td>
             </tr>
             <tr>
                 <td>AAA</td>
                 <td>5</td>
+                <td>1</td>
                 <td>2</td>
-                <td>1</td>
-                <td>1</td>
-                <td>All air<br>Surface ships<br><br><sup>preemptive-attack</sup></td>
+                <td>2</td>
+                <td>All air<br>Surface ships<br><br><sup>defensive-engage</sup></td>
             </tr>
 
             <!-- Air Units -->
             <tr class="category-header-air">
                 <td id="air" colspan="6">Air Units</td>
             </tr>
-            <tr class="category-header">
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th>Attack</th>
-                <th>Defense</th>
-                <th>Move</th>
-                <th>Effective</th>
-            </tr>
             <tr>
                 <td>Fighter</td>
                 <td>10</td>
                 <td>3</td>
                 <td>4</td>
-                <td>4</td>
+                <td>8</td>
                 <td>All land<br>All air<br>Surface ships</td>
             </tr>
             <tr>
@@ -157,9 +148,9 @@
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
-                <td>4</td>
+                <td>8</td>
                 <td>All land<br>All ships
-                    <br><br><sup>Can load 2 Long Range Missile</sup>
+                    <br><br><sup>can equip 2 Long Range Missile</sup>
                 </td>
             </tr>
             <tr>
@@ -167,7 +158,7 @@
                 <td>14</td>
                 <td>4</td>
                 <td>1</td>
-                <td>6</td>
+                <td>12</td>
                 <td>All land<br>All ships</td>
             </tr>
             <tr>
@@ -193,7 +184,7 @@
                 <td>-</td>
                 <td>6</td>
                 <td>Transports:<br>
-                    Trhee land units<br>
+                    Tow land units<br>
                 </td>
             </tr>
 
@@ -201,30 +192,20 @@
             <tr class="category-header-sea">
                 <td id="sea" colspan="6">Sea Units</td>
             </tr>
-            <tr class="category-header">
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th>Attack</th>
-                <th>Defense</th>
-                <th>Move</th>
-                <th>Effective</th>
-            </tr>
             <tr>
                 <td>Battleship</td>
                 <td>20</td>
                 <td>4</td>
                 <td>4</td>
-                <td>2</td>
-                <td>All land<br>All air<br>All surface ships
-                    <br><br><sup>Supports 2 hits</sup>
-                </td>
+                <td>4</td>
+                <td>All land<br>All air<br>All surface ships</td>
             </tr>
             <tr>
                 <td>Cruiser</td>
                 <td>12</td>
                 <td>3</td>
                 <td>3</td>
-                <td>2</td>
+                <td>4</td>
                 <td>All land<br>All air<br>All surface ships</td>
             </tr>
             <tr>
@@ -232,20 +213,18 @@
                 <td>8</td>
                 <td>2</td>
                 <td>2</td>
-                <td>2</td>
-                <td>All land<br>All ships
-                    <br><br><sup>Can load 2 torpedoes</sup>
-                </td>
+                <td>4</td>
+                <td>All land<br>All ships</td>
             </tr>
             <tr>
                 <td>Submarine</td>
                 <td>6</td>
                 <td>2</td>
                 <td>1</td>
-                <td>2</td>
+                <td>4</td>
                 <td>All ships
-                    <br><br><sup>preemptive-attack
-                        <br>Can load 2 torpedoes</sup>
+                    <br><br><sup>defensive-engage
+                        <br>can equip 2 torpedoes</sup>
                 </td>
             </tr>
             <tr>
@@ -253,31 +232,22 @@
                 <td>16</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2</td>
-                <td> <br><br><sup>Supports 2 hits</sup>
-                </td>
+                <td>4</td>
+                <td>-</td>
             </tr>
             <tr>
                 <td>Transport</td>
                 <td>7</td>
                 <td>-</td>
                 <td>-</td>
-                <td>2</td>
+                <td>4</td>
                 <td>Transport:<br>
-                    Three land units<br>
-                    Three oils
+                    Two land units<br>
+                    Two oils
                 </td>
             </tr>
             <tr class="category-header-other">
                 <td id="equipment" colspan="6">Equipment</td>
-            </tr>
-            <tr class="category-header">
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th>Attack</th>
-                <th>Defense</th>
-                <th>Move</th>
-                <th>Effective</th>
             </tr>
             <tr>
                 <td>Torpedo</td>
@@ -286,7 +256,7 @@
                 <td>-</td>
                 <td>2</td>
                 <td>All ships
-                    <br><br><sup>Pack of 2</sup>
+                    <br><br><sup>Place Cruiser or Submarine</sup>
                 </td>
             </tr>
             <tr>
@@ -296,8 +266,8 @@
                 <td>-</td>
                 <td>2</td>
                 <td>All land
-                    <br>All surface ships
-                    <br><br><sup>Pack of 2</sup>
+                    <br>Al surface ships
+                    <br><br><sup>Place on Tactical Bomber</sup>
                 </td>
             </tr>
 
@@ -305,74 +275,43 @@
             <tr class="category-header-facilities">
                 <td id="fac" colspan="6">Facilities</td>
             </tr>
-            <tr class="category-header">
-                <th>Facility Type</th>
-                <th>Cost</th>
-                <th colspan="4">Note</th>
-            </tr>
             <tr>
-                <td>
-                    <img src="../images/financial.png" width="64">
-                    Financial Complex
-                </td>
+                <td>Financial Complex</td>
                 <td>20</td>
                 <td colspan="4">Increase production limit by 20 IPCs per turn.</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/industry.png" width="64">
-                    Industrial Complex
-                </td>
+                <td>Industrial Complex</td>
                 <td>15</td>
                 <td colspan="4">Produces units and equipment.</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/refinery.png" width="64">
-                    Refinery
-                </td>
+                <td>Refinery</td>
                 <td>15</td>
                 <td colspan="4">Can receive 1 oil transporter</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/military.png" width="64">
-                    Military Base
-                </td>
+                <td>Military Base</td>
                 <td>10</td>
                 <td colspan="4">Can store 3 units of equipment</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/air.png" width="64">
-                    Air Base
-                </td>
+                <td>Air Base</td>
                 <td>10</td>
                 <td colspan="4">Can park 5 airplanes </td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/naval.png" width="64">
-                    Naval Base
-                </td>
+                <td>Naval Base</td>
                 <td>10</td>
                 <td colspan="4">Can dock 2 ship</td>
             </tr>
             <tr>
-                <td>
-                    <img src="../images/silo.png" width="64">
-                    ICBM Silo
-                </td>
+                <td>ICBM Silo</td>
                 <td>10</td>
                 <td colspan="4">Can hold 1 ICBM</td>
             </tr>
             <tr class="category-header-infrastructure">
                 <td id="infrastructure" colspan="6">Infrastructure</td>
-            </tr>
-            <tr class="category-header">
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th colspan="4">Note</th>
             </tr>
             <tr>
                 <td>Roads</td>
@@ -387,15 +326,10 @@
             <tr>
                 <td>Oil Pipe</td>
                 <td>5</td>
-                <td colspan="4">Transports oil from refineries to main complexes</td>
+                <td colspan="4">Transports oil from refineries to main conplexes</td>
             </tr>
             <tr class="category-header-other">
                 <td id="actions" colspan="6">Actions</td>
-            </tr>
-            <tr class="category-header">
-                <th>Unit Type</th>
-                <th>Cost</th>
-                <th colspan="4">Note</th>
             </tr>
             <tr>
                 <td>Relocate Base complex</td>
@@ -404,7 +338,7 @@
             </tr>
 
             <tr>
-                <td>Relocate complexes</td>
+                <td>Rellocate complexes</td>
                 <td>10</td>
                 <td colspan="4">Undamaged with no units complexes to tile with units.
                 </td>
