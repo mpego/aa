@@ -1,0 +1,12 @@
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.2",
+  "base_commit_sha": "c79f142c9132ef6601628b50e9f6465619e48205",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
