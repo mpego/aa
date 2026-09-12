@@ -1,0 +1,18 @@
+v2/stats.html
+  h_93a7d038c1b94f 264,303,306-328
+  h_93a7d038c1b94f 265,304-305
+v2/rules.html
+  h_93a7d038c1b94f 73,145,221-227,236,240,243,254-257,280-288,294-295,299-302,306-308,311-312,314
+  h_93a7d038c1b94f 289-293,296-298,303-305,309-310,313
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "94205b71bb504853ed56a0b797fe4393230595cd",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
