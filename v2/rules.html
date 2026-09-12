@@ -70,7 +70,7 @@
         <a href="#combat">Combat</a> |
         <a href="#developments">Developments</a> |
         <a href="#poc">Proof of Concepts</a> |
-        <a href="stats.html">Stats</a> | 
+        <a href="https://docs.google.com/presentation/d/1UHTfu-KPH8Z1e5SHt69_b7VNFK3RrXCiV4j4QKGTD6k/edit?slide=id.g3fa371f69de_0_36#slide=id.g3fa371f69de_0_36">Stats</a> | 
         <a href="rules-es.html">Español</a> | 
     </div>
 
@@ -142,8 +142,7 @@
         <ul>
             <li><strong>Base Complex:</strong>
                 It is the Base Complex of the player.
-                <br>They come with defense against ICBM.
-                <br>On ICBM attack roll three dice, on one 3 or less, the missile is destroyed before attack
+                <br>They come with 2 AAA embedded.
                 <br>If the missile hits the complex it counts as one hit
                 <br>Can produce IPC from oil.
             </li>
@@ -219,8 +218,13 @@
         <ul>
             <li><strong>Infantry:</strong>Infantry is not produced, it is directly bought and can be placed at any tile
                 with friendly units or complexes in non contested tiles.</li>
-            <li><strong>Transports</strong> Can transport units or equipment.
-                <br>Mechanized units can transport infantries and equipment.
+            <li><strong>Mechanized infantry</strong>Can act as carrier for Infantry
+                <br>When carrying infantry, mechanized infantry cannot attack or defend.\
+                <br>Unloading Infantry counts as a movement, it frees the mechanized infantry to attack or defend.
+            </li>
+            
+            <li><strong>Transports</strong> Can load units or equipment.
+                <br>Mechanized infantry can transport equipment.
                 <br>Sea transport can transport land units and equipment.
                 <br>Air transport can transport land units and equipment.
                 <br>
@@ -229,34 +233,28 @@
             </li>
 
             <li><strong>Battleship</strong>Requires 2 hits to be destroyed.</li>
-            <li><strong>Aircraft Carrier:</strong> They are not transpornts, they act as air bases at sea. Requires 2
+            <li><strong>Aircraft Carrier:</strong> They are carriers, they act as air bases at sea. Requires 2
                 hits to be destroyed.
             </li>
 
-            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an defensive engage
+            <li><strong>AAA:</strong> Have an auto defence system that allows them to perform an preemptive engage
                 on passing by planes, ICBM or surface ships at shore on enemy turn, once per turn. Use attacking stats.
             </li>
-            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an defensive engage
+            <li><strong>Submarines:</strong> Have an auto defence system that allows them to perform an preemptive engage
                 on passing by ships on enemy turn, once per turn. Use attacking stats.</li>
-
-            <li><strong>ICBM:</strong> Can attack any tile (works like strategic bomber attack).
-                <ul>
-                    <li>When moving can have only one change of direction.</li>
-                    <li>On a 5 or less the attack succeeds. On a 1 the impact is in the tile and all adyacent tiles.
-                    </li>
-                    <li> Accounts for any number of hits required to destroy what is on the tiles.</li>
-                </ul>
-            </li>
 
             <li><strong>Refueler</strong> Refueling implies restore the full range for the plane.</li>
             <ul>Can refuel one air unit in the same territory per turn.
                 Refuelers can be used like air bases at air or to extend the range of movement of a plane.
             </ul>
         </ul>
-        <li>Units transporting or being transported cannot attack or defend.</li>
         <li>If a ship is docked it cannot defend if the territory is attacked
             <br>If the tile is conquered, docked ship is captured
         </li>
+        <li>Units being carried can attack and defend.</li>
+        <li>Units being transported cannot attack or defend.</li>
+        <li>Units acting as carriers or transports cannot attack or defend.</li>
+        <li>Units have a class that is used to determine their capabilities and interactions with other units.</li>
     </ul>
 
     <h2 id="equipment">Equipment</h2>
@@ -275,28 +273,45 @@
         <li>Can overpass territory with enemy ship units</li>
         <li>It is affected by preemptive attack</li>
         <p></p>
-        <strong>Landmine</strong>
-        <li>Can be placed on a tile.</li>
-        <li>One pack consist of 2 landmine</li>
-        <li>Attacks units passing by the tile.</li>
-        <li>landmine are consumed if mine attack succeds.</li>
-        <p></p>
-        <strong>Seamine</strong>
-        <li>Can be placed on a tile.</li>
-        <li>One pack consist of 2 seamines</li>
-        <li>Attacks units passing by the tile.</li>
-        <li>Seamine are consumed mine attack succeds.</li>
-        <p></p>
-        <strong>Swarm drone</strong>
-        <li>Can be placed on a tile.</li>
-        <li>One pack consist of 1 swarm drone</li>
-        <li>Attacks units in range of the drone.</li>
-        <li>Swarm drone is consumed after use</li>
-        <p></p>
     </ul>
     <br>A pack of equipment count as one unit for storage and transport.
     <li>A unit can be equiped only at the corresponding base of the unit</li>
 
+
+    <h2 id="arsenal">Arsenal</h2>
+    <ul>
+        Arsenal are like units that must be transposted to the corresponding base to be used or tail to be deployed.
+
+        <li><strong>ICBM:</strong></li>
+        <ul>
+            <li>Can attack any tile (works like strategic bomber attack).</li>
+            <li>Can be fired only form a ICBM Silo.</li>
+            <li>When moving can have only one change of direction.</li>
+            <li>On a 5 or less the attack succeeds. On a 1 the impact is in the tile and all adyacent tiles.
+            </li>
+            <li> Accounts for any number of hits required to destroy what is on the tiles.</li>
+        </ul>
+        <li><strong>Landmine</strong></li>
+        <ul>
+            <li>Can be placed on a tile.</li>
+            <li>Attacks units passing by the tile.</li>
+            <li>landmine are consumed if mine attack succeds.</li>
+        </ul>
+        
+        <li><strong>Seamine</strong></li>
+        <ul>
+            <li>Can be placed on a tile.</li>
+            <li>Attacks units passing by the tile.</li>
+            <li>Seamine are consumed mine attack succeds.</li>
+        </ul>
+        <li><strong>Tactical Drone</strong></li>
+        <ul>
+            <li>Can be placed on a tile.</li>
+            <li>Attacks units in range of the drone.</li>
+            <li>Drone is consumed after use</li>
+        </ul>
+        <p></p>
+    </ul>
     <h2 id="collection">IPC Collection</h2>
     <ul>
         <br>Player can choose to roll dice for IPC collection for each refinery or one die for the Base Complex.
@@ -454,8 +469,6 @@
                 </li>
             </ul>
         </ul>
-
-
     </ul>
 </body>
 
