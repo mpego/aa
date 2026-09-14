@@ -6,12 +6,6 @@ The idea is to reach a mid point between the simple rules of Risk and the deep o
 
 [Rules](v1/rules.html)
 
-[Stats](v1/stats.html)
-
-[Combat cards](combat.png) 
-
-There is a v2 of the rule set, oriented to a resource builder game mechanics.
+There is a v2 of the rule set, oriented to a resource builder war game mechanics.
 
 [Rules](v2/rules.html)
-
-[Stats](v2/stats.html)
