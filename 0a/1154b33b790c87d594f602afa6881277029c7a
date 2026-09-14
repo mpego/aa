@@ -1,0 +1,36 @@
+v2/rules_es.md
+  s_03b386119ef5cb::t_e9fe6315ae5aa4 1-291
+v1/rules-es.html
+  h_93a7d038c1b94f 68-69
+v2/rules_es.html
+  s_03b386119ef5cb::t_41b9e828f811a6 1-158
+README.md
+  h_93a7d038c1b94f 9
+v2/rules-es.md
+  s_03b386119ef5cb::t_565c435015be85 1-291
+v2/rules-es.html
+  s_03b386119ef5cb::t_9eb08018f69493 1-158
+v1/rules.html
+  h_93a7d038c1b94f 69-70
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "0a1154b33b790c87d594f602afa6881277029c7a",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  },
+  "sessions": {
+    "s_03b386119ef5cb": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "720769b3-f308-4c30-9c67-e1d62017f722",
+        "model": "gemini-3.5-flash"
+      },
+      "human_author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
