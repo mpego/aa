@@ -2,7 +2,7 @@
 
 ## Objetivo del Juego
 
-**Meta:** Ser el dominador global destruyendo todos los Complejos de Base y tropas enemigas.
+**Meta:** Ser el dominador global destruyendo todos los Complejos Principales y tropas enemigas.
 
 ## Setup
 
@@ -14,7 +14,7 @@ Mapa:
 Cada jugador elige una ubicación de inicio a al menos 15 casillas (tiles) de distancia entre sí.
 
 **Configuración del ejército:**
-* Coloca un Complejo de Base (Base Complex) en cada casilla de origen.
+* Coloca un Complejo Principal en cada casilla de origen.
 * El ejército inicial de cada jugador es de 4 infanterías y 50 IPC.
 * Comienza el turno normalmente.
 
@@ -76,8 +76,8 @@ La infraestructura solo puede ser construida por unidades de infantería del jug
 
 ### Instalaciones (Facilities)
 
-* **Complejo de Base (Base Complex):**
-  * Es el Complejo de Base del jugador.
+* **Complejo Principal:**
+  * Es el Complejo Principal del jugador.
   * Viene con 2 AAA integrados.
   * Si un misil impacta en el complejo, cuenta como un impacto.
   * Puede producir IPC a partir de petróleo.
@@ -204,15 +204,15 @@ El arsenal son como unidades que deben ser transportadas a la base correspondien
 
 ## Recolección de IPC
 
-* Los jugadores pueden elegir tirar dados para la recolección de IPC por cada refinería o tirar un dado por el Complejo de Base.
-  * Si se tira por el Complejo de Base, un resultado de 2 o menos otorga 5 IPC.
+* Los jugadores pueden elegir tirar dados para la recolección de IPC por cada refinería o tirar un dado por el Complejo Principal.
+  * Si se tira por el Complejo Principal, un resultado de 2 o menos otorga 5 IPC.
 * El petróleo debe trasladarse desde las refinerías mediante tuberías de petróleo a un Complejo de Producción para convertirse en IPC de producción.
 * El valor de conversión es de 1 a 1: el valor del dado de la refinería a IPC.
 * El IPC recolectado se acumula a lo que el jugador ya tiene, hasta un máximo de 50 IPC.
 
 ## Producción
 
-* El Complejo de Base permite 20 IPC de producción.
+* El Complejo Pirncipal permite 20 IPC de producción.
 * Cada Complejo Financiero aporta 20 IPC de producción adicional por turno. Todos los IPC de producción de todos los complejos se suman para determinar la producción total del jugador para el turno.
 * La producción de unidades no se puede dividir en varios turnos.
 * La producción de la refinería no se agota.
@@ -251,7 +251,7 @@ Cada casilla puede ser atacada solo una vez por turno.
 * El jugador que causa el daño elige qué unidad o complejo recibe el daño.
   * Si el daño supera a las unidades de primera línea, el daño puede ir a las unidades de respaldo en la casilla según las reglas de las unidades atacantes (la regla *efectivo contra* en la página de estadísticas se aplica a toda asignación de daño).
 * Si la casilla tiene construcciones, estas también pueden elegirse como objetivo en lugar de las unidades.
-  * Para asignar daño al *Complejo de Base*, todas las unidades defensoras deben haber sido derrotadas.
+  * Para asignar daño al *Complejo Principal*, todas las unidades defensoras deben haber sido derrotadas.
 
 Después del ataque, las unidades restantes se quedan en la casilla (excepto los aviones, que deben regresar a una base aérea o reabastecedor), y la casilla permanece en disputa.
 * El control de las casillas en disputa no cambia hasta que solo un jugador tenga unidades en la casilla, momento en el cual se adueña de ella.
