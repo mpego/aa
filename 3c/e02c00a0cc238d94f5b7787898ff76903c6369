@@ -1,0 +1,31 @@
+v2/rules.md
+  h_93a7d038c1b94f 88,113,165,167,173,185,213
+  h_93a7d038c1b94f 5,16-18,23,25-27,29,35,37-40,44-45,48,50,52-54,66,69,75,82,98,107,111,141,143-145,154-155,159,164,168-171,174-177,186-192,196,201,210,219,223-228,230,234-239,243-244,250-251,255-260,262,266-267,269
+v2/rules-es.md
+  s_03b386119ef5cb::t_208a40bbd47ebe 5,17,79-80,201,204,209-210,248,263
+v2/rules_es.html
+  s_03b386119ef5cb::t_baca37716fad7e 1-158
+v2/rules_es.md
+  s_03b386119ef5cb::t_baca37716fad7e 1-282
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "3ce02c00a0cc238d94f5b7787898ff76903c6369",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  },
+  "sessions": {
+    "s_03b386119ef5cb": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "720769b3-f308-4c30-9c67-e1d62017f722",
+        "model": "gemini-3.5-flash"
+      },
+      "human_author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
