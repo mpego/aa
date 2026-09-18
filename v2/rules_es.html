@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Prevent caching -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reglas del Juego</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 10px;
+        }
+
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 5px;
+        }
+
+        h3 {
+            color: #2980b9;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        strong {
+            color: #2c3e50;
+        }
+
+        .note {
+            font-style: italic;
+            color: #666;
+            background-color: #f8f9fa;
+            padding: 10px;
+            border-left: 3px solid #3498db;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div style="margin-bottom: 20px; padding: 10px; background-color: #f8f9fa; border-bottom: 2px solid #3498db;">
+        <a href="#setup">Configuración</a> |
+        <a href="#turn">Turno</a> |
+        <a href="#objective">Objetivo del Juego</a> |
+        <a href="#production">Producción</a> |
+        <a href="#tiles">Casillas y Movimiento</a> |
+        <a href="#infrastructure">Infraestructura</a> |
+        <a href="#units">Unidades</a> |
+        <a href="#collection">Recolección de IPC</a> |
+        <a href="#combat">Combate</a> |
+        <a href="#developments">Desarrollos</a> |
+        <a href="#poc">Prueba de conceptos</a> |
+        <a href="https://docs.google.com/presentation/d/1UHTfu-KPH8Z1e5SHt69_b7VNFK3RrXCiV4j4QKGTD6k/edit?slide=id.g3fa371f69de_0_36#slide=id.g3fa371f69de_0_36">Estadísticas</a> | 
+        <a href="rules.html">English</a> | 
+    </div>
+
+    <!-- Container where the parsed Markdown will be rendered -->
+    <div id="content">
+        <p>Cargando Reglas del Juego...</p>
+    </div>
+
+    <!-- Load marked parser from CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            fetch('rules_es.md')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('No se pudo cargar rules_es.md');
+                    }
+                    return response.text();
+                })
+                .then(markdown => {
+                    // Map headers to specific anchor IDs to maintain compatibility with existing links
+                    const headingIdMap = {
+                        "objetivo del juego": "objective",
+                        "configuración": "setup",
+                        "casillas y movimiento de unidades": "tiles",
+                        "infraestructura": "infrastructure",
+                        "unidades": "units",
+                        "equipo": "equipment",
+                        "arsenal": "arsenal",
+                        "recolección de ipc": "collection",
+                        "producción": "production",
+                        "combate": "combat",
+                        "turno": "turn",
+                        "prueba de conceptos": "poc",
+                        "desarrollos (bajo desarrollo ...)": "developments"
+                    };
+
+                    const slugify = (str) => {
+                        return str
+                            .toLowerCase()
+                            .trim()
+                            .replace(/[^\w\s-]/g, '')
+                            .replace(/[\s_-]+/g, '-')
+                            .replace(/^-+|-+$/g, '');
+                    };
+
+                    const renderer = new marked.Renderer();
+                    // Destructure object argument passed to renderer in modern marked.js versions
+                    renderer.heading = function({ text, depth, raw }) {
+                        const cleanText = text.replace(/<[^>]*>/g, '').trim();
+                        const key = cleanText.toLowerCase();
+                        const id = headingIdMap[key] || slugify(cleanText);
+                        return `<h${depth} id="${id}">${text}</h${depth}>`;
+                    };
+
+                    marked.use({ renderer });
+
+                    document.getElementById('content').innerHTML = marked.parse(markdown);
+
+                    // If a hash is present in the URL, scroll to it after rendering completes
+                    if (window.location.hash) {
+                        const id = window.location.hash.substring(1);
+                        const targetElement = document.getElementById(id) || document.getElementById(decodeURIComponent(id));
+                        if (targetElement) {
+                            setTimeout(() => {
+                                targetElement.scrollIntoView({ behavior: 'smooth' });
+                            }, 100);
+                        }
+                    }
+                })
+                .catch(err => {
+                    document.getElementById('content').innerHTML = `<p style="color: red;">Error al cargar las reglas: ${err.message}</p>`;
+                    console.error(err);
+                });
+        });
+    </script>
+</body>
+
+</html>
