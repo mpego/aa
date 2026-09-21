@@ -1,11 +1,15 @@
-Home rules for a simplified version of Axis & Allies
+Theater of War - the boardgame
 
-The idea is to reach a mid point between the simple rules of Risk and the deep of options and masive map of A&A
+It all started with the idea is to reach a mid point between the simple rules of Risk and the deep of options and masive map of A&A.
+
+That evolved into a brand new war game in its own right.
 
 [Counters](counters.min.html)
 
-[Rules](v1/rules.html)
+Origina spinoff
 
-There is a v2 of the rule set, oriented to a resource builder war game mechanics.
+[Rules](v1/rules.html) 
 
-[Rules](v2/rules.html)
+Final rule set, oriented to a resource builder, global war game.
+
+[Introduction](v2/intro.html) | [Rules](v2/rules.html)

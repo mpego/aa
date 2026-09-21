@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <!-- Prevent caching -->
@@ -9,7 +9,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informe Táctico: Reglas del Juego</title>
+    <title>Tactical Briefing: Game Introduction</title>
     
     <!-- Google Fonts: Inter & JetBrains Mono -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -182,35 +182,17 @@
             list-style: none;
             display: flex;
             flex-direction: column;
-            gap: 0.6rem;
-            max-height: 450px;
-            overflow-y: auto;
-            padding-right: 0.5rem;
-        }
-
-        /* Custom Scrollbar for TOC */
-        .toc-list::-webkit-scrollbar {
-            width: 4px;
-        }
-        .toc-list::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.02);
-        }
-        .toc-list::-webkit-scrollbar-thumb {
-            background: rgba(6, 182, 212, 0.3);
-            border-radius: 2px;
+            gap: 0.75rem;
         }
 
         .toc-item a {
             color: var(--text-secondary);
             text-decoration: none;
-            font-size: 0.85rem;
+            font-size: 0.9rem;
             transition: color 0.2s, padding-left 0.2s;
             display: block;
             border-left: 2px solid transparent;
             padding-left: 0.5rem;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
         }
 
         .toc-item a:hover {
@@ -240,7 +222,7 @@
             padding: 2rem 2.5rem;
             backdrop-filter: blur(12px);
             box-shadow: var(--glass-glow);
-            border-top: 4px solid var(--accent-cyan);
+            border-top: 4px solid var(--accent-blue);
         }
 
         @media (max-width: 600px) {
@@ -251,7 +233,7 @@
 
         /* Markdown Render Styling */
         #content {
-            font-size: 1.02rem;
+            font-size: 1.05rem;
         }
 
         /* Headings */
@@ -269,7 +251,7 @@
         }
 
         #content h2 {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: var(--accent-cyan);
             margin-top: 2.5rem;
@@ -279,7 +261,6 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            scroll-margin-top: 5.5rem; /* prevent being covered by sticky HUD */
         }
 
         #content h2::before {
@@ -290,7 +271,7 @@
         }
 
         #content h3 {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--text-primary);
             margin-top: 1.75rem;
@@ -298,7 +279,6 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            scroll-margin-top: 5.5rem;
         }
 
         #content h3::before {
@@ -330,13 +310,10 @@
         }
 
         /* Lists */
-        #content ul, #content ol {
-            margin-bottom: 1.5rem;
-            padding-left: 0.5rem;
-        }
-
         #content ul {
             list-style: none;
+            margin-bottom: 1.5rem;
+            padding-left: 0.5rem;
         }
 
         #content li {
@@ -346,7 +323,7 @@
             color: var(--text-secondary);
         }
 
-        #content ul > li::before {
+        #content li::before {
             content: "";
             position: absolute;
             left: 0.5rem;
@@ -358,29 +335,8 @@
             box-shadow: 0 0 6px var(--accent-cyan);
         }
 
-        /* Handle ordered lists nicely */
-        #content ol {
-            counter-reset: o-list;
-            list-style: none;
-        }
-
-        #content ol > li {
-            counter-increment: o-list;
-        }
-
-        #content ol > li::before {
-            content: counter(o-list) ".";
-            position: absolute;
-            left: 0.25rem;
-            top: 0;
-            font-family: var(--font-mono);
-            font-size: 0.85rem;
-            font-weight: bold;
-            color: var(--accent-cyan);
-        }
-
         /* Nested lists */
-        #content li ul, #content li ol {
+        #content li ul {
             margin-top: 0.5rem;
             margin-bottom: 0.5rem;
             padding-left: 0.5rem;
@@ -400,19 +356,19 @@
             top: 0.7rem;
         }
 
-        /* Highlight note styles */
-        #content .note, #content blockquote {
-            background: rgba(59, 130, 246, 0.05);
-            border-left: 4px solid var(--accent-blue);
+        /* Highlight box for tactical advice */
+        #content blockquote {
+            background: rgba(245, 158, 11, 0.05);
+            border-left: 4px solid var(--accent-amber);
             border-radius: 0 0.5rem 0.5rem 0;
             padding: 1.25rem 1.5rem;
             margin: 1.5rem 0;
         }
 
-        #content .note p, #content blockquote p {
+        #content blockquote p {
             margin-bottom: 0;
             font-style: italic;
-            color: var(--text-primary);
+            color: #f3f4f6;
         }
 
         /* Links inside markdown */
@@ -427,6 +383,47 @@
             color: var(--text-primary);
             border-bottom-style: solid;
             border-bottom-color: var(--text-primary);
+        }
+
+        /* Custom Styles for Specific Sections (via CSS styling of rendered structures) */
+        /* Make the intro text stand out */
+        #content > p:first-of-type {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--text-primary);
+            line-height: 1.8;
+            border-left: 3px solid var(--accent-cyan);
+            padding-left: 1.25rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Callout styling for numbered list cards (Three Pillars) */
+        .pillar-card {
+            background: rgba(59, 130, 246, 0.03);
+            border: 1px solid rgba(59, 130, 246, 0.1);
+            border-radius: 0.5rem;
+            padding: 1.25rem;
+            margin-bottom: 1.25rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .pillar-card:hover {
+            transform: translateX(4px);
+            border-color: rgba(59, 130, 246, 0.3);
+            background: rgba(59, 130, 246, 0.05);
+        }
+
+        /* System Logs styling */
+        .system-log {
+            font-family: var(--font-mono);
+            font-size: 0.85rem;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 0.5rem;
+            padding: 1rem;
+            color: var(--accent-cyan);
+            margin: 1.5rem 0;
+            overflow-x: auto;
         }
 
         /* Action Buttons */
@@ -544,14 +541,13 @@
     <div class="hud-bar">
         <div class="hud-status">
             <span class="hud-dot"></span>
-            <span>TERMINAL SEGURO: ONLINE</span>
+            <span>SECURE TERMINAL: ONLINE</span>
         </div>
-        <div class="hud-title">TEATRO DE GUERRA // REGLAS</div>
+        <div class="hud-title">THEATER OF WAR // INTRO</div>
         <div class="nav-links">
-            <a href="intro.html">Introducción</a>
-            <a href="rules_es.html" class="active">Reglas</a>
-            <a href="rules.html">English</a>
-            <a href="../counters.html">Contadores</a>
+            <a href="intro.html" class="active">Introduction</a>
+            <a href="rules.html">Game Rules</a>
+            <a href="../counters.html">Counters</a>
         </div>
     </div>
 
@@ -561,29 +557,32 @@
         <!-- Sticky Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-card">
-                <div class="sidebar-title">CENTRO DE MANDO</div>
+                <div class="sidebar-title">SITUATION ROOM</div>
                 <div class="quick-info-row">
-                    <span>SEGURIDAD:</span>
-                    <span style="color: var(--accent-amber); font-weight: bold;">CLASIFICADO</span>
+                    <span>SECURITY:</span>
+                    <span style="color: var(--accent-amber); font-weight: bold;">CLASSIFIED</span>
                 </div>
                 <div class="quick-info-row">
-                    <span>ESTADO:</span>
-                    <span style="color: var(--accent-green); font-weight: bold;">OPERATIVO</span>
+                    <span>STATUS:</span>
+                    <span>BRIEFING</span>
                 </div>
                 <div class="quick-info-row">
                     <span>SECTOR:</span>
-                    <span>REGLAS TÁCTICAS</span>
+                    <span>GLOBAL CONFLICT</span>
                 </div>
                 <div class="quick-info-row">
-                    <span>VERSIÓN:</span>
-                    <span>v2.0 (BETA)</span>
+                    <span>DATE:</span>
+                    <span>SEP 2026</span>
                 </div>
             </div>
 
             <div class="sidebar-card">
-                <div class="sidebar-title">SECCIONES</div>
+                <div class="sidebar-title">TABLE OF CONTENTS</div>
                 <ul class="toc-list" id="toc-container">
-                    <li class="toc-item"><a href="#content">Cargando secciones...</a></li>
+                    <li class="toc-item"><a href="#welcome-to-the-theater-of-war-game-introduction">Introduction</a></li>
+                    <li class="toc-item"><a href="#the-three-pillars-of-victory">Three Pillars of Victory</a></li>
+                    <li class="toc-item"><a href="#anatomy-of-a-turn">Anatomy of a Turn</a></li>
+                    <li class="toc-item"><a href="#tactical-advice-for-your-first-game">Tactical Advice</a></li>
                 </ul>
             </div>
         </aside>
@@ -594,20 +593,23 @@
             <div id="content">
                 <div class="loader-container">
                     <div class="spinner"></div>
-                    <div>DESENCRIPTANDO REGLAS DE JUEGO...</div>
+                    <div>INITIALIZING BRIEFING SYSTEM...</div>
                 </div>
             </div>
 
             <!-- Call to Actions -->
             <div class="cta-container">
-                <a href="intro.html" class="btn btn-secondary">
+                <a href="rules.html" class="btn btn-primary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;">
-                        <line x1="19" y1="12" x2="5" y2="12"></line>
-                        <polyline points="12 19 5 12 12 5"></polyline>
+                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                        <polyline points="14 2 14 8 20 8"></polyline>
+                        <line x1="16" y1="13" x2="8" y2="13"></line>
+                        <line x1="16" y1="17" x2="8" y2="17"></line>
+                        <polyline points="10 9 9 9 8 9"></polyline>
                     </svg>
-                    Volver a la Intro
+                    Proceed to Game Rules
                 </a>
-                <a href="../counters.html" class="btn btn-primary">
+                <a href="../counters.html" class="btn btn-secondary">
                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:0.25rem;">
                         <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
                         <line x1="9" y1="3" x2="9" y2="21"></line>
@@ -615,14 +617,14 @@
                         <line x1="3" y1="9" x2="21" y2="9"></line>
                         <line x1="3" y1="15" x2="21" y2="15"></line>
                     </svg>
-                    Iniciar Contadores
+                    Open Game Counters
                 </a>
             </div>
         </main>
     </div>
 
     <!-- Back to top button -->
-    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+    <button class="back-to-top" id="back-to-top" aria-label="Scroll back to top">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
@@ -632,30 +634,14 @@
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
         window.addEventListener('DOMContentLoaded', () => {
-            fetch('rules_es.md')
+            fetch('intro.md')
                 .then(response => {
                     if (!response.ok) {
-                        throw new Error('Failed to load rules_es.md');
+                        throw new Error('Failed to load intro.md');
                     }
                     return response.text();
                 })
                 .then(markdown => {
-                    const headingIdMap = {
-                        "objetivo del juego": "objective",
-                        "configuración": "setup",
-                        "casillas y movimiento de unidades": "tiles",
-                        "infraestructura": "infrastructure",
-                        "unidades": "units",
-                        "equipo": "equipment",
-                        "arsenal": "arsenal",
-                        "recolección de ipc": "collection",
-                        "producción": "production",
-                        "combate": "combat",
-                        "turno": "turn",
-                        "prueba de conceptos": "poc",
-                        "desarrollos (bajo desarrollo ...)": "developments"
-                    };
-
                     const slugify = (str) => {
                         return str
                             .toLowerCase()
@@ -667,40 +653,84 @@
 
                     const renderer = new marked.Renderer();
                     
-                    // Style headings with custom mapping and custom IDs
+                    // Style headings with custom IDs
                     renderer.heading = function({ text, depth, raw }) {
                         const cleanText = text.replace(/<[^>]*>/g, '').trim();
-                        const key = cleanText.toLowerCase();
-                        const id = headingIdMap[key] || slugify(cleanText);
+                        const id = slugify(cleanText);
                         return `<h${depth} id="${id}">${text}</h${depth}>`;
                     };
 
+                    // Customize list rendering to wrap lists inside nice structures
+                    // and allow styling items elegantly.
                     marked.use({ renderer });
 
                     // Render markdown to HTML
-                    document.getElementById('content').innerHTML = marked.parse(markdown);
+                    const rawHtml = marked.parse(markdown);
+                    
+                    // We can post-process the HTML slightly to inject custom structure
+                    // to make the three pillars look beautiful.
+                    const parser = new DOMParser();
+                    const doc = parser.parseFromString(rawHtml, 'text/html');
+                    
+                    // Convert H3 elements in "The Three Pillars" section into nice stylized panels
+                    const headings = doc.querySelectorAll('h3');
+                    headings.forEach(heading => {
+                        // Let's identify if it is numbered (e.g. "1. Logistics...")
+                        const text = heading.textContent;
+                        if (/^\d+\./.test(text)) {
+                            // Find all sibling elements until the next H3 or H2
+                            const siblingContainer = doc.createElement('div');
+                            siblingContainer.className = 'pillar-card';
+                            
+                            // Insert the container before the heading
+                            heading.parentNode.insertBefore(siblingContainer, heading);
+                            
+                            // Move heading and its content inside
+                            siblingContainer.appendChild(heading.cloneNode(true));
+                            
+                            let nextSibling = heading.nextElementSibling;
+                            while (nextSibling && nextSibling.tagName !== 'H3' && nextSibling.tagName !== 'H2' && nextSibling.tagName !== 'HR') {
+                                const current = nextSibling;
+                                nextSibling = nextSibling.nextElementSibling;
+                                siblingContainer.appendChild(current.cloneNode(true));
+                                current.remove();
+                            }
+                            heading.remove();
+                        }
+                    });
 
-                    // If a hash is present in the URL, scroll to it after rendering completes
+                    document.getElementById('content').innerHTML = doc.body.innerHTML;
+
+                    // If a hash is present in the URL, scroll to it
                     if (window.location.hash) {
                         const id = window.location.hash.substring(1);
                         const targetElement = document.getElementById(id) || document.getElementById(decodeURIComponent(id));
                         if (targetElement) {
                             setTimeout(() => {
                                 targetElement.scrollIntoView({ behavior: 'smooth' });
-                            }, 150);
+                            }, 100);
                         }
                     }
 
-                    // Dynamically generate Sidebar Table of Contents based on H2 headings rendered
+                    // Dynamically generate Sidebar Table of Contents based on actual H2 headings rendered
                     const h2Headings = document.querySelectorAll('#content h2');
                     if (h2Headings.length > 0) {
                         const tocContainer = document.getElementById('toc-container');
-                        tocContainer.innerHTML = ''; // clear loading state
+                        tocContainer.innerHTML = ''; // clear initial list
                         
+                        // Add link for H1 title first
+                        const h1Element = document.querySelector('#content h1');
+                        if (h1Element) {
+                            const li = document.createElement('li');
+                            li.className = 'toc-item';
+                            li.innerHTML = `<a href="#${h1Element.id}">Commander's Log</a>`;
+                            tocContainer.appendChild(li);
+                        }
+
                         h2Headings.forEach(h2 => {
                             const li = document.createElement('li');
                             li.className = 'toc-item';
-                            li.innerHTML = `<a href="#${h2.id}">${h2.textContent}</a>`;
+                            li.innerHTML = `<a href="#${h2.id}">${h2.textContent.replace(/^◼\s*/, '')}</a>`;
                             tocContainer.appendChild(li);
                         });
                     }
@@ -708,8 +738,8 @@
                 .catch(err => {
                     document.getElementById('content').innerHTML = `
                         <div style="color: var(--accent-red); font-family: var(--font-mono); padding: 2rem; border: 1px solid rgba(239, 68, 68, 0.2); background: rgba(239, 68, 68, 0.05); border-radius: 0.5rem;">
-                            <h3 style="color: var(--accent-red); margin-bottom: 0.5rem;">[ERROR: FALLO AL DESENCRIPTAR]</h3>
-                            <p style="margin-bottom: 0;">No se pudo conectar con el nodo de reglas. Detalles: ${err.message}</p>
+                            <h3 style="color: var(--accent-red); margin-bottom: 0.5rem;">[ERROR: DATA CORRUPTION]</h3>
+                            <p style="margin-bottom: 0;">Failed to establish connection to briefing node. Details: ${err.message}</p>
                         </div>
                     `;
                     console.error(err);
