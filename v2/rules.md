@@ -266,9 +266,11 @@ After the attack, remaining units stay in the tile (except for airplanes, which 
 * A preemptive attack of attakers is neutralized by corresponding defending units with preemptive attack. In this case, the preemptive attack happen only for surpluss units.
 * Preemptive attack is resolved as soon as condition is met.
 
-## Proof of concepts (NOT PLAYABLE YET)
+## Proof of concepts
 
-## Developments (under development ...)
+Nothing as of now
+
+## Developments (NOT PLAYABLE YET ...)
 
 Every turn a player can spend up to 10 IPC in development. Only one development can be undergoing at a time.
 
