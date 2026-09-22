@@ -1,0 +1,36 @@
+v2/rules.html
+  s_708b207406c460::t_9aa2d748990a67 21-24,27-30,33-34,54-56,66-67
+  h_93a7d038c1b94f 25-26
+v2/intro.html
+  h_93a7d038c1b94f 25-26
+  s_708b207406c460::t_8b527921c70c77 21-24,27-30,33-34,54-56,66-67,125,176,246,249,259,298,301,308,361,402-403,412-413,421,456,460,462,466,468,472,474,492,507-508,532
+v2/rules-es.html
+  s_708b207406c460::t_e382825b9555fc 21-24,27-30,33-34,54-56,66-67
+  h_93a7d038c1b94f 25-26
+v2/rules_es.html
+  s_708b207406c460::t_8c52f6211337d3 21-24,27-30,33-34,54-56,66-67,176,199,264,267,277,318,321,328,405,459,463,465,469,471,475,477,495,510-511,535,738
+  h_93a7d038c1b94f 25-26
+v2/intro.md
+  h_93a7d038c1b94f 50
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "6c9f449dcd79470d0588150a02b575e90feb9afe",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  },
+  "sessions": {
+    "s_708b207406c460": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "06d1790d-0291-4e8f-bf8b-99c99c095dec",
+        "model": "gemini-3.5-flash"
+      },
+      "human_author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
