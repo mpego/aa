@@ -18,20 +18,20 @@
 
     <style>
         :root {
-            --bg-color: #0b0f19;
-            --card-bg: rgba(17, 24, 39, 0.75);
-            --border-color: rgba(59, 130, 246, 0.2);
-            --border-glow: rgba(59, 130, 246, 0.4);
-            --text-primary: #f3f4f6;
-            --text-secondary: #9ca3af;
-            --text-muted: #6b7280;
-            --accent-cyan: #06b6d4;
-            --accent-blue: #3b82f6;
-            --accent-green: #10b981;
+            --bg-color: #050b07;
+            --card-bg: rgba(12, 24, 16, 0.78);
+            --border-color: rgba(16, 185, 129, 0.2);
+            --border-glow: rgba(16, 185, 129, 0.4);
+            --text-primary: #f5f17a;
+            --text-secondary: #ffffff;
+            --text-muted: #34d399;
+            --accent-cyan: #10b981;
+            --accent-blue: #059669;
+            --accent-green: #34d399;
             --accent-amber: #f59e0b;
             --accent-red: #ef4444;
-            --glass-border: 1px solid rgba(255, 255, 255, 0.08);
-            --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            --glass-border: 1px solid rgba(16, 185, 129, 0.12);
+            --glass-glow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
             --font-sans: 'Inter', sans-serif;
             --font-mono: 'JetBrains Mono', monospace;
         }
@@ -51,9 +51,9 @@
             padding: 0;
             margin: 0;
             background-image: 
-                radial-gradient(circle at 5% 10%, rgba(6, 182, 212, 0.12) 0%, transparent 35%),
-                radial-gradient(circle at 95% 85%, rgba(59, 130, 246, 0.12) 0%, transparent 35%),
-                radial-gradient(circle at 50% 50%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
+                radial-gradient(circle at 5% 10%, rgba(16, 185, 129, 0.15) 0%, transparent 35%),
+                radial-gradient(circle at 95% 85%, rgba(5, 150, 105, 0.15) 0%, transparent 35%),
+                radial-gradient(circle at 50% 50%, rgba(52, 211, 153, 0.05) 0%, transparent 50%);
             background-attachment: fixed;
             display: flex;
             flex-direction: column;
@@ -63,8 +63,8 @@
         /* Top HUD / Status Bar */
         .hud-bar {
             width: 100%;
-            background: rgba(17, 24, 39, 0.9);
-            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+            background: rgba(12, 24, 16, 0.95);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
             padding: 0.75rem 2rem;
             display: flex;
             justify-content: space-between;
@@ -122,7 +122,7 @@
 
         .nav-links a:hover {
             color: var(--text-primary);
-            text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+            text-shadow: 0 0 8px rgba(16, 185, 129, 0.4);
         }
 
         .nav-links a.active {
@@ -173,7 +173,7 @@
             color: var(--accent-cyan);
             text-transform: uppercase;
             margin-bottom: 1rem;
-            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
             padding-bottom: 0.5rem;
             letter-spacing: 0.05em;
         }
@@ -243,10 +243,10 @@
             line-height: 1.2;
             margin-bottom: 1.5rem;
             letter-spacing: -0.02em;
-            background: linear-gradient(135deg, #f3f4f6 30%, #9ca3af 100%);
+            background: linear-gradient(135deg, #f0fdf4 30%, #a7f3d0 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            border-bottom: 2px solid rgba(59, 130, 246, 0.3);
+            border-bottom: 2px solid rgba(16, 185, 129, 0.3);
             padding-bottom: 0.75rem;
         }
 
@@ -256,7 +256,7 @@
             color: var(--accent-cyan);
             margin-top: 2.5rem;
             margin-bottom: 1.25rem;
-            border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+            border-bottom: 1px solid rgba(16, 185, 129, 0.2);
             padding-bottom: 0.5rem;
             display: flex;
             align-items: center;
@@ -295,17 +295,17 @@
 
         #content strong {
             color: var(--text-primary);
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(16, 185, 129, 0.08);
             padding: 0.1rem 0.3rem;
             border-radius: 0.25rem;
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.15);
         }
 
         /* Dividers */
         #content hr {
             border: 0;
             height: 1px;
-            background: linear-gradient(to right, rgba(59, 130, 246, 0), rgba(59, 130, 246, 0.4), rgba(59, 130, 246, 0));
+            background: linear-gradient(to right, rgba(16, 185, 129, 0), rgba(16, 185, 129, 0.4), rgba(16, 185, 129, 0));
             margin: 2.5rem 0;
         }
 
@@ -358,7 +358,7 @@
 
         /* Highlight box for tactical advice */
         #content blockquote {
-            background: rgba(245, 158, 11, 0.05);
+            background: rgba(245, 158, 11, 0.04);
             border-left: 4px solid var(--accent-amber);
             border-radius: 0 0.5rem 0.5rem 0;
             padding: 1.25rem 1.5rem;
@@ -399,8 +399,8 @@
 
         /* Callout styling for numbered list cards (Three Pillars) */
         .pillar-card {
-            background: rgba(59, 130, 246, 0.03);
-            border: 1px solid rgba(59, 130, 246, 0.1);
+            background: rgba(16, 185, 129, 0.03);
+            border: 1px solid rgba(16, 185, 129, 0.1);
             border-radius: 0.5rem;
             padding: 1.25rem;
             margin-bottom: 1.25rem;
@@ -409,8 +409,8 @@
 
         .pillar-card:hover {
             transform: translateX(4px);
-            border-color: rgba(59, 130, 246, 0.3);
-            background: rgba(59, 130, 246, 0.05);
+            border-color: rgba(16, 185, 129, 0.3);
+            background: rgba(16, 185, 129, 0.05);
         }
 
         /* System Logs styling */
@@ -418,7 +418,7 @@
             font-family: var(--font-mono);
             font-size: 0.85rem;
             background: rgba(0, 0, 0, 0.3);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(16, 185, 129, 0.1);
             border-radius: 0.5rem;
             padding: 1rem;
             color: var(--accent-cyan);
@@ -453,25 +453,25 @@
 
         .btn-primary {
             background-color: var(--accent-cyan);
-            color: #000;
+            color: #022c16;
         }
 
         .btn-primary:hover {
-            background-color: #22d3ee;
+            background-color: #34d399;
             transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.4);
+            box-shadow: 0 4px 12px rgba(16, 185, 129, 0.4);
         }
 
         .btn-secondary {
-            background-color: rgba(255, 255, 255, 0.05);
+            background-color: rgba(16, 185, 129, 0.04);
             color: var(--text-primary);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.15);
         }
 
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(16, 185, 129, 0.1);
             transform: translateY(-1px);
-            border-color: rgba(255, 255, 255, 0.2);
+            border-color: rgba(16, 185, 129, 0.3);
         }
 
         /* Loading Animation */
@@ -489,7 +489,7 @@
         .spinner {
             width: 40px;
             height: 40px;
-            border: 3px solid rgba(6, 182, 212, 0.1);
+            border: 3px solid rgba(16, 185, 129, 0.1);
             border-radius: 50%;
             border-top-color: var(--accent-cyan);
             animation: spin 1s ease-in-out infinite;
@@ -504,8 +504,8 @@
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: rgba(17, 24, 39, 0.8);
-            border: 1px solid rgba(59, 130, 246, 0.3);
+            background: rgba(12, 24, 16, 0.9);
+            border: 1px solid rgba(16, 185, 129, 0.3);
             color: var(--text-secondary);
             width: 45px;
             height: 45px;
@@ -529,7 +529,7 @@
         .back-to-top:hover {
             color: var(--text-primary);
             border-color: var(--accent-cyan);
-            box-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+            box-shadow: 0 0 10px rgba(16, 185, 129, 0.3);
             transform: translateY(-2px);
         }
     </style>

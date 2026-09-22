@@ -47,7 +47,7 @@ Unlike traditional turn-based games where players act entirely in isolation, thi
 *   **Protect Your Arteries:** Do not leave your pipelines undefended. A cheap landmine or a well-placed infantry division can save millions of IPCs in lost oil production.
 *   **Diversify Your Frontline:** Since only 5 units fight at a time, bringing 5 different specialized units (e.g., combining Infantry, AAA, and armor) is often far more effective than bringing 10 of the same unit.
 *   **Plan the Route:** Remember that land, air, and naval units are built at **Industrial Complexes** and must travel automatically via roads to their respective military/air/naval bases to deploy. Ensure your transit roads remain clear of enemy forces.
-*   **Pro tip: be patient:** Don't rush to try to wipe out your enemies, there will be plenty of time to build defences and the rush might backfire at you. 
+*   **Pro tip: Be patient.** Don't rush to try to wipe out your enemies, they will have plenty of time to build defences and the rush might backfire at you. 
 
 You are now ready. Open [rules.md](rules.md) to study the precise operational manuals, assemble your staff, and prepare for deployment. 
 
