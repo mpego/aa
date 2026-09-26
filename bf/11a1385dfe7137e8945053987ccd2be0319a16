@@ -1,0 +1,36 @@
+requirements.txt
+  s_708b207406c460::t_e59699f297552c 1
+generate_cover.py
+  s_708b207406c460::t_9bb31e5f90f37f 1-227,229-303
+  h_93a7d038c1b94f 228
+v2/rules.html
+  h_93a7d038c1b94f 555
+v2/rules.md
+  h_93a7d038c1b94f 53-54,56-57,284,286-290
+  h_93a7d038c1b94f 52
+generate_map.py
+  s_708b207406c460::t_cea625b9427de0 189-190
+  s_708b207406c460::t_5a8ebde0903cda 227-229
+  s_708b207406c460::t_5502de1002e458 1-188,191-226,230-347
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "bf11a1385dfe7137e8945053987ccd2be0319a16",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  },
+  "sessions": {
+    "s_708b207406c460": {
+      "agent_id": {
+        "tool": "gemini",
+        "id": "06d1790d-0291-4e8f-bf8b-99c99c095dec",
+        "model": "gemini-3.5-flash"
+      },
+      "human_author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
