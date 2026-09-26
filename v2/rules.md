@@ -49,9 +49,12 @@ Map:
 
 ### Phase 3: All Players
 
-**Resolve combats:**
+**Resolve combats**
+   * Resolve all contested zones 
+   * Resolve movment of units that need to go back to a base
 
-**Collection**
+**IPC Collection**
+   * Collect IPC from connected Refineries
 
 ## Tiles and Unit movement
 
@@ -278,10 +281,13 @@ A completion dice is rolled every turn after spending in development reaches 30 
 
 An extra completion dice can be bought with 10 IPC.
 
-* **Radar:** Radars work in conjunction with AAA. Radars can detect air units passing by adjacent tiles and extend AAA pre-attack to their surrounding tiles.
+* **Radar:** Radars work in conjunction with AAA. Radars can detect air units passing by adjacent tiles and allow AAA adjacents to that tile run a pre-attack.
 * **Stealth technology:** Once developed, radar cannot detect air units.
-* **Portable AAA:** AAA can be installed in Battleships and Aircraft Carriers.
-* **Drones:** Works like short-range ICBMs.
+* **Portable AAA:** AAA can be used as equipment.
+* **Portable Radar:** Radars can be used as equipment.
+* **Upgraded ships:** All surface ships can be equiped with AAA and Radars.
+* **Drones:** Extend Drones range by 2 tiles.
+* **Radar upgrade:** Extend Radar range by 1 tile.
 * **Paratroopers:** Infantry can be dropped in any tile that is not under combat.
 * **Land units level up:** Land units can be damaged by units with same or higher level. Before rolling the completion die, a level-up die must be rolled with a value higher than the current level.
 * **Air units level up:** Air units can be damaged by units with same or higher level. Before rolling the completion die, a level-up die must be rolled with a value higher than the current level.
