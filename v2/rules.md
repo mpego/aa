@@ -4,7 +4,7 @@
 
 **Goal:** Be the global dominator by destroying enemies' Base Complex.
 
-The winner it the player that takes a difference of two Base points points with the second closest player.
+The winner is the player that takes a difference of two Base points points with the second closest player.
 
 **Playtime:** About 10 hours for a four player game
 
@@ -87,11 +87,12 @@ Infrastructure can be built only by player infantry units. Each unit can build o
 
 * **Base Complex:**
   * It is the Base Complex of the player.
-  * Comes with 2 AAA embedded.
+  * Comes equiped with 2 AAA.
   * If a ICBM hits the complex, it counts as one hit.
   * Can produce IPC from oil.
   * When destoyed units of that player become militia and continues playing. If possible a new base can be built.
   * **Destroying a enemy Base, earns you that players Base points** plus 50 IPC to be spent at the end of the turn. IPC not spent goes to your IPC count.
+  Put a maker at your home Base with you actual points.
 
 * **Production Complex:**
   * Receives resources from refineries to produce IPC.
