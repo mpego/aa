@@ -41,7 +41,8 @@ Map:
    * Move as many units as wanted. Each unit can move only once per turn.
    * Units can move to contested tiles.
    * If the destination tile is occupied by enemy units, combat is declared.
-   * If retreating from a contested tile, the destination must be friendly and non-contested. Retreating units cannot move through the edge enemies came from.
+   * If retreating from a contested tile, the destination must be friendly and non-contested or the Base Complex.
+    * Retreating units cannot move through the edge enemies came from.
    * Resolve preemptive attack as conditions are met.
    * At no time may a tile contain units of a player exceeding the maximum allowed per tile.
    * To keep track of attackers at contested tiles, place a counter for the attacking player on the tile.
@@ -140,7 +141,7 @@ Infrastructure can be built only by player infantry units. Each unit can build o
 
 ## Units
 
-* **Infantry:** Infantry is not produced; it is directly bought and can be placed at any tile with friendly units or complexes in non-contested tiles.
+* **Infantry:** Infantry is not produced; it is directly bought and can be placed at any tile with friendly units or complexes in non-contested tiles (locating at a contested Base Complex is allowed)   
 * **Mechanized infantry:** Can act as a transport by land.
 * **Transports:** Can load units or equipment.
   * Mechanized infantry can transport Infantry, equipment or arsenal.
@@ -153,11 +154,11 @@ Infrastructure can be built only by player infantry units. Each unit can build o
 * **Submarines:** Have an auto-defense system that allows them to perform a preemptive engage on passing ships on the enemy's turn, once per turn. Uses attacking stats.
 * **Refueler:** Refueling restores the full range of a plane.
   * Can refuel one air unit in the same territory per turn.
-  * Refuelers can be used like air bases in the air or to extend the range of movement of a plane.
+  * Can be used like air bases in the air to carry one plane at a time.
 
 
 * If a ship is docked, it cannot defend if the territory is attacked.
-  * If the tile is conquered, a docked ship is captured.
+* If the tile is conquered with docked ships or parked planes, the units are captured.
 * Units being carried can attack and defend.
 * Units transporting or being transported cannot attack or defend.
 * Units have a class that is used to determine their capabilities and interactions with other units.
@@ -210,7 +211,7 @@ Arsenal are units that must be transported to a destination tile to be deployed.
 
 ## IPC Collection
 
-* A player with no Refineries produces at a rate of 2 IPC per turn.
+* Players always produces IPC, either by connected refineries if any or at a fixed rate of 2 IPC per turn.
 * Oil must be moved from Refineries by oil pipelines to a Production Complex to be converted into production IPCs.
 * Conversion value is 1 to 1: the value of the dice of the Refinery to IPC.
 * All IPCs of production from all Refineries are summed up to determine the total production of the player for the turn.
@@ -219,12 +220,11 @@ Arsenal are units that must be transported to a destination tile to be deployed.
 ## Production
 
 * Base Complex allows for 20 IPC of production.
-* Each Financial Complex accounts for additional production per turn. 
 * Production of units cannot be split across multiple turns.
 * Refinery production does not exhaust.
 
 Units, equipment and arsenal are produced in Industrial Complexes:
-* Up to three packs or units can be temporarily stored in the Industrial Complex.
+* Up to units (units, equipment or arsenal) can be temporarily stored in the Industrial Complex.
 * No more units can be produced if they are not automatically relocated.
   * Land units must be relocated to a Military Base.
   * Airplanes must be relocated to an Air Base.
