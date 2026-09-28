@@ -1,0 +1,16 @@
+v2/rules.html
+  h_93a7d038c1b94f 620-626
+v2/rules.md
+  h_93a7d038c1b94f 5-9,20,94-95,98,102,109,114,116,118,122
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.4",
+  "base_commit_sha": "1023144108daffe4cf062869f8bd89ddd055f9f6",
+  "prompts": {},
+  "humans": {
+    "h_93a7d038c1b94f": {
+      "author": "Mauricio Pego <mauricio.pego@pedidosya.com>"
+    }
+  }
+}
