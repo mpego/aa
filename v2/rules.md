@@ -2,7 +2,11 @@
 
 ## Game Objective
 
-**Goal:** Be the global dominator by destroing all enemies' Base Complex and troops.
+**Goal:** Be the global dominator by destroying enemies' Base Complex.
+
+The winner it the player that takes a difference of two Base points points with the second closest player.
+
+**Playtime:** About 10 hours for a four player game
 
 ## Setup
 
@@ -13,6 +17,7 @@ Map:
 
 
 **Army setup:**
+* Players start with one Base point.
 * Each player chooses a home tile at least 15 tiles apart from each other
 * Place a Base Complex and 4 infantry in each home tile.
 * Set 50 IPC as starting point.
@@ -86,26 +91,35 @@ Infrastructure can be built only by player infantry units. Each unit can build o
   * If a ICBM hits the complex, it counts as one hit.
   * Can produce IPC from oil.
   * When destoyed units of that player become militia and continues playing. If possible a new base can be built.
+  * **Destroying a enemy Base, earns you that players Base points** plus 50 IPC to be spent at the end of the turn. IPC not spent goes to your IPC count.
+
 * **Production Complex:**
   * Receives resources from refineries to produce IPC.
+
 * **Financial Complex:**
   * Increases allowance of production per turn.
   * Does not need to be connected to the main complex.
+
 * **Refinery:**
   * Each refinery has an oil production value equal to the roll of one die when built on land, and two dice when built on water (as if it were two refineries). Each turn, roll the corresponding dice.
   * If production in a refinery was not collected in the previous turn, it changes to the higher value.
   * Put value markers on each refinery to track production for the turn.
   * Can be built on land or sea, but there must be at least 3 tiles separating it from any other Refinery.
   * If built on a tile with both water and land, it is always built on land.
+
 * **Industrial Complex:**
   * These are for the production of units and equipment.
   * All units are produced here and are moved automatically by road to the destination base unless the route has contested or enemy units in a tile.
   * If they cannot be moved, the complex can hold up to three units; these units cannot move, attack, or defend.
+
 * **Military Base:** Is the starting base for land units.
+
 * **Air Bases:** Is the starting base for air units.
+
 * **Naval Bases:** Is the starting base for naval units.
   * Docked units count toward new unit limits.
   * Docking is required to repair ships.
+
 * **ICBM Silo:** It is from where ICBMs are launched.
 
 ### Rules for Infrastructure
